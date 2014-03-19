@@ -1,0 +1,162 @@
+<include file="Public:header"/>
+<div class="container">
+  <div class="base-title grid24">
+    <a href="" class="fl"></a>
+    <p class="fl">第五屆跳格國際舞蹈影像節之廣州站巡演</p>
+  </div>
+  <div class="row-fluid">
+  <include file="Public:sidebar"/>
+  <div class="grid19 my-main offset1">
+      <button>
+        <div class="btn-G" id="vedio">
+          <div class="btn-G1">
+            添加新视频
+          </div>
+        </div>
+      </button>
+      <ul class="vedio-list">
+        <!-- 隐藏的上传框 -->
+        <div class="login vediodiv" id="vediodiv">
+          <div class="borgrey">
+            <div class="logtop">
+              <span>添加视频<a href="#" class="fr cancel">x</a></span>
+            </div>
+            <form method="post" action="">
+              <span class="spanmail">视频链接：
+					<input type="text" class="mailbox" name="video_url" id="video_url">
+					<span id="video_url_error" style="font-size:5px;color:red;"></span>
+			  </span>
+              <span class="spanmail">视频名称：
+					<input type="text" class="pswbox" name="video_name" id="video_name">
+					<span id="video_name_error" style="font-size:5px;color:red;"></span>
+			  </span>
+              <button class="btn-log">确定</button>
+              <button class="btn-cc">取消</button>
+            </form>
+            <div class="logtype">
+              目前已支持<a href="">优酷网</a>、<a href="">土豆网</a>等视频网站的视频播放页链接
+            </div>
+          </div>
+        </div>
+        <li class="clearfix">
+          <a href="#" class="title1 fl">邓立峰隐退大作.avi</a>
+          <div class="my-main-manager fr">
+            <a href="#" class="fl manage">编辑</a>|<a href="#" class="delect fr">删除</a>
+          </div>
+        </li>
+        <li class="clearfix">
+          <a href="#" class="title fl">邓立峰隐退大作.avi</a>
+          <div class="my-main-manager fr">
+            <a href="#" class="fl manage">编辑</a>|<a href="#" class="delect fr">删除</a>
+          </div>
+        </li>
+        <li class="clearfix">
+          <a href="#" class="title fl">邓立峰隐退大作.avi</a>
+          <div class="my-main-manager fr">
+            <a href="#" class="fl manage">编辑</a>|<a href="#" class="delect fr">删除</a>
+          </div>
+        </li>
+        <li class="clearfix">
+          <a href="#" class="title fl">邓立峰隐退大作.avi</a>
+          <div class="my-main-manager fr">
+            <a href="#" class="fl manage">编辑</a>|<a href="#" class="delect fr">删除</a>
+          </div>
+        </li>
+        <li class="clearfix">
+          <a href="#" class="title now fl">邓立峰隐退大作.txt</a>
+          <div class="my-main-manager fr">
+            <a href="#" class="fl manage">编辑</a>|<a href="#" class="delect fr">删除</a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<script>
+/*
+ * 验证url是否合法
+ */
+function isURL(url) { // 验证url
+	var strRegex = "[a-zA-z]+://[^\s]*";
+	var re = new RegExp(strRegex);
+	return re.test(url);
+}
+/*
+ * 检查某元素是否为空
+ */
+function checkNotNull(id_name, msg) {
+	var selected_id = '#' + id_name;
+	var error_span = '#' + id_name + '_error';
+
+	if ($.trim($(selected_id).val()) == '') {
+		$(error_span).text(msg);
+		return false;
+	} else {
+		$(error_span).text('');
+		return true;
+	}
+}
+/**
+ * 检查视频名称是否为空
+ */
+function checkVideoName() {
+	var id_name = 'video_name';
+	$msg = '视频名称不能为空';
+	return checkNotNull(id_name, $msg);
+}
+/**
+ * 检查视频url
+ */
+function checkVideoUrl() {
+	var video_url = $('#video_url').val();
+	var error_span = $('#video_url_error');
+	if (!isURL(video_url)) {
+		$(error_span).text('请输入合法的url');
+		return false;
+	} else {
+		$(error_span).text('');
+		return true;
+	}
+}
+/*
+ * 鼠标移开，检查视频名称
+ */
+	$('#video_name').blur(function() {
+		checkVideoName();
+	});
+/*
+ * 鼠标移开，检查视频链接
+ */
+	$('#video_url').blur(function() {
+		checkVideoUrl();
+	});
+/*
+ * 视频上传确定
+ */
+$('.btn-log').click(function(){
+	if(!(checkVideoName()&&checkVideoUrl())){
+		return false;
+	}
+	vedio=$('#video_url').val();
+	toUrl='{:U("Events/getVideoDetails")}';
+	$.ajax({
+		type:'POST',
+		url: toUrl,
+		data:{
+			vurl:vedio,
+			submitted:'submitted,'
+		},
+		dataType:'json',
+		success:function(data){
+			alert('hah');
+		},
+		error: function (data, status, e)
+			{
+				alert(e);
+			}
+	});
+	return false;
+});
+</script>
+<include file="Public:footer"/>

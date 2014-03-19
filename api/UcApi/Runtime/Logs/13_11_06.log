@@ -1,0 +1,372 @@
+[ 2013-11-06T00:18:45+08:00 ] 192.168.134.16 /api/uc.php?time=1383668325&code=2404UiMdA0%2FIi76Opo6OjmWfZj4fsWutOG2DKSPeeIXbbPYlRpfHQxzC1pIaNpcnLF9ZQNUGj3x%2BzE%2FXdYDMyUFZMlz9cnIFnMS%2Bb5vxvnOC2xNxoXZaY4DarbAQAbTvPWarpwDmn%2F47SnuaJ2gEls0Fv%2FSwdIDaIlAIvxq3%2F2K7qh0BrmQ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002478s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1884 ) LIMIT 1   [ RunTime:0.000500s ]
+
+[ 2013-11-06T07:44:54+08:00 ] 192.168.205.26 /api/uc.php?time=1383695092&code=a109L5yncNcVpUIm%2Fa7WF2clRtWAf2MXorwdOvLQM%2FCHbGG4ZD9Mez0T5fHUO9wsNOwMNBTbTKdONR%2BsnCt5zpnwCXN6W%2F5Pov0bqN1i6Ck2oYJAo7mnFuen2qQ%2BbWN4JbWXbrHRnpVE34J8VQqTth5fROcf%2B66K8h2zUi6dhrQ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002305s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2421 ) LIMIT 1   [ RunTime:0.000536s ]
+
+[ 2013-11-06T08:02:44+08:00 ] 113.66.206.244 /api/uc.php?time=1383696159&code=0a5c5WDSOVuwdhzhOYSJf80vlGoP8ATyiVCDIswVKJSzhjfo6IVmCJzxdieSvr%2Faukn3ilvBgUhZ4wfj3eFTaPu%2Bi%2F9xWAG9dnJALUt626yRQNuvIWyZ%2B%2Fa16DPTE1VQuuY6mYeV%2FYTpgjuXia5O%2FLjUTCe1lt2B%2BCb7
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002140s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 848 ) LIMIT 1   [ RunTime:0.000572s ]
+
+[ 2013-11-06T08:17:12+08:00 ] 192.168.136.158 /api/uc.php?time=1383697030&code=8d2a0yK1cAC8LPZgpPkIFKkc%2Bg6GCjvjqwLcKq8ClFUB67iCZTOnlvIJsZOnBwRTxH4rd%2FRnLyA9ymMPZPA3XOz9ymPzfZ11YWvpbsxh1h739l6V9FqZBsS%2F7kzdpF2fRBQJbEilvB22vRGm2Kuuoj%2FRnY3Cg%2F4PYiaqYj%2F%2FCbz6Yw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002376s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1560 ) LIMIT 1   [ RunTime:0.000716s ]
+
+[ 2013-11-06T08:39:59+08:00 ] 192.168.201.76 /api/uc.php?time=1383698399&code=a80cSUNnxhkJj9UQv%2F%2F3vjRsOwAhtJU6RBLi2S7LQldwxYU3NEf%2BHh1o7Ski6LI1iPrhyrEjoqH13eWePu%2FFcaQ32S3ZGKrLwiI%2FjYVz6K%2Fgkfh9s1g%2BMLOTVNhFueG40YolVtICThEqdhiLY5WZlYSIQpm4LXX0ko0nLypY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002171s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 158 ) LIMIT 1   [ RunTime:0.000581s ]
+
+[ 2013-11-06T08:55:15+08:00 ] 192.168.200.84 /api/uc.php?time=1383699315&code=62f0PzoAni7ywwgKSTkhzdgA%2FGuU13IcgaZko6VJdATD9%2BArao29Pew%2FeAFoY4jvCzWJj1s7i8HqWjGr1kEX%2Ff2XMxkdGi1RBrpzICKGkrkouixaCsikYiJ%2FW8BBXobJnF89T9DZnoVLfoY%2FkOXZGyDNSG4GUtrYX8uu1iL%2BEj3v
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002438s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1639 ) LIMIT 1   [ RunTime:0.000577s ]
+
+[ 2013-11-06T08:56:48+08:00 ] 192.168.170.7 /api/uc.php?time=1383699408&code=a1c3Ux1m5oRcUpb6bk3fADrYkXH%2B8IwIqLkgVihT9fKAQQQ2vtoQNhjoiAlEo%2FYfjgQj%2FPNjynu5x9JPhXRm2PnBw%2FPFqLce9j9fbxlrEcuLv5DW1mBWpoBd1IkVZDe875i7mX5YpvBGyh7ur%2FZG%2BffFFW1P9goDjJts
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002054s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 805 ) LIMIT 1   [ RunTime:0.000386s ]
+
+[ 2013-11-06T09:49:29+08:00 ] 192.168.142.155 /api/uc.php?time=1383702569&code=57a7ZaU6YtFlKJBhsQm%2FdG3nCB2C2o8AeNg4j7Gbb%2FzK%2FZxdCkC%2F%2Bibark4ubuZ4Er4F31kKo1OxgmptSnzGum66dKIXLPBBx40kNJ7FbIs6fFxTjwE8lMjbSYESACWvEQWKisdq%2BnPu%2BYTtQt2UtAh65NSuL%2FBWcZrgrGsEaxG9gA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002063s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2181 ) LIMIT 1   [ RunTime:0.000302s ]
+
+[ 2013-11-06T10:36:00+08:00 ] 183.4.27.56 /api/uc.php?time=1383705359&code=dca7Bma5httKEBlFmxg38vr9oWckwDTJt4saz3udXWAPyoBjvRGCnWgKiY6nPYJ4f8tdmq1nHRY3Amh5VyB%2FARqhQd2r0qGP7qbSSKqozHsk%2FHhXC466hTwV%2BQWg5ExFE4OOIjHcSwJFFVVbZbWXsKx0AfS8Vl3AlI0dARlKoqHAOpmXAtDA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002195s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 479 ) LIMIT 1   [ RunTime:0.000446s ]
+
+[ 2013-11-06T10:58:27+08:00 ] 192.168.203.163 /api/uc.php?time=1383706706&code=ac380bNAy1FI%2FgePhnnBrgq0QW7CUow9aTPal9X35gDwsmFOVbF1Uh0A9bn3qJgonzNIXSmrqkeyLiA2tN3EoCFO%2FiwxO7Z3AAmKBzk22YY3p8fk08206UhNSUQ%2F93KjU7%2FxRF%2BxvGbUH5yMmLOQgir5AUimEQJmpKMO%2Baky0w
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002246s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2013 ) LIMIT 1   [ RunTime:0.000298s ]
+
+[ 2013-11-06T12:39:02+08:00 ] 192.168.201.223 /api/uc.php?time=1383712742&code=659cE97Gd7LHYPSQSGaCevJ74BZGq%2BmHu4VhV7VFH29RzF4aHaiN%2Fp%2BxgZmlp1QTpx2rCTgQwzBr0hWj1f1R7Ix8B9yRUyBa0nKaqT3Px1hkuWTgUG6ZMzIoSjIes%2FJ0uJIjeuH0pT75gRKCFnOI93lfLoh%2BHbfW%2FYrun6V9Z%2BwcSg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002212s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1544 ) LIMIT 1   [ RunTime:0.000576s ]
+
+[ 2013-11-06T13:21:27+08:00 ] 192.168.178.81 /api/uc.php?time=1383715287&code=e9fe2jb0tAUH5b3xPdN9IQsV3wM3I9wtkVnTptqoffH69BhJGfoGqtfij%2FjoLmXvNeO6LuMZ0LW46htpxIrE4%2FSCLEmpnvbfF8UcJ6SA7RKOZXvOhb2dRY3UBgvwu%2FkemObSTAj1GsefgFYzcQgJbfDwL48y1n8EG2CfeuWr
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002094s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2444 ) LIMIT 1   [ RunTime:0.000512s ]
+
+[ 2013-11-06T13:21:33+08:00 ] 192.168.136.216 /api/uc.php?time=1383715293&code=49e6S1S4yiwBEv%2FyVykiZ6nNHN9IHvrVxjJS%2BvLKrcs4uFPP1jjUxtMhlrWyBYLq54XuwDRkOrxvbPoM%2Fkht9NuZYTrB1pbW0x3kL0ohvzl%2FZXfyLjQBX4vN1OGTZ3mi7tUz1xDIt6PC%2FrPOEOfHHNMPxQYIrhzfkA9hBcrpzT4I5A
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002290s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2509 ) LIMIT 1   [ RunTime:0.000621s ]
+
+[ 2013-11-06T13:34:21+08:00 ] 192.168.194.154 /api/uc.php?time=1383716061&code=1f05DqESSYryVsTXEeIUbdqtmEFhFD%2BkvYaV84hspBPXLbAoKGF2phftVP8Fizn2y3VXPsGps2dBn0xALibfPVRCqYdcALH4De8HLbYMvnpPrZv0VXnAZ9r04QYgVk0h0u1088jObfbRakeDNTBTnGJHXMnYI4GMF4aAcA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002286s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2562 ) LIMIT 1   [ RunTime:0.000534s ]
+SQL: INSERT INTO `sdk_accounts` (`account_id`,`user_name`,`email`,`password`,`reg_time`) VALUES (2562,'yys','502469330@qq.com','189a67d37b5bd9d1a6ca66d0e63119c0b57c22ae',1383716061) [ RunTime:0.004772s ]
+
+[ 2013-11-06T13:34:47+08:00 ] 192.168.194.154 /api/uc.php?time=1383716087&code=c43e6a368EyvrQe9RzJMM3yP6lWICbnXoHOqCKyadw4gFnxgdMJfSgG7ZC1r3uA1%2BMm6kcHTRbvBRLK5YcRdlNVJxNgc0pNpsLxnDWHzaEkTsZUX9UBjrrPyJtZ51rIgAu80KIlQR21WUSyGuimfi1f%2BDhNiWxOJWCeZhw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.001942s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2562 ) LIMIT 1   [ RunTime:0.000321s ]
+
+[ 2013-11-06T14:00:29+08:00 ] 202.116.192.50 /api/uc.php?code=9a35ngtOehprdU41T16zbfX%2B7f1qX%2FodIqUVYBWlsMlgf2GMATOSMsVNM5anmedruM1Stvd8gmVmXl%2FzoN4KLQZ%2FlyT%2BBc388DRgOodZlxntNpc&__times__=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-11-06T14:00:29+08:00 ] 192.168.135.79 /api/uc.php?time=1383717629&code=2dd8WAHElKc%2BSTbjahS1HCmaMs9v7vnkCZZ08XcDastDQlwcabODY0eJpPnk1UwtjWOVduHNEvFw4A8FwXfSUepHR7THLNeJkvM4HHBx9aNK61yEOw%2BQqxrAimTA4azUTPS6CFZGwZSgOo2nM7DdgfPKaFtgWxroSSLNKc4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002128s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 846 ) LIMIT 1   [ RunTime:0.000507s ]
+NOTIC: [8] Undefined index:  apph D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 169 行.
+NOTIC: [8] Undefined offset:  2 D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 141 行.
+
+[ 2013-11-06T15:36:32+08:00 ] 192.168.133.216 /api/uc.php?time=1383723391&code=bc5aZvqokJbjqg4irp7pVn9Rq7nLz%2B7%2F1%2BAWIHeEUNbQWVph7UPGjW4ax1NRbBmOQcF2j2uyWEUtACM3VH3V7lOvFnaC%2FCeeYtk7alUkc2vfZUuC%2FNeUF8eZ3zsiNVfrcN6WhBSvqSO9pSP717XA3yW%2FWwYIhzLpsMFt7uyLLi4T
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002358s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 129 ) LIMIT 1   [ RunTime:0.000584s ]
+
+[ 2013-11-06T15:38:08+08:00 ] 192.168.182.8 /api/uc.php?time=1383723486&code=9997lNdMS8f4ywqcCtBDioWArKvGuSNYnEbmmpCkxNcvuRn0GQNRfX%2BLqaKVXyPxSTpXpY%2FmtnlKoBk6w%2BhdCId0BdpggyKDAwNFU%2Bg50sJfDc7qOV0jtqh7BHLymp92XqCjS1K9kRov243I0uPRabPIGvqyqUG7IRQ%2FL45n%2FAmMrImVlA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002221s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1767 ) LIMIT 1   [ RunTime:0.000573s ]
+
+[ 2013-11-06T16:21:11+08:00 ] 192.168.149.92 /api/uc.php?time=1383726069&code=0721WLyNrGfDdNU%2BXjSqNAS%2BK%2FcO4F2UX6mJUqk6t%2Blj0tBNFPF0s57bi%2Fy5C%2FpP3JD9LJ4Xk%2FZ2BmVd%2BDUCLEIbOEsvuuUPSrvOY66f62o%2BXB1x7E%2FaeY1YK22%2B%2BEJ%2B9g08%2B9uCRkkyb5uzBjbn4DnhFTznNB0JOWHaWzJGCJnKVA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002442s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2136 ) LIMIT 1   [ RunTime:0.000576s ]
+
+[ 2013-11-06T16:21:25+08:00 ] 192.168.149.92 /api/uc.php?time=1383726084&code=cb98irvdJaXR2GcQBBQl3oRfQI1%2BDSkaacIP6ucr6ppgKQDPhv113%2F8OzyjXVs0%2FvmUS8XsGbqOorEGuBw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-11-06T16:37:13+08:00 ] 192.168.222.82 /api/uc.php?time=1383727033&code=f339THGAD39uyffZroexcDXwfSTwH8OLHvMCeP2y2k3LU3WAgIGPz%2F5eZFF%2FGbweP5zsHwec3kX4Ako4bAVvZXKdDoP7Ya31Y8y%2BNCc8pjPmZ1zjm347PPNrVWAGpJogm7V59z12R9xa%2Fs8cg5SnvebZ7VdVwaoN%2BRRea%2B550kG3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001142s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002150s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 900 ) LIMIT 1   [ RunTime:0.000492s ]
+
+[ 2013-11-06T17:38:16+08:00 ] 192.168.201.108 /api/uc.php?time=1383730696&code=facfdw4oKNJ5Stqq0M53pt3SHaIzEH%2FCCR0mQVA%2FltADkN9JlgWSj20WmLlQ8bzLG0hebeLmx%2F6L8hAytN2H7yOket16lHv%2BABmb7tvelNyXkbaTK7nTsIOKgRblxUm6YmMBci6MBvhNjN1jLab2W1w7mMUJ8rj7W1MRpUBkCDrdeA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002260s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2531 ) LIMIT 1   [ RunTime:0.000591s ]
+
+[ 2013-11-06T18:08:02+08:00 ] 192.168.156.142 /api/uc.php?time=1383732480&code=ddd3nM%2BMkwAFqvXJGb4D2NdGj1Q%2Fyb%2Fzax9oCekzqlzzXF2GXD9QRCY4GDI1aTSzvYP%2Fys6LkEgvBHt%2FmO7D5kxJoDewRJ7e7LDKhDJN%2B3DIrApjT8%2BWn5UVi%2FkXW7fIlhSJ0GNchvpheaHFwyxiC3b%2FVauGPGjYualtbUiRvb5B
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002275s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 880 ) LIMIT 1   [ RunTime:0.000570s ]
+
+[ 2013-11-06T18:12:02+08:00 ] 192.168.201.45 /api/uc.php?time=1383732721&code=8c17f8imIl6KITK5M0f0H99u4Q97wefXzsUqJa4LpUgpqfP6ZxXt3aedXfJIMxKy%2Bv3R87aC%2F2ej5X7%2BbJtt9QcBh87W%2FVxg7uRUTh6ibS%2Bx1ogKgpdxHYqVAatBRv%2B63Bm%2FLLCzGtlj8ECrZO8SKEBAn6IQxM372P%2BgWA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002024s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2497 ) LIMIT 1   [ RunTime:0.000504s ]
+
+[ 2013-11-06T18:29:25+08:00 ] 192.168.164.216 /api/uc.php?time=1383733765&code=cc77VCcyqagmRdp37pbasDM0vvDbBuQ1088as4o7lg5W%2BZOlSUpto3Wvmo25q7NiO4fwOjLgIZdMSTPSjIsrqXAaJgZ%2F8XMxqpBBI%2Bvbh4hFpS8DIEQF2eLxrbUHASwsffaXwfPEJnR2ju%2F5Ms2908QbM4gn6dZFIuUyIhFAjw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002206s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1079 ) LIMIT 1   [ RunTime:0.000539s ]
+
+[ 2013-11-06T19:17:55+08:00 ] 192.168.137.13 /api/uc.php?time=1383736675&code=5100REZwafHLCa76xE30VkHmyYiepUgw2h40uQqJA5wkJrSw47BsZ0%2FxPDUkhK2iuZ97nPzXWaoUrs1oytwoswPEIYpJNFbOsw0RbR9PbWZ8yaL1k%2Bzz%2BPdfj3KQWWXrXhagnE9s%2BjhUQ70oBziI%2Fwpo7k38yU3d04QtLg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002307s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2320 ) LIMIT 1   [ RunTime:0.000478s ]
+
+[ 2013-11-06T21:55:33+08:00 ] 192.168.162.204 /api/uc.php?time=1383746133&code=c6d4W9YRIhzuTKHmIdYMwGSVaavh6bFBMU%2BtaJF3C3EtXP4Qa3btLqMB6dVxS%2Fr2Ccw8xtoBYQ5sYzsMUvsXgWpoQS2%2FR0TrEYzdccqgGRr7DbaMyvbdRT6KKD%2BYHjjL063RbneaPcDUNydtBWjrTocV7pn%2BN8ObkEsuVpi8FFYt8LD0mSnf0eY
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002294s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 751 ) LIMIT 1   [ RunTime:0.000598s ]
+
+[ 2013-11-06T22:04:11+08:00 ] 192.168.201.215 /api/uc.php?time=1383746651&code=1d11RWOquzKVkt3BnAF0mxVohfJeRUQozniTZfbt6InFzpPMYgnwCdMCCvAJZ%2F028BvbHiuMldQmMPQcftlvCFMazE08n5eW0D%2BjWUXNx5XQsw96QxwURmRh3BltP82LJ%2Fgk0rKSQMb%2F%2BRi5fnljB6fEV9aP75S2tdaQeg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002069s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1773 ) LIMIT 1   [ RunTime:0.000616s ]
+
+[ 2013-11-06T23:24:13+08:00 ] 192.168.201.234 /api/uc.php?time=1383751453&code=0411fZTeiLdI2TcNYFWF9kSueaLsHj8X5sFyaBMlQi8yrEtvHg9%2BdZBbE8KZxuir6EW%2FTltbdvfA3lgxb9vBo2RmYtzZ3mY9h%2FCOoDWFw%2FtFJMylDYv24ArWv4oMYK0bi7yk9UYeXhjMneQNKTQ%2Fnq6puxqBvtp8F4UCqK7UkhUxuSo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001255s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.001959s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2549 ) LIMIT 1   [ RunTime:0.000370s ]
+
+[ 2013-11-06T23:31:10+08:00 ] 192.168.131.94 /api/uc.php?time=1383751870&code=e5d2H6iXDziUc%2FXuarHPsYXnHkjpJbK7EJGNjU2DEt65c08bH1GNgWNjRXtd8G47%2Ft%2F7%2FtBn4QGxNymADwDURki0aZ933vT279KmyexqOv%2Fj8ZHaVA7UbZiFMdFhfLIQApUDKWXja2t%2F6IJ2ovcL%2F%2B8IXApja2Q6RDICdHTGN0Tb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002396s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 709 ) LIMIT 1   [ RunTime:0.000563s ]
+
+[ 2013-11-06T23:33:48+08:00 ] 192.168.180.217 /api/uc.php?time=1383752027&code=173bcKcDjmeSBaR%2BTzYBxNMuTCFolIHq0AglnnvLY5hlP6pkBcmEATAAhdII7RJekZedFrMiEAck914jnXFrgKBZWKOuqQCAKz5ZmWnssHsKSK2tB9txoCrVpDOn5jdq2MuDdjivBvPN2b8%2FXN2ScQs%2BOn3B8q83VxTqq8mFzQ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.001992s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2563 ) LIMIT 1   [ RunTime:0.000404s ]
+SQL: INSERT INTO `sdk_accounts` (`account_id`,`user_name`,`email`,`password`,`reg_time`) VALUES (2563,'yaoyao','751524704@qq.com','6f91955d586b99674a014ef0f0cdd474f68bca53',1383752028) [ RunTime:0.001852s ]
+
+[ 2013-11-06T23:38:08+08:00 ] 192.168.140.2 /api/uc.php?time=1383752288&code=ba78SauClreuJnPPm3VY7Fv7jBhh2trZy%2FqyiV4d2Jy1BOCVPhqGpJKGA0l4GSmQp89AZbQi22NF1JMsSNkB6q65cE42ts7lqJHcHGFe94ZImiQXMB1u9FG4NztS7qXLUwQjvBkjMiQIVjMYJjmS6aubJIVpJvZj3fjzFhkoifw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002136s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 398 ) LIMIT 1   [ RunTime:0.000611s ]
+
+[ 2013-11-06T23:53:05+08:00 ] 192.168.203.136 /api/uc.php?time=1383753185&code=29c9KB1tLvGazKoCVPhoFWIHeHdJZmm9Jkiu%2B3XkODmhdMDHLOYwpyLzUrlxBzriRjnvgmkxwutnr30nX1%2FcPqTU8MzAe7INeYJTsOSPvUGxN8dfQ94%2FQSqI4TbrtuX4ahWGD8MvqgqlBlUhEpALvaq3sHqN%2BD3bnhdEscY1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002163s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 643 ) LIMIT 1   [ RunTime:0.000502s ]
+

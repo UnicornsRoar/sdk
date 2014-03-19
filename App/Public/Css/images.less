@@ -1,0 +1,172 @@
+
+/* images path 
+CSS sprite  图片名最好和class一样，才可以直接复制粘贴CSS
+*/ 
+@images-path:         "../images";
+// .icon{
+// 	background: url("@{images-path}/sprite.png") no-repeat;
+// }
+.top-nav {
+	background: url("@{images-path}/green-bg.png") repeat;
+}
+a.btn{
+ 	background: url("@{images-path}/btn-bg.png") repeat;
+}
+a.btn button{
+	.size(42px,90px);
+	background: url("@{images-path}/pre-nex.png");
+}
+a.btn button.prev{
+ 	background-position: 0 0;
+}
+a.btn button.next{
+    background-position: -42px 0;
+}
+a.btn:hover{
+	background: url("@{images-path}/btn-bg-on.png") repeat;	
+}
+.content:hover .date{
+ 	background: url("@{images-path}/green-bg.png") repeat;
+}
+.date{
+	background: url("@{images-path}/lightgreen-bg.png") repeat;
+}
+.previewunit{
+	background: url("@{images-path}/previewbg.png") repeat;
+}
+.big-btn{
+	background: url("@{images-path}/bigbtn.png") repeat-x;
+	&:hover{
+	background: url("@{images-path}/bigbtn-hv.png") repeat-x;
+	}
+    &:active{
+    background: url("@{images-path}/bigbtn-at.png") repeat-x;
+   }
+}
+.btn-log{
+  background: url("@{images-path}/logbtn.png") repeat-x;
+  &:hover{
+  background: url("@{images-path}/logbtn-hv.png") repeat-x;
+  }
+  &:active{
+  background: url("@{images-path}/logbtn-at.png") repeat-x;
+  }
+}
+.btn-cc{
+  background: url("@{images-path}/ccbtn.png") repeat-x;
+  &:hover{
+  background: url("@{images-path}/ccbtn-hv.png") repeat-x;
+  }
+  &:active{
+  background: url("@{images-path}/ccbtn-at.png") repeat-x; 
+  } 
+}
+.global-button,.reply button,.plsh-button,.reply3 button{
+   background: url("@{images-path}/publish-bg.png") repeat;
+}
+.replyunit{
+  background: url("@{images-path}/green-bg.png") repeat;
+}
+.btn-next{
+	background: url("@{images-path}/logbtn.png")  repeat-x;
+  &:hover{
+  background: url("@{images-path}/logbtn-hv.png")  repeat-x;
+  }
+  &:active{
+  background: url("@{images-path}/logbtn-at.png")  repeat-x;
+  }
+}
+.load-pic{
+	.size(50px,50px);
+	background: url("@{images-path}/loading.gif");
+}
+.imgtime{
+	background: url("@{images-path}/time.png");
+}
+.imgplace{
+	background: url("@{images-path}/place.png");
+}
+.imghost{
+	background: url("@{images-path}/host.png");	
+}
+.like-on{
+	background: url("@{images-path}/like-on.png");	
+}
+.share-on{
+	background: url("@{images-path}/share-on.png");	
+}
+.imglike{
+	.size(15px,15px);
+	background: url("@{images-path}/like.png");
+}
+.imgshare{
+	.size(19px,17px);
+	background: url("@{images-path}/share.png");	
+}
+.logtype{
+	background: url("@{images-path}/login-bg.png");
+}
+.close{
+	.size(15px,30px);
+	margin-left: 20px;
+	margin-top: 9px;
+	background: url("@{images-path}/close.png") no-repeat;
+}
+.turn li{
+	background-image:url("@{images-path}/arrows.png"); 
+	background-repeat: no-repeat;
+	background-position: 206px 0 ;
+}
+.forget1 .content span.must1{
+	.size(18px,18px);
+	margin: 8px 0 0 8px;
+	background-image:url("@{images-path}/must2.png"); 
+}
+.forget1 .content span.must2{
+	.size(37px,37px);
+	margin: 5px 25px 0 0;
+	background-image:url("@{images-path}/must.png");
+}
+.base-title a.back{
+  background: url("@{images-path}/acti.png") no-repeat;
+   
+  &:hover{
+    background: url("@{images-path}/acti-hv.png") no-repeat; 
+  }
+  &:active{
+    background: url("@{images-path}/acti-at.png") no-repeat;
+  }
+}
+.my-bar li .border{
+	.size(7px,11px);
+	background: url("@{images-path}/border.png") no-repeat;
+}
+.reply i.triangle{
+	.size(8px,5px);
+	background: url("@{images-path}/triangle.png") no-repeat;
+}
+.dialog-bg{
+  z-index: 4;
+}
+.login{
+	z-index: 8;
+}
+.vedioplay{
+	z-index: 5;
+}
+.hoverli{
+	z-index: 3;
+}
+.play{
+	z-index: 3;
+}
+.imagesdiv{
+    z-index: 6;
+}
+a.btn{
+  z-index: 7;
+}
+.i-detail{
+  z-index: 7;
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>广外隧道口</title>
+		
+		<link rel="stylesheet" type="text/css" href="__CSS__/common.css" media="screen" id="themes">
+		<script type="text/javascript" src="__JS__/jquery.js"></script>
+		<script type="text/javascript" src="__JS__/jquery.cookie.js"></script>
+		<script type="text/javascript" src="__JS__/admin_common.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("a").focus(function() {
+					$(this).blur();
+				});
+
+				/* 左侧菜单 */
+				$("#left h5").click(function() {
+					var obj = $(this).next();
+					obj.is(":hidden") ? obj.slideDown("fast") : obj.slideUp("fast");
+				});
+
+				/* 判断浏览器 */
+				if(!$.browser.msie) {
+					$("#left").css({"margin-right":"3px","-moz-box-shadow":"2px 2px 3px #DDD","-webkit-box-shadow":"2px 2px 3px #DDD"});
+				};
+			})
+		</script>
+	</head>
+	<body>
+		<div id="left" style="margin-right: 3px; -webkit-box-shadow: rgb(221, 221, 221) 2px 2px 3px; ">
+			<h5>活动管理</h5>
+			<ul>
+				<li><a href="{:U('Events/allEvents')}" target="frameRight">所有活动</a></li>
+				<!-- <li><a href="{:U('Events/allHots')}" target="frameRight">热门活动</a></li> -->
+			</ul>
+			<h5>用户管理</h5>
+			<ul>
+				<li><a href="{:U('Accounts/allAccounts')}" target="frameRight">用户信息</a></li>
+			</ul>
+			<h5>活动杂项管理</h5>
+			<ul>
+				<li><a href="{:U('Mass/allComments')}" target="frameRight">评论管理</a></li>
+				<li><a href="{:U('Mass/allAttachments')}" target="frameRight">附件管理</a></li>
+				<li><a href="{:U('Mass/allVideos')}" target="frameRight">视频管理</a></li>
+			</ul>
+		</div>
+	
+</body></html>

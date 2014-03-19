@@ -1,0 +1,55 @@
+<include file="Public:header"/>
+<div class="container">
+  <p class="bigtitle grid24">{$page_name}</p>
+  <div class="row-fluid">
+    <div class="grid17">
+	<if condition="!empty($coming)">
+    <volist name="coming" id="co">
+      <div class="unit">
+        <img src="{$co.poster_src}" alt="" class="poster fl">
+        <div class="detail2 fl">
+          <div class="clearfix">
+          <div class="{$co['day']['class']} fl">{$co.day.info}</div>
+          <a href="{:U('Events/activityDetail/e')}/{$co.event_id}" class="name fl">
+            <span>{$co.event_name}</span>
+          </a>
+          </div>
+          <ul>
+            <li>
+              <span class="imgtime fl icon">时间</span>
+              <p class="information fl">{$co.start_time|date="y-m-d H:i",###} 周{$co.start_day}</p>
+            </li>
+            <li>
+              <span class="imgplace fl icon">地点</span>
+              <p class="information fl">{$co.event_locale}</p>
+            </li>
+            <li>
+              <span class="imghost fl icon">主办方</span>
+              <p class="information fl">{$co.event_host}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+	</volist>
+	 <div class="ipage">
+        <ul class="page">
+          {$page}
+        </ul>
+      </div>
+	<else />
+        最近大家都很忙，没时间搞活动哦
+      </if>
+    </div>
+    <div class="grid7 cutline padlef40">
+      <p class="crumb">
+      <if condition="$page_name eq '最新发布'">
+        <a href="{:U('Events/instant')}">传送门&gt;&gt;即将开始</a>
+      <else />
+        <a href="{:U('Events/newest')}">传送门&gt;&gt;最新发布</a>
+      </if>
+      </p>
+    </div>
+  </div>
+</div>
+
+<include file="Public:footer"/>

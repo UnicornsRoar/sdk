@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>广外隧道口后台登录界面</title>
+<link rel="stylesheet" type="text/css" href="__CSS__/login.css" />
+</head>
+<body>
+<form id="login-form" action="__URL__/doLogin" method="post">
+  <fieldset>
+  <legend>登录</legend>
+  <label for="login">用户名：</label>
+  <input type="text" id="login" name="name" maxlength="20" />
+  <div class="clear"></div>
+  <label for="password">密&nbsp;&nbsp;&nbsp;码：</label>
+  <input type="password" id="password" name="password" maxlength="20" />
+  <label for="check_word">验证码：</label>
+  <input type="text" id="check_input" name="check_word" maxlength="4" />
+  <input type="hidden" name="login" value="1" />
+  <img id="check_img" src="__IMG__/verify.php" onClick="this.src='__IMG__/verify.php?'+ Math.random()" style="cursor: pointer" title="看不清？点击刷新" />
+  
+  
+ 
+  <input type="submit" style="margin-left:320px;margin-top: 28px;" class="button" name="commit" value="登录" />
+  </fieldset>
+</form>
+
+</body></html>

@@ -1,0 +1,247 @@
+[ 2013-10-02T00:43:17+08:00 ] 202.116.192.50 /api/uc.php?code=4637FW%2FqJgfkmTAguvB68yVAOWuvPoYcJzDu8ExnL58iZT4uQf1SKFafS7XmTA6WdiuKSteESyQ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-10-02T00:43:37+08:00 ] 202.116.192.50 /api/uc.php?code=6b1dHddH9JH%2BNSnIJVnw4esggzBJnPY6pT2RDc8VQzzza63CFTnz3aWKn2%2FT7%2FNat%2FUHE6vXWJk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-10-02T00:43:50+08:00 ] 202.116.192.50 /api/uc.php?code=775c1J4R1af4R%2BMbzvdPxjwU65ILHaUmtsFICW1WyUD1zRXE86k44Ze40DMWHiPt%2FKCbFCO9DFA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-10-02T00:48:30+08:00 ] 202.116.192.50 /api/uc.php?code=db54hGAj5KaXneeGDRI2Ryph9EuFHbwQh%2BhbxuvJAZoBAdpLw9F8vHxeW916Id8P2wuvtYfqSWo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001092s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-10-02T00:54:31+08:00 ] 202.116.192.50 /api/uc.php?code=6eaeOu0wQeMbGVmKKo1YFUud7BATTOX1TXbANR7792NtwPnD%2F2rkh7taNTWfp3F0RWR37PP3tJHYL71Epc0&__times__=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Undefined index:  1 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  2 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  3 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  4 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  5 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  6 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  8 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  UC_API D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+
+[ 2013-10-02T01:09:51+08:00 ] 202.116.192.50 /api/uc.php?code=7328VcZdue7qN18tg6RC0r4dKQz68d3KH%2BFf%2BaV1eFUD5L8V90iPBL%2FICod1tidLewio8Yx5gqQ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-10-02T01:29:09+08:00 ] 202.116.192.50 /api/uc.php?code=a2a5jHhom%2BXKWyN1R37wpDHQ9YsQf%2FP8W9CKY66RdVW2lfdMzTxSWQZSWdAh6Y2LYLG%2B2rXaESRapF4xTX8&__times__=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Undefined index:  2 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  3 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  4 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  5 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  6 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  8 D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  type D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  name D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  url D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  ip D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  viewprourl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  apifilename D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  charset D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  synlogin D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extra D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  extraurl D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  recvnote D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index:  UC_API D:\wwwroot\mainweb\sdk\uc_client\lib\xml.class.php 第 69 行.
+
+[ 2013-10-02T01:29:09+08:00 ] 116.23.132.59 /api/uc.php?time=1380648549&code=b642nk%2BR8D57SKuoa4T5Zi7TU1FdO3JmRBekBNte3BWHIbN6e0%2BIiKWsrUhMgcabSt0Z0HPQCDDY4%2FW3%2BElxcNHz2rDynSC%2FJeCSuXl%2Fr0UuPzS8A%2BT62dGMw2RGwfePdixdClsNeB3XVhJB%2FngEa1t7hjFicLPTdAIkEjLZ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001217s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002250s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 1181 ) LIMIT 1   [ RunTime:0.000590s ]
+NOTIC: [8] Undefined index:  app1 D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 169 行.
+NOTIC: [8] Undefined index:  apph D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 169 行.
+NOTIC: [8] Undefined offset:  2 D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 141 行.
+
+[ 2013-10-02T01:29:36+08:00 ] 202.116.192.50 /api/uc.php?code=459cCx%2FP0PCi9OU90BkFPEwIvqeRVms3bSBSrvQqCYcPeU%2B20YMOVoTtd0cACyAaPyFwnznovh0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001010s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+
+[ 2013-10-02T13:55:04+08:00 ] 192.168.137.94 /api/uc.php?time=1380693303&code=480fRFYDmiuyAxKFURsK2wUgHJ5Hw2JgHDJipxbEqxRRXKszryZYjdmT94LFiklNg%2FITuzzMET6S8FaGQRnrKVOavfqrQshNMlQbgEWFAKSN0rteMfDGYQYDYS%2FNNG%2By6erykME047oWCwOrP%2BM5z1qRaU2xwrHKKLJwCHl5%2BVdsfw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002157s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2241 ) LIMIT 1   [ RunTime:0.000601s ]
+

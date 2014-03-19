@@ -1,0 +1,304 @@
+<include file="Public:header"/>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2550815018" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(function(){
+    $(".board-input").click(function(){
+      $(".board-input").slideUp(400);
+      $(".reply3").slideDown(400);
+      $(".reply3 form #input").focus();
+    });
+    $(".reply").hide();
+    var mark = 1;
+    $(".j-more").click(function(){ 
+      var reply=$(this).parent().parent().nextAll(".reply");
+      if(mark==1){
+        $(this).parent().parent().parent().css("border-bottom-width","0");
+        mark=0; 
+        reply.slideDown(500);
+      }
+      else{
+        $(this).parent().parent().parent().css("border-bottom-width","1px");
+        mark=1;
+        reply.slideUp(500);
+      }
+      $(".reply form #input").focus();
+    });
+    $(".play").click(function(){
+        $(".vedioplay").show();
+        $(".dialog-bg").show(400);
+      });
+  });
+
+  $(function(){
+    $("#marklike").click(function(){
+      var status = $($(this).children()[1]);
+      $.post("{:U('Accounts/isLogined')}",{},
+        function(isLogined){
+          if (isLogined == 1){
+            if (status.html() == '我很喜欢')
+              $.post(
+                '__URL__/marklike',
+                {eventId:<php>echo $detail['event_id']</php>},
+                function(feedback){
+                  if (feedback == 1){
+                    status.html('已经喜欢');
+                    var collectCount = parseInt($('#collectCount').html());
+                    $('#collectCount').html((collectCount+1)+'人喜欢');
+                  }
+                }
+              );
+            else{
+              if (status.html() == '取消喜欢')
+                $.post(
+                  '__URL__/unlike',
+                  {eventId:<php>echo $detail['event_id']</php>},
+                  function(feedback){
+                    if (feedback == 1){
+                      status.html('我很喜欢');
+                      var collectCount = parseInt($('#collectCount').html());
+                      $('#collectCount').html((collectCount-1)+'人喜欢');
+                    }
+                  }
+                );
+            }
+          }else{
+            alert('请先登录');
+          }
+        }
+      )
+    });
+  });
+
+  $(function(){
+    $("#marklike").hover(
+      function(){
+        var status = $($(this).children()[1]);
+        if (status.html() == '已经喜欢'){
+          status.html('取消喜欢');
+        }
+      },
+      function(){
+        var status = $($(this).children()[1]);
+        if (status.html() == '取消喜欢')
+          status.html('已经喜欢');
+    });
+  });
+
+  <if condition="$detail['has_videos'] eq 1">
+      video_object = Array();
+      <volist name="videos" id="vi">
+      video_object[{$vi.video_id}] = '{$vi.video_object}';
+      </volist>
+  </if>
+
+  //添加视频地址
+  $(function(){
+    $(".thevedio").click(function(){
+      var video_object = $(this).children(".video_object").val();
+      $("#playDiv").append(video_object);
+    });
+  });
+
+</script>
+<!-- 半透明的背景 -->
+<div class="dialog-bg"></div>
+<!-- 视频弹出框框 -->
+<if condition="$detail.has_videos eq 1">
+  <div class="login vedioplay" style="width:480px;height: 420px">
+        <p><a href="javascript:void(0)" id="playDiv" class="fr cancel">x</a></p>
+  </div>
+</if>
+<div class="container">
+  <p class="bigtitle grid24">{$detail.event_name}</p> 
+  <ul class="detail3 fl">
+    <li>
+      <span class="imgtime fl icon"></span>
+      <span class="information fl">
+        {$detail.start_time|date="y-m-d H:i",###} 周{$detail.start_day}
+        <if condition="isset($detail['end_day'])">
+         &nbsp; 至 &nbsp;{$detail.end_time|date="y-m-d H:i",###} 周{$detail.end_day}
+        </if>
+      </span>
+    </li>
+    <li>
+      <span class="imgplace fl icon"></span>
+      <span class="information fl">{$detail.event_locale|default="地点待定"}</span>
+    </li>
+    <li>
+      <span class="imghost fl icon"></span>
+      <span class="information fl">{$detail.event_host}</span>
+    </li>
+    <li><span class="information">|</span></li>
+    <li>
+      <span class="fl like-on icon"></span>
+
+      <span class="information fl" id="collectCount">{$detail.loves}人喜欢</span>
+    </li>
+    <li>
+      <span class="fl share-on icon"></span>
+      <span class="information fl" id="shareCount">{$detail.share_count}人分享</span>
+    </li>
+  </ul>  
+  <div class="row-fluid">
+    <div class="grid15">
+      <p class="smalltitle">
+        活动详情
+      </p>  
+      <p class="intro">
+        {$detail.event_details}
+        <!-- <a href="#" class="more">更多&gt;&gt;</a> -->
+      </p>
+      <div class="button">
+        <button>
+          <div class="btn-R">
+            <div class="btn-R1" id="marklike">
+              <span class="imglike icon fl"></span>
+              <span class="fl"><if condition="$isCollected eq 1">已经收藏<else />我很喜欢</if></span>
+            </div>
+          </div>
+        </button>
+        <button type="button" id="wb_publisher">   
+          <div class="btn-B">
+            <div class="btn-B1">
+              <span class="imgshare icon fl"></span>
+              <span class="fl">我要分享</span>
+            </div>
+          </div>
+        </wb:button>
+         <script type="text/javascript">
+          WB2.anyWhere(function(W){
+            W.widget.publish({
+                action:"pubilish",
+                type:"web",
+                language:"zh_cn",
+                refer:window.location,
+                appkey:"473q1s",
+                id: "wb_publisher",
+                default_text : "{$detail.event_name} "+window.location,
+                default_image : "http://www.suidaokou.com{$detail.poster_src}",
+                uid : 2553094622,
+                callback: function(){
+                  alert(11111111);
+                  /*$.post(
+                    '__URL__/addShare',
+                    {eventId:<php>echo $detail['event_id']</php>},
+                    function(feedback){
+                      alert('feedback:'+feedback);
+                      if (feedback == 1){
+                        var shareCount = parseInt($('#shareCount').html());
+                        $('#shareCount').html((shareCount+1)+'人分享');
+                      }
+                    }
+                  );*/
+                }
+            });
+        });
+         </script>
+      </div>
+      <p class="smalltitle">
+        留言板
+      </p>
+      <input type="text" class="board-input" value="说些什么吧">
+      <div class="reply3 fl  clearfix">
+        <form action="__URL__/writeComment" method="post">
+          <textarea name="comment" id="input"></textarea>
+          <button class="fr" type="submit" name="eventId" value="{$detail.event_id}">发布</button>
+        </form>
+      </div>
+      <ul class="board">
+      <volist name="comments" id="first">
+        <li class="clearfix">
+          <!-- <img src="{$first.head|default='__IMG__/head/head.png'}" alt="" class="head fl"/> -->
+          <img src="http://passport.mygdufs.com/ucenter/avatar.php?uid={$first.account_id}&size=small"class="head fl"/>
+          <div class="b-content fl">
+            <p><span class="user">{$first.user_name}</span>
+              <span class="time">{$first.post_time|date="y-m-d",###}</span>
+              <span class="time">{$first.post_time|date="H:i",###}</span>
+            </p>
+          </div>
+          <div class="b-content fl">
+            <div class="message">
+              {$first.comment}
+             </div>
+            <p class="clearfix">
+              <a href="javascript:void(0)" class="more fr j-more">回复</a>
+            </p>
+          </div>
+            <div class="reply reply4  clearfix fr">
+              <img src="__IMG__/triangle.png" alt="">
+              <form action="__URL__/reply" method="post">
+                <textarea name="comment" id="input"></textarea>
+                <button class="fr" name="cid" type="submit" value="{$first.comment_id}">发布</button>
+              </form>
+            </div>
+          <div class="b-content fr">
+            <if condition="isset($first['second'])">
+              <div class="re-message clearfix">
+                <volist name="first['second']" id="second">             
+                  <div class="reunit clearfix">
+                    <!-- <img src="{$second.head|default='__IMG__/head/head.png'}" alt="" class="head-reply fl"/> -->
+                    <img src="http://passport.mygdufs.com/ucenter/avatar.php?uid={$second.this_acc_id}&size=small" alt="" class="head-reply fl"/>
+                    <div class="b-content fl">
+                      <p><span class="user">{$second.this_acc_name}</span>
+                        <span class="time">{$second.post_time|date="y-m-d",###}</span>
+                        <span class="time">{$second.post_time|date="H:i",###}</span>
+                      </p>
+                      <div class="message">
+                        {$second.comment}
+                      </div>
+                      <p class="clearfix"><a href="javascript:void(0)" class="more fr j-more">回复</a></p>
+                    </div>
+                    <div class=" reply2 reply fl clearfix">
+                      <img src="__IMG__/triangle.png" alt=""/>
+                      <form action="__URL__/reply" method="post">
+                        <textarea name="comment" id="input"></textarea>
+                        <button class="fr" name="cid" type="submit" value="{$second.comment_id}">发布</button>
+                      </form>
+                    </div>
+                  </div>              
+               </volist> 
+            </div>
+            </if>
+          </div>
+        </li>
+      </volist>
+      </ul>
+    </div> 
+    <div class="grid8 offset1">
+      <p class="smalltitle">
+        活动海报
+      </p>
+      <img src="__ROOT__{$detail.poster_src}" alt=""  class="bigposter"/>
+      <if condition="$detail['has_videos'] eq 1" >
+        <p class="smalltitle">
+          活动视频
+        </p>
+        <div class="clearfix">
+        <volist name="videos" id="$vi"> 
+           <!-- 如果是右边那个a,则<a href="javascript:void(0)" class=" v-last thevedio "> 就是加一个class -->
+            <a href="javascript:void(0)" class="thevedio">
+              <img src="__IMG__/vedio/play.png" alt="" class="play"/>
+              <img src='{$vi.video_img}' alt="" class="vedio"/>
+              <input type="hidden" class="video_object" value='{$vi.video_object}' />
+            </a>
+        </volist>
+        </div>
+<!--       <p class="clearfix">
+        <a href="#" class="more fr">更多&gt;&gt;</a>
+      </p> -->
+      </if>
+
+      <if condition="$detail['has_attachments'] eq 1">
+        <div class="attachment">
+          <p class="smalltitle">
+            相关附件
+          </p>
+          <volist name="attachments" id="at">     
+            <p><a href="{:U('Attachments/downLoad/f')}/{$at.attachment_id}">{$at.attachment_name}</a></p>
+          </volist>
+        </div>
+      </if>
+    </div>
+  </div>
+</div>
+<include file="Public:footer"/>

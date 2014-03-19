@@ -1,0 +1,84 @@
+@import "variables.less";
+
+body, html {
+	font-size: @base-font-size;
+	font-family: @base-font-family;
+	line-height: @base-line-height;
+}
+a {
+	color:@text-color;
+}
+body{
+	background: @body-background;
+	line-height: 1.5;
+	word-wrap:break-word;
+}
+/*---------------- page header ----------------*/
+/* 居中容器 */
+.center {
+	margin: 0 auto;
+}
+.container {
+	.center;
+	width: @global-width;
+  min-width:@min-width;
+  max-width:@max-width;
+  z-index: 0;
+}
+.wrapper {
+	background: @global-white;
+}
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,img{margin:0;padding:0;}
+img,button{border:0;}
+button{cursor: pointer;}
+input,button{font-family: @base-font-family;}
+input{background: #fff;}
+ol,ul { list-style:none;}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+input:focus{outline: 0;}
+textarea:focus{outline: 0;}
+.fl{float:left;display: inline;}
+.fr{float:right;display: inline;}
+.textr{text-align: right;}
+.inl{display:inline;}
+.disn{display: none;}
+.marrit38{margin-right: 38px;} 
+.marlf112{margin-left: 112px;}
+.marbot20{margin-bottom: 20px;}
+.padlef40{padding-left: 40px;}
+a.more{
+  color:@title-blue;
+  font-size: 12px;
+  font-weight: normal;
+} 
+a.more:hover{
+  text-decoration: underline;
+}
+.borright{border-right: #bdbdbd 1px solid;}
+.borleft{border-left: #959595 1px solid;padding-left: 6px;}
+/* header */
+
+
+/* nav */
+
+
+/*---------------- page footer ----------------*/

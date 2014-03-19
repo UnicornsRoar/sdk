@@ -1,0 +1,47 @@
+html, body, img, a img, form{margin:0; padding:0; border:0 none}
+
+html, body, p, table{font:normal normal normal 14PX Tahoma,Verdana,Helvetica,Arial,sans-serif; line-height:150%}
+body, table{background-color:white}
+@media print{body *{color:#000 !important; border-color:#ccc !important}
+}
+
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; text-shadow:gray 0px 0px 5px; font-family:Verdana,Geneva,Arial,Helvetica,sans-serif; font-size-adjust:none; font-stretch:normal; font-style:normal; font-variant:normal; font-weight:bold; line-height:1.5em}
+ h1{font-size:15px}
+ h2{font-size:14px}
+ h3{font-size:13px}
+ h4{font-size:12px}
+ h5{font-size:11px}
+ h6{font-size:12px}
+
+a{text-decoration:none; color:#174B73; border-bottom:1px dashed gray}
+
+ 
+table.list{margin:3px 0px; padding:8px; border-collapse:collapse; border:1px solid gray; text-align:left; width:99%; float:left}
+
+table.select{margin:3px 0px; padding:3px; border-collapse:collapse; border:1px solid gray; text-align:left; width:500px; clear:both}
+table.order{margin:3px 0px; padding:3px; border-collapse:collapse; border:1px solid gray; text-align:left; width:260px; clear:both}
+table.login{margin:15% auto 0% auto; padding:3px; border-collapse:collapse; border:1px solid gray; text-align:left; width:350px; max-width:350px; clear:both}
+table.message{margin:10% auto 0px auto; padding:3px; border-collapse:collapse; border:1px solid gray; text-align:center; width:55%}
+table.error{margin:12px 0px; border-collapse:collapse; border:2px groove #d4d4d4; padding:5px; text-align:left; line-height:165%; width:90%}
+table td.topTd{background:url(../Images/bgline.gif) repeat-x; border-bottom:1pt solid gray}
+table td.bottomTd{background:url(../Images/bgline.gif) repeat-x; border-bottom:1pt solid gray}
+table th{background:#cdd}
+table thead th{border-left:1px solid #cdd; background-color:#dee; background-image:url(../Images/bgcolor.gif); color:#899}
+ table.message th, 
+ table.message td, 
+  table.select th, 
+ table.select td, 
+  table.order th, 
+ table.order td, 
+  table.error th, 
+ table.error td, 
+   table.login th, 
+ table.login td, 
+ table.list th, 
+ table.list td{border-left:1px solid silver; border-bottom:1px solid silver; vertical-align:top; padding:3px}
+
+table th.active, td.active{background-color:#CFC}
+table tr.row{background-color:#FFF}
+table tr.active{background-color:#CFC}
+table th.head{background:url(../Images/titlebg.gif) repeat-x; background-position:12px 45%; padding-left:25px; color:white}
+

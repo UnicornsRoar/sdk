@@ -1,0 +1,271 @@
+<include file="Public:header" />
+<div class="container">
+  <p class="new-title grid24">新活动发布</p>
+  <div class="row-fluid">
+    <div class="grid17">
+	<form id="create_event" action="{:U('Events/postActivity')}" method="post">
+      <div class="must">
+        <i class="must-i">必填项</i>
+      </div>
+    <div class="must-form">
+        <div class="row clearfix">
+          <p class="fl">活动名称：</p><input type="text" class="acti-input fl" name="event_name" id="event_name">
+        </div>
+        <div class="row clearfix">
+          <p class="fl">活动时间：</p>
+          <input type="text" class="acti-date fl datepicker"  name="start_time" id="start_time"/>
+<!--           <input type="text" class="acti-clock fl"/>
+          <input type="text" class="acti-clock fl marrit38"/> -->
+           {$start_hour_min}
+          <a class="endtime fl" href="#">结束时间？</a>
+        </div>
+         <div class="row j-close clearfix">
+          <p class="fl">结束时间：</p>
+          <input type="text" class="acti-date fl datepicker" name="end_time"/>
+		  {$end_hour_min}
+          <a class="close fl j-close" href="#"></a>
+         </div>
+        <div class="row clearfix">
+          <p class="fl">活动地点：</p><input type="text" class="acti-input fl"  name="event_locale" id="event_locale">
+        </div>
+        <div class="row clearfix">
+          <p class="fl">主办单位：</p><input type="text" class="acti-input fl" name="event_host" id="event_host">
+        </div>
+      </div>
+      <div class="must">
+        <i class="choose-i">选填项</i>
+      </div>
+      <div class="choose-form">
+        <div class="row clearfix">
+          <p class="fl">活动详情：</p>
+          <textarea class="acti-detail fl" name="event_details"></textarea>
+        </div>
+        <span >上传海报：</span>
+        <button class="addPoster">
+          <div class="btn-B">
+            <div class="btn-B1">
+            选择文件
+            </div>
+          </div>
+        </button>
+		<button class="deletePoster">
+          <div class="btn-B">
+            <div class="btn-B1">
+            删除文件
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="disn">
+      <form>
+        <input type="file" accept="image/png/jpg/gif" id="posterToUpload" name="poster_src"/>
+        <button type="submit">确定上传</button>
+	  </form>
+	  </div>
+      <div class="acti-upload">
+        <i class="acti-warn">请上传小于5M的png、jpg或gif格式的图像。</i>
+        <div class="preview1" id="poster_area">
+		<img id="loading" src="__JS__/AjaxFileUploaderV2.1/loading.gif" style="display:none;">
+		</div>
+
+		<button id="btn-G1" >
+			<div class="btn-G marbot20">
+			  <div class="btn-G1" >
+				 发布活动
+			  </div>
+			</div>
+		</button>
+      </div>
+	  <input type="hidden" name="submitted" value="submitted" />
+	  </form>
+    </div>
+    <div class="grid7 cutline placard padlef40">
+        <h1>你的活动将来会：</h1>
+        <p>1. 在首页的“最新发布”栏目中进行呈现。</p>
+        <p>2. 当活动即将开始之前，你的活动会被推送到首页“即将开始”栏目。</p>
+        <p>3. 如果你们的活动足够的出色，我们会考虑把你的活动置顶到我们首页的”精品活动”栏目，成为所有隧道口访问者的关注焦点。</p>
+    </div>
+  </div>
+</div>
+<script>
+/********************发布活动START**********************/
+/*
+ *检查元素是否为空
+ */
+function checkNotNull(id_name){
+	var selected_id = '#'+id_name;
+	if($.trim($(selected_id).val()) == ''){
+		return false;
+	}else{
+		return true;
+	}
+}
+/*
+ *检查活动名称是否为空
+ */
+function checkEventName(){
+	var id_name='event_name';
+	return (checkNotNull(id_name));
+}
+/*
+ *检查活动活动时间
+ */
+function checkEventTime(){
+	var id_name = 'start_time';
+	return (checkNotNull(id_name));
+}
+/*
+ *检查活动地点
+ */
+function checkEventLocale(){
+	var id_name = 'event_locale';
+	return (checkNotNull(id_name));
+}
+/*
+ *
+ */
+function checkEventHost(){
+	var id_name = 'event_host';
+	return (checkNotNull(id_name));
+}
+/*
+ *检查活动必须填信息
+ */
+function checkRequireEvent(){
+	var c_event_name = checkEventName();
+	var c_event_time = checkEventTime();
+	var c_event_locale = checkEventLocale();
+	var c_event_host = checkEventHost();
+	if (!c_event_name) {
+		art.dialog('活动名称是必须的');
+		setTimeout('closeDia()',2500);
+		return false;
+	}
+	if (!c_event_time) {
+		art.dialog('活动开始时间是必须的');
+		setTimeout('closeDia()',2500);
+		return false;
+	}
+	if (!c_event_locale) {
+		art.dialog('活动地点是必须的');
+		setTimeout('closeDia()',2500);
+		return false;
+	}
+	if (!c_event_host) {
+		art.dialog('活动单位是必须的');
+		setTimeout('closeDia()',2500);
+		return false;
+	}
+	return true;
+}
+$('#btn-G1').click(function(){
+	if(checkRequireEvent()){
+		$('#create_event').submit();
+	}
+});
+// 关闭弹出层
+function closeDia(){
+	$('.d-outer').first().hide();
+}
+/********************发布活动END**********************/
+
+/******************** 上传海报 ********************/
+
+/*隐藏删除文件按钮 */
+$('.deletePoster').hide();
+
+/*button模拟文件上传按钮*/
+	  $('.addPoster').live('click',function(){
+			$('#posterToUpload').trigger('click');
+			return false;
+		});
+		$('#posterToUpload').live('change',function(){
+			ajaxPosterUpload();
+		});
+
+
+function ajaxPosterUpload()
+{
+	// 显示加载的图标
+	$("#loading").show();
+	$.ajaxFileUpload
+	(
+		{
+			url:'{:U("Events/uploadPoster")}',
+			secureuri:false,
+			fileElementId:'posterToUpload',
+			dataType: 'json',
+			data:{name:'logan', id:'id'},
+			success: function (data, status)
+			{
+				if(typeof(data.error) != 'undefined')
+				{
+					if(data.error != '')
+					{
+						alert(data.error);
+					}else
+					{
+						var newImage = new Image(),
+							srcWidth = 0,//图片原始宽度
+							srcHeight = 0,//图片原始高度
+							scale = 0;//缩放比：原始大小 比 缩放后的大小
+						newImage.src = data.img_src;
+						$(newImage).live('load',function(){
+							//原始宽高
+							srcWidth = this.width;
+							srcHeight = this.height;
+							if(srcWidth > srcHeight){
+								scale = srcWidth / 500;
+								$('#poster_area').removeClass("preview1");
+								$('#poster_area').html('<img src="' + data.img_src + '" style="width:395px;height:280px;" />');
+								$('#create_event').append('<input type="hidden" name="poster_src" id="poster_src" value="'+data.img_src+'"/>');
+								$('.addPoster').hide();$('.deletePoster').show();
+							}else{
+								scale = srcHeight / 350;
+								$('#poster_area').html('<img src="' + data.img_src + '" style="width:280px;height:395px;" />');
+								$('#create_event').append('<input type="hidden" id="poster_src" name="poster_src" value="'+data.img_src+'"/>');
+								$('.addPoster').hide();$('.deletePoster').show();
+							}
+						});
+					}
+					// 隐藏加载的图标
+					$("#loading").hide();
+				}
+			},
+			error: function (data, status, e)
+			{
+				alert(e);
+			}
+		}
+	)
+	return false;
+}
+/******************** 上传海报 End ********************/
+
+/******************** 删除海报 Start ********************/
+$('.deletePoster').click(function(){
+	var poster_src = $('#poster_area img').attr('src');
+	$.ajax({
+			type: 'POST',
+			url: '{:U("Events/deletePoster")}',
+			data: {
+				/* <if condition="isset($event['event_id'])"> */
+				event_id: '{$event["event_id"]}',
+				/* </if> */
+				src: poster_src,
+				submitted: 'submitted'
+			},
+			success:
+				function(data) {
+				$('#poster_area img').remove();
+				$('#poster_area').addClass("preview1");
+				$('.addPoster').show();$('.deletePoster').hide();
+				$('#poster_src').val('');
+				}
+		});
+		return false;
+});
+/******************** 删除海报 End ********************/
+</script>
+
+<include file="Public:footer" />

@@ -1,0 +1,145 @@
+<include file="Public:header"/>
+<script type="text/javascript">
+    var arr = new Array();
+    var links = new Array();
+/*    var hotIndex = 0;
+  <volist name="hot" id="ho">
+    arr[<php>echo $i-1</php>]='{$ho.banner_img}';
+    links[<php>echo $i-1</php>]='{:U("Events/activityDetail/e")}/{$ho.event_id}';
+
+    hotInfo[<php>echo $i-1</php>] = {
+      'event_time':'{$ho.start_time|date="y-m-d H:i:s",###} 周{$ho.start_day}',
+      'hoster':'{$ho.event_host}',
+      'locale':'{$ho.event_locale}'
+    };
+  </volist>*/
+  var places = new Array();
+  var times  = new Array();
+  var hosts  = new Array();
+  <volist name="hot" id="ho">
+    arr[<php>echo $i-1</php>]='{$ho.banner_img}';
+    links[<php>echo $i-1</php>]='{:U("Events/activityDetail/e")}/{$ho.event_id}';
+    times[<php>echo $i-1</php>] = '{$ho.start_time|date="y-m-d H:i",###}  周{$ho.start_day}';
+    hosts[<php>echo $i-1</php>] = '{$ho.event_host}';
+    places[<php>echo $i-1</php>] = '{$ho.event_locale}';
+  </volist>
+    $(function(){loadImg(arr,links);});
+
+  // banner 轮换信息
+  /*$(function(){
+    $(".jprev").click(function(){
+      hotIndex = (hotIndex-1 < 0) ? (arr.length-1) : (hotIndex-1);
+      $("#event_start_time").html(hotInfo[hotIndex].event_time);
+      $("#event_location").html(hotInfo[hotIndex].locale);
+      $("#event_holder").html(hotInfo[hotIndex].hoster);
+    })
+  });
+
+  $(function(){
+    $(".jnext").click(function(){
+      hotIndex = (hotIndex+1)%arr.length;
+      $("#event_start_time").html(hotInfo[hotIndex].event_time);
+      $("#event_location").html(hotInfo[hotIndex].locale);
+      $("#event_holder").html(hotInfo[hotIndex].hoster);
+    })
+  });*/
+</script>
+<div class="container">
+  <div class="row-fluid">
+    <div class="grid24 banner">
+      <div class="imagesdiv">          
+      </div>
+      <!-- <div class="btn"> -->
+        <a href="javascript:void(0)" class="jprev btn">
+          <button class="prev"> 
+          上一张    
+          </button>
+        </a>
+        <ul class="i-detail">
+          <li>
+            <span class="imgtime fl icon"></span>
+            <span class="information fl" id="event_start_time">{$hot.0.start_time|date="y-m-d H:i:s",###} 周{$hot.0.start_day}</span>
+          </li>
+          <li>
+            <span class="imgplace fl icon"></span>
+            <span class="information fl" id="event_location">{$hot.0.event_locale}</span>
+          </li>
+          <li>
+            <span class="imghost fl icon"></span>
+            <span class="information fl" id="event_holder">{$hot.0.event_host}</span>
+          </li>
+        </ul>
+        <a href="javascript:void(0)" class="jnext btn">
+          <button class="next">   
+          下一张       
+          </button>
+        </a>
+      <!-- </div> -->
+      <div class="load-pic">
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid main">
+    <div class="grid11 soon fl">
+      <div class="title"><p class="fl">即将开始</p>
+        <if condition="!empty($coming)">
+          <a class="fr more" href="{:U('Events/instant')}">更多&gt;&gt;</a>
+        </if>
+      </div>
+    <if condition="!empty($coming)">
+    <volist name="coming" id="co">
+      <div class="content">
+        <a href="{:U('Events/activityDetail/e')}/{$co.event_id}"><div class="date fl"><p class="today">{$co.day.info}</p></div></a>
+        <div class="detail1 fl"> 
+          <a href="{:U('Events/activityDetail/e')}/{$co.event_id}" class="name">{$co.event_name}</a>
+          <ul>
+            <li>
+              <span class="imgtime fl icon">时间</span>
+              <p class="information fl">{$co.start_time|date="y-m-d H:i",###} 周{$co.start_day}</p>
+            </li>
+            <li>
+              <span class="imgplace fl icon">地点</span>
+              <p class="information fl">{$co.event_locale}</p>
+            </li>
+            <li>
+              <span class="imghost fl icon">主办方</span>
+              <p class="information fl">{$co.event_host}</p>
+            </li>
+          </ul>        
+        </div>
+      </div>
+      </volist>
+      <p><a href="{:U('Events/instant')}" class="fr more martop10">更多&gt;&gt;</a></p>
+      <else />
+        最近大家都很忙，没时间搞活动哦
+      </if>
+    </div>
+    <div class="offset2 grid11 new fl">
+      <div class="title"><p class="fl">最新发布</p><a class="fr more" href="{:U('Events/newest')}">更多&gt;&gt;</a></div>
+      <volist name="new" id="ne">
+      <div class="content">
+        <a href="{:U('Events/activityDetail/e/')}/{$ne.event_id}"><div class="date fl"><p class="month">{$ne.start_time|date="M",###|strtoupper}</p><p class="day">{$ne.start_time|date="d",###}</p></div></a>
+        <div class="detail1 fl"> 
+          <a href="{:U('Events/activityDetail/e/')}/{$ne.event_id}" class="name">{$ne.event_name}</a>
+          <ul>
+            <li>
+              <span class="imgtime fl icon">时间</span>
+              <p class="information fl">{$ne.start_time|date="y-m-d H:i",###} 周{$ne.start_day}</p>
+            </li>
+            <li>
+              <span class="imgplace fl icon">地点</span>
+              <p class="information fl">{$ne.event_locale}</p>
+            </li>
+            <li>
+              <span class="imghost fl icon">主办方</span>
+              <p class="information fl">{$ne.event_host}</p>
+            </li>
+          </ul>        
+        </div>
+      </div>
+      </volist>
+      <p><a href="{:U('Events/newest')}" class="fr more martop10">更多&gt;&gt;</a></p>
+    </div> 
+  </div>
+</div>
+<include file="Public:footer"/>

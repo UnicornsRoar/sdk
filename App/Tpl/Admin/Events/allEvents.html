@@ -1,0 +1,66 @@
+<include file="Public:header"/>
+<body>
+	<script type="text/javascript">
+	$(function(){
+		$('#delBatch').click(function(){
+			var is_del = confirm("确定要删除选中数据？");
+			if (is_del == false){
+				return false;
+			} else {
+				if (!$(".event_ids:checked").length) {
+					alert("请至少勾选一项");
+					return false;
+				} else {
+					document.event_list.submit();
+				}
+			}
+		});
+
+		var if_selected = false;
+		$("#select_all").click(function(){
+			if(if_selected){
+				$(".event_ids").attr("checked","");
+				if_selected = false;
+			} else {
+				$(".event_ids").attr("checked","checked");
+				if_selected = true;
+			}
+		});
+	});
+	</script>
+	<!-- <div class="container"> -->
+	<form action="{:U('deleteBatch')}" method="post" name="event_list">
+		<table class="table table-striped">
+			<tr>
+				<th width="8%"><input type="checkbox" value="0" id="select_all" style="margin: 2px 5px; ">id</th>
+				<th width="35%">活动名称</th>
+				<th width="23%">主办方</th>
+				<th width="10%">发布时间</th>
+				<th width="10%">发布者</th>
+				<th width="14%">操作</th>
+			</tr>
+			<volist name="events" id="ev">
+				<tr>
+					<td>
+						<input type="checkbox"  value="{$ev.event_id}"  class="event_ids" name="ids[]"style="margin:0 5px"/>{$ev.event_id}
+					</td>
+					<td><a href="{:U('Home/Events/activityDetail')}/e/{$ev.event_id}">{$ev.event_name}</a></td>
+					<td>{$ev.event_host}</td>
+					<td>{$ev.create_time|date="y-m-d",###}</td>
+					<td>{$ev.user_name}</td>
+					<td style="font-size: 10px">
+						<a href="{:U('edit')}/e/{$ev.event_id}"><i class="icon-edit"></i> 编辑 </a>
+						|<a href="{:U('delete')}/e/{$ev.event_id}" class="text-warning" onclick="return confirm('确定要删除？');"><i class="icon-remove"></i> 删除</a>
+					</td>
+				</tr>
+			</volist>
+		</table>
+		<!-- 分页 -->
+		<button class="btn btn-warning" id="delBatch">删除选中活动</button>
+	</form>
+		<div class="pagination pull-right">
+			<ul>{$page}</ul>
+		</div>
+	<!-- </div> -->
+</body>
+</html>

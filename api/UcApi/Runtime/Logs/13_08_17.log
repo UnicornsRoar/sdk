@@ -1,0 +1,23 @@
+[ 2013-08-17T13:45:26+08:00 ] 192.168.160.66 /api/uc.php?time=1376718326&code=80cdGffv9mnHeuZTS9ITRkMHfF8f%2FIx0jARDK8m6luPEp5hOYGApGvUngSgaN82V1JFaNX4GwYKfBWW5aQUwiUWGiqunMxq9Dg%2B2juRgbgi5%2FNJHLQDCofHaRk2F4jcTin%2BIRAitUIo0dW14FejgccXybZL95L%2Fowrx7TMJ0Ee5fSQ
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001527s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002514s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2400 ) LIMIT 1   [ RunTime:0.000426s ]
+SQL: INSERT INTO `sdk_accounts` (`account_id`,`user_name`,`email`,`password`,`reg_time`) VALUES (2400,'纪皮皮','1009985537@qq.com','fb25f0e4ef087e896a283bc516cadef452346b55',1376718326) [ RunTime:0.001201s ]
+
+[ 2013-08-17T13:46:13+08:00 ] 192.168.160.66 /api/uc.php?time=1376718373&code=a660FxPjFY8dGdJSrQGlYpu7FVANF3LtJf1lQ4izuPWOOisXnLY1%2FEk07crjMBU5NEG0RYK15btTCdmRKISEndF%2FaaztzirxDuwLhjGQfnHHj%2F7NkWN7n3WjCXUmHvWX8sGX5pTJISICPBC9zu9aMH3K6L3CkZzoWagaTqM0sSKUNA
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001639s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002120s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2400 ) LIMIT 1   [ RunTime:0.000360s ]
+

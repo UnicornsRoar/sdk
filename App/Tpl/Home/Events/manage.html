@@ -1,0 +1,43 @@
+<include file="Public:header"/>
+<div class="container">
+  <p class="my-title grid24">活动管理·我的活动</p>
+  <div class="row-fluid">
+    <div class="grid4 my-bar">
+      <ul>
+        <li>
+          <p class="mes-title">我的活动</p>
+          <img src="__IMG__/border.png" alt="">
+        </li>
+        <li>
+          <a href="{:U('Accounts/mymessage')}" class="myacti-a">消息中心</a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid19 my-main offset1">
+      <button>
+        <div class="btn-G">
+          <div class="btn-G1">
+            发布活动
+          </div>
+        </div>
+      </button>
+	  <volist name="event" id="vo">
+      <div class="my-main-row">
+        <a href="{:U('Events/activityDetail/e')}/{$vo.event_id}" class="my-main-title">{$vo.event_name}</a>
+        <p class="my-main-date fl">{$vo.create_time|date="Y-m-d H:i:s",###}</p>
+        <div class="my-main-manager fr"><a href="{:U('/Events/editActivity/event_id/' . $vo['event_id'])}" class="fl manage">管理</a>|<a href="{:U('/Events/delActivity/event_id/'.$vo['event_id'])}" class="fr delect" id="delete">删除</a></div>
+      </div>
+	  </volist>
+    </div>
+  </div>
+</div>
+<script>
+	$('#delete').click(function(){
+		return confirm('确定删除该活动？');
+	});
+	$('.btn-G').click(function(){
+	var url ='{:U("Events/Activity")}';
+	 window.location.href=url;
+});
+</script>
+<include file="Public:footer"/>

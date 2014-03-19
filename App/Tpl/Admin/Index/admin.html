@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<title>广外隧道口</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	</head>
+	<frameset rows="60px,*,24px" cols="*" name="frameAll" id="frameAll" frameborder="0" framespacing="0">
+		<!--框架上部分-->
+		<frame src="__URL__/top" name="frameTop" id="frameTop" scrolling="no" noresize />
+		<!--框架右侧和左侧-->
+		<frameset cols="180px,*" name="frameMain" id="frameMain" frameborder="0" framespacing="0" >
+			<!--框架左侧-->
+			<frame src="__URL__/left" name="frameLeft" id="frameLeft" scrolling="no" noresize /> 
+			<!--框架右侧-->
+			<frame src="{:U('Events/allEvents')}" name="frameRight" id="frameRight" scrolling="yes" noresize style="overflow-x:hidden" /> 
+		</frameset>
+		<!--框架下部分-->
+		<frame src="__URL__/bottom" name="frameButtom" id="frameButtom" scrolling="no" frameborder="0" noresize />
+	</frameset>
+	<noframes>
+		<body><h1>您的浏览器不支持框架，该升级您的浏览器了！</h1></body>
+	</noframes>
+</html>
+

@@ -1,0 +1,62 @@
+<include file="Public:header"/>
+<body>
+	<script type="text/javascript">
+	$(function(){
+		$('#delBatch').click(function(){
+			var is_del = confirm("确定要删除选中数据？");
+			if (is_del == false){
+				return false;
+			} else {
+				if (!$(".ids:checked").length) {
+					alert("请至少勾选一项");
+					return false;
+				} else {
+					document.content_list.submit();
+				}
+			}
+		});
+
+		var if_selected = false;
+		$("#select_all").click(function(){
+			if(if_selected){
+				$(".ids").attr("checked","");
+				if_selected = false;
+			} else {
+				$(".ids").attr("checked","checked");
+				if_selected = true;
+			}
+		});
+	});
+	</script>
+	<form action="{:U('deleteBatch')}" method="post" name="content_list">
+		<input type="hidden" name="pk" value="attachment_id"/>
+		<input type="hidden" name="model" value="Attachments"/>
+		<table class="table table-striped">
+			<tr>
+				<th width="7%"><input type="checkbox" value="0" id="select_all" style="margin: 2px 5px; ">id</th>
+				<th width="12%">上传者</th>
+				<th width="32%">活动名字</th>
+				<th width="40%">附件名字</th>
+				<th width="9%">操作</th>
+			</tr>
+			<volist name="attachments" id="co">
+				<tr>
+					<td>
+						<input type="checkbox"  value="{$co.attachment_id}"  class="ids" name="ids[]"style="margin:0 5px"/>{$co.attachment_id}
+					</td>
+	 				<td>{$co.user_name}</td>
+					<td>{$co.event_name}</td>
+					<td><a href="{:U('Home/Attachments/download')}/f/{$co.attachment_id}">{$co.attachment_name}</a></td>
+					<td style="font-size: 10px">
+						<a href="{:U('delete')}/id/{$co.attachment_id}/pk/attachment_id/model/Attachments" class="text-warning" onclick="return confirm('确定要删除？');"><i class="icon-remove"></i> 删除</a>
+					</td>
+				</tr>
+			</volist>
+		</table>
+		<button class="btn btn-warning" id="delBatch">删除选中附件</button>
+	</form>
+		<div class="pagination pull-right">
+			<ul>{$page}</ul>
+		</div>
+</body>
+</html>

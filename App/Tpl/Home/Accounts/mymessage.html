@@ -1,0 +1,64 @@
+<include file="Public:header"/>
+<script type="text/javascript">
+$(function(){
+  var mark = 1;
+  $(".reply").hide();
+  $(".j-more").click(function(){
+    var reply=$(this).parent().nextAll(".reply");
+    if(mark==1){
+      reply.slideDown(400); 
+      mark=0;
+    }
+    else{
+      reply.slideUp(400);
+      mark=1;
+    }
+    $(".reply form #input").focus();
+  });
+});
+</script>
+<div class="container">
+  <p class="my-title grid24">活动管理·消息中心</p>
+  <div class="row-fluid">
+    <div class="grid4 my-bar">
+      <ul>
+        <li>
+          <a href="{:U('Events/manage')}" class="myacti-a">我的活动</a>   
+        </li>
+        <li>                 
+          <p class="mes-title">消息中心</p> 
+          <img src="__IMG__/border.png" alt="">
+        </li>
+      </ul>
+    </div>
+    <div class="grid19 my-main offset1">
+      <volist name="comments" id="msg">
+        <div class="reply-row">
+          <span>{$msg.user_name}<a href="{:U('Events/activityDetail')}/e/{$msg.event_id}" class="reply-a1">From:{$msg.event_name}</a></span>
+          <p>{$msg.comment}</p>
+          <p>
+            <if condition="empty($msg['reply'])">
+              <a href="javascript:void(0)" class="reply-a2 j-more">回复</a>
+            <else />
+              <a href="javascript:void(0)" class="reply-a2">已回复</a>
+            </if><span class="reply-date">{$msg.post_time|date="y-m-d H",###}</span>
+          </p>
+          <if condition="empty($msg['reply'])">
+            <div class="reply reply5">
+              <img src="__IMG__/triangle.png" alt=""/>
+              <form action="{:U('Accounts/reply')}" method="post">
+                <input type="text" name="comment" id="word"/>
+                <button class="fr" name="cid" type="submit" value="{$msg.comment_id}">发布</button>
+              </form>
+            </div>
+          <else />
+            <div class="already">
+              {$msg.reply.comment}
+            </div>
+          </if>
+        </div>
+      </volist>
+    </div>
+  </div>
+</div>
+<include file="Public:footer"/>

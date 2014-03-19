@@ -1,0 +1,55 @@
+<include file="Public:header"/>
+<div class="container">
+  <p class="bigtitle grid24">{$themeInfo.theme_name}</p>  
+  <div class="row-fluid">
+    <div class="grid17">
+      <volist name="eventInfo" id="ev">
+        <div class="unit">
+          <img src="{$ev.poster_src}" alt="" class="poster fl">
+          <div class="detail2 fl"> 
+            <div class="clearfix">
+            <a href="{:U('Events/activityDetail')}/e/{$ev.event_id}" class="name fl">
+              <span>{$ev.event_name}</span>
+            </a>
+            </div>
+            <ul>
+              <li>
+                <span class="imgtime fl icon">时间</span>
+                <p class="information fl">{$ev.start_time|date="y-m-d H:i",###} 周{$ev.start_day}</p>
+              </li>
+              <li>
+                <span class="imgplace fl icon">地点</span>
+                <p class="information fl">{$ev.event_locale}</p>
+              </li>
+              <li>
+                <span class="imghost fl icon">主办方</span>
+                <p class="information fl">{$ev.event_host}</p>
+              </li>
+            </ul>    
+          </div>
+        </div>
+      </volist>
+      <div class="ipage">
+        <ul class="page">
+          {$page}
+        </ul>
+      </div>
+    </div> 
+    <div class="grid7 cutline padlef40">
+      <h2 class="crumb">来看看其他活动主题吧！</h2>
+      <br/>
+      <if condition="empty($others)">
+        <p class="crumb">
+          额。。。没有其他主题 -_-||  
+        </p>
+      <else />
+        <volist name="others" id="ot">
+          <p class="crumb">
+            <a href="__URL__/theme/id/{$ot.theme_id}">{$ot.theme_name}</a>
+          </p>
+        </volist>
+      </if>
+    </div>
+  </div>
+</div>
+<include file="Public:footer"/>

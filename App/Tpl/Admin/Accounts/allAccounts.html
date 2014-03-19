@@ -1,0 +1,73 @@
+<include file="Public:header"/>
+<body>
+	<script type="text/javascript">
+	$(function(){
+		$('#delBatch').click(function(){
+			var is_del = confirm("确定要删除选中数据？");
+			if (is_del == false){
+				return false;
+			} else {
+				if (!$(".accounts:checked").length) {
+					alert("请至少勾选一项");
+					return false;
+				} else {
+					document.event_list.submit();
+				}
+			}
+		});
+
+		var if_selected = false;
+		$("#select_all").click(function(){
+			if(if_selected){
+				$(".accounts").attr("checked","");
+				if_selected = false;
+			} else {
+				$(".accounts").attr("checked","checked");
+				if_selected = true;
+			}
+		});
+
+		$(".delete").click(function(){
+            var id_del = confirm("确定要删除？");
+            if(id_del == false){
+                return false;
+            }
+        });
+	});
+	</script>
+	<form action="__URL__/deleteInBatch" method="post" name="account_list">
+		<table class="table table-striped">
+			<tr>
+				<th width="10%"><input type="checkbox" value="0" id="select_all" style="margin: 2px 5px; ">id</th>
+				<th width="25%">用户名</th>
+				<th width="25%">邮箱</th>
+				<th width="20%">注册时间</th>
+				<th width="20%">操作</th>
+			</tr>
+
+			<volist name="accounts" id="ac">
+				<tr>
+					<td>
+						<input type="checkbox" value="{$ac.account_id}" name="accounts[]" style="margin:0 5px" class="accounts"/>{$ac.account_id}
+					</td>
+					<td>{$ac.user_name}</td>
+					<td>{$ac.email}</td>
+					<td>{$ac.reg_time|date="y-m-d",###}</td>
+					<td style="font-size: 10px">
+						<if condition="$ac.verified eq 1">
+							<i class="icon-arrow-down"></i> <a href="{:U('down')}/aid/{$ac.account_id}">降权</a>
+						<else/>
+							<i class="icon-arrow-up"></i> <a href="{:U('up')}/aid/{$ac.account_id}">升权</a>
+						</if>
+						 | <i class="icon-remove"></i> <a href="{:U('delete')}/aid/{$ac.account_id}" class="delete">删除</a>
+					</td>
+				</tr>
+			</volist>
+		</table>
+		<button class="btn btn-warning" id="delBatch">删除选中用户</button>
+	</form>
+		<div class="pagination pull-right">
+			<ul>{$page}</ul>
+		</div>
+</body>
+</html>

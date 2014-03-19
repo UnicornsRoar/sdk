@@ -1,0 +1,54 @@
+<include file="Public:header"/>
+<script type="text/javascript" src="__JS__/Message.js"></script>
+<div class="container">
+  <div class="base-title grid24">
+    <a href="" class="fl back"></a>
+    <p class="fl">{$event.event_name}</p>
+  </div>
+  <div class="row-fluid">
+    <div class="grid4 my-bar">
+      <ul>
+        <li>                 
+          <a href="{:U('Events/editActivity/event_id')}/{$event.event_id}" class="myacti-a">基本信息</a> 
+        </li>
+        <li>
+          <a href="{:U('Index/index')}" class="myacti-a">视频管理</a>   
+        </li>
+        <li>
+          <a href="{:U('Events/attachment')}/e/{$event.event_id}" class="myacti-a">附件管理</a>   
+        </li>
+        <li>
+          <p class="mes-title">留言评论</p> 
+          <img src="__IMG__/border.png" alt="">            
+        </li>
+      </ul>
+    </div>
+    <div class="grid19 my-main offset1">
+      <volist name="comments" id="msg">
+        <div class="reply-row">
+          <span>{$msg.user_name}<a href="{:U('Events/Activity/e')}/{$msg.event_id}" class="reply-a1">From:{$msg.event_name}</a></span>
+          <p>{$msg.comment}</p>
+          <if condition="empty($msg['reply'])">
+            <a href="javascript:void(0)" class="reply-a2">回复</a>
+          <else />
+            <a href="javascript:void(0)" class="reply-a2">已回复</a>
+          </if><span class="reply-date">{$msg.post_time|date="y-m-d H:i:s",###}</span>
+          <if condition="empty($msg['reply'])">
+            <div class="reply">
+              <img src="__IMG__/triangle.png" alt=""/>
+              <form action="{:U('Events/reply')}" method="post">
+                <input type="text" name="comment" id="word"/>
+                <button class="fr" name="cid" type="submit" value="{$msg.comment_id}">发布</button>
+              </form>
+            </div>
+          <else />
+            <div class="already">
+              {$msg.reply.comment}
+            </div>
+          </if>
+        </div>
+      </volist>
+    </div>
+  </div>
+</div>
+<include file="Public:footer"/>

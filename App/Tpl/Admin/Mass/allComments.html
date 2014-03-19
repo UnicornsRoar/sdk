@@ -1,0 +1,64 @@
+<include file="Public:header"/>
+<body>
+	<script type="text/javascript">
+	$(function(){
+		$('#delBatch').click(function(){
+			var is_del = confirm("确定要删除选中数据？");
+			if (is_del == false){
+				return false;
+			} else {
+				if (!$(".ids:checked").length) {
+					alert("请至少勾选一项");
+					return false;
+				} else {
+					document.content_list.submit();
+				}
+			}
+		});
+
+		var if_selected = false;
+		$("#select_all").click(function(){
+			if(if_selected){
+				$(".ids").attr("checked","");
+				if_selected = false;
+			} else {
+				$(".ids").attr("checked","checked");
+				if_selected = true;
+			}
+		});
+	});
+	</script>
+	<form action="{:U('deleteBatch')}" method="post" name="content_list">
+		<input type="hidden" name="pk" value="comment_id"/>
+		<input type="hidden" name="model" value="Comments"/>
+		<table class="table table-striped">
+			<tr>
+				<th width="7%"><input type="checkbox" value="0" id="select_all" style="margin: 2px 5px; ">id</th>
+				<th width="12%">评论者</th>
+				<th width="32%">评论内容</th>
+				<th width="15%">发布时间</th>
+				<th width="25%">评论活动</th>
+				<th width="9%">操作</th>
+			</tr>
+			<volist name="comments" id="co">
+				<tr>
+					<td>
+						<input type="checkbox"  value="{$co.comment_id}"  class="ids" name="ids[]"style="margin:0 5px"/>{$co.comment_id}
+					</td>
+					<td>{$co.user_name}</td>
+					<td>{$co.comment}</td>
+					<td>{$co.post_time|date="y-m-d H:i",###}</td>
+					<td>{$co.event_name}</td>
+					<td style="font-size: 10px">
+						<a href="{:U('delete')}/co/{$co.comment_id}/pk/comment_id/model/Comments" class="text-warning" onclick="return confirm('确定要删除？');"><i class="icon-remove"></i> 删除</a>
+					</td>
+				</tr>
+			</volist>
+		</table>
+		<button class="btn btn-warning" id="delBatch">删除选中评论</button>
+	</form>
+		<div class="pagination pull-right">
+			<ul>{$page}</ul>
+		</div>
+</body>
+</html>

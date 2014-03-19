@@ -1,0 +1,19 @@
+<?php
+/**
+ * ucenter配置
+ */
+
+define('UC_CONNECT', 'mysql');
+define('UC_DBHOST', 'localhost');
+define('UC_DBUSER', 'passport_db');
+define('UC_DBPW', '8bRTV7hDrQbRSnGh');
+define('UC_DBNAME', 'passport');
+define('UC_DBCHARSET', 'utf8');
+define('UC_DBTABLEPRE', '`passport`.uc_');
+define('UC_DBCONNECT', '0');
+define('UC_KEY', 'c917Zdh3pwWs/obM71vT3TKCwRGfQpsSbOaZPso');
+define('UC_API', 'http://passport.mygdufs.com/ucenter');
+define('UC_CHARSET', 'utf-8');
+define('UC_IP', '');
+define('UC_APPID', '2');
+define('UC_PPP', '20');

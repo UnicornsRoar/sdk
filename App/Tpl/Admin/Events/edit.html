@@ -1,0 +1,67 @@
+<include file="Public:header"/>
+<body>
+	<script type="text/javascript">
+		$(function(){
+			$('#save').click(function(){
+				$.post(
+					"{:U('saveEdit')}",
+					{
+						'event_id'     : $('#id_value').val(),
+						'event_name'   : $('#event_name').val(),
+						'event_host'   : $('#event_host').val(),
+						'event_details': $('#event_details').val()
+					},
+					function(feedback){
+						if (feedback == 1){
+							alert('保存成功！');
+						} else {
+							alert('保存失败！');
+						}
+					}
+				);
+			});
+		});
+	</script>
+	<div class="container" style="margin:20px 0 0 0 ">
+		<form class="form-horizontal" action="__URL__/saveEdit" method="post">
+			<div class="control-group">
+				<label class="control-label" for="event_id">活动ID</label>
+				<div class="controls" id="event_id">
+					<span class="input-mini uneditable-input">{$details.event_id}</span>
+					<input type="hidden" value="{$details.event_id}" name="event_id" id="id_value"/>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="event_name">活动名称</label>
+				<div class="controls">
+					<input type="text" class="input-xxlarge" id="event_name" name="event_name" value="{$details.event_name}">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="event_host">主办方</label>
+				<div class="controls">
+					<input type="text" class="input-xxlarge" id="event_host" name="event_host" value="{$details.event_host}">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="event_details">活动详情</label>
+				<div class="controls">
+					<textarea id="event_details"style="width:530px; height:300px;" name="event_details">{$details.event_details}</textarea>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					<button id="save" class="btn btn-large btn-success"type="button">保存</button> &nbsp;&nbsp;&nbsp;
+					<a href="{$Think.server.http_referer}" class="btn btn-large btn-warning">
+						返回
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

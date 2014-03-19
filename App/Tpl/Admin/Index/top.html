@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>广外隧道口后台管理</title>
+		
+		<link rel="stylesheet" type="text/css" href="__CSS__/common.css" media="screen" id="themes">
+		<script type="text/javascript" src="__JS__/jquery.js"></script>
+		<script type="text/javascript" src="__JS__/jquery.cookie.js"></script>
+		<script type="text/javascript" src="__JS__/admin_common.js"></script>
+		<script type="text/javascript">
+			function con (){
+				var out = confirm('确定要退出？');
+				if (out == true){
+					window.parent.location.href="__URL__/logout";
+					return true;
+				}else{
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body id="top_page">
+		<div id="top">
+			<div class="logo fl"><h1>广外隧道口</h1><p>www.suidaokou.com</p></div>
+			<div class="nav">
+				<div class="top_menu">
+					<p class="fl lh32">您好，<span class="red fwb">{$Think.session.username}</span> [ <a href="#" onclick="con()">退出</a> ]</p>
+                                        <p class="fr lh32"><a href="http://www.suidaokou.com/" target="_top">网站首页</a> | <a href="http://www.suidaokou.com">帮助中心</a></p>
+				</div>
+
+			</div>
+		</div>
+	
+</body></html>

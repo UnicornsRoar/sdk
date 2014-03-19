@@ -1,0 +1,22 @@
+[ 2013-08-16T12:45:53+08:00 ] 192.168.202.65 /api/uc.php?time=1376628352&code=b442ygbazqYG1fBcM46bnrK4x2u5UwnBLePWrNIz%2B5utZl8EIQqV2%2FTbWy0QsGAtE3P2TEpB9Ocz6OpTyG%2BCJEojFn5FFW8Z4j068%2BEcuufifjvUac4qz90HbHRmWTMa9Xl1kXpYKlGvpXoFYW3Qe0sOHkTHxql%2B0Cc%2BsdQLJjHt
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002319s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 753 ) LIMIT 1   [ RunTime:0.000619s ]
+
+[ 2013-08-16T13:35:48+08:00 ] 192.168.129.3 /api/uc.php?time=1376631347&code=eb50PRgVQAdQm2uy6sm3BWdq4vuVjHvYTsGXTW3OOrHIVeh9vtEXrCspqmt71lS9xk41tC3Y7O0otH8Xai94KVuzJsF8zA3ML6MI4bWUAF%2ByJxzhGrRxEEqsV4DO4VPspJPBLJP7NgNLAZ2aWzHbbB1W8CSGPlubC1TXvkqY%2F7I
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+NOTIC: [8] Constant UC_CLIENT_VERSION already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 4 行.
+NOTIC: [8] Constant UC_CLIENT_RELEASE already defined D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 5 行.
+NOTIC: [2048] Only variables should be passed by reference D:\wwwroot\mainweb\sdk\api\UcApi\Lib\Action\IndexAction.class.php 第 63 行.
+NOTIC: [8] Constant API_RETURN_FAILED already defined D:\wwwroot\mainweb\sdk\uc_client\model\note.php 第 16 行.
+SQL: SHOW COLUMNS FROM `sdk_accounts` [ RunTime:0.002107s ]
+SQL: SELECT * FROM `sdk_accounts` WHERE ( `account_id` = 2183 ) LIMIT 1   [ RunTime:0.000575s ]
+
