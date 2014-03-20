@@ -1,3 +1,4 @@
-#testgit
+#testgit test more
 App/Runtime/*
 App/Public/Uploads/*
+phpMyAdmin/*
