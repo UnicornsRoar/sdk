@@ -30,7 +30,7 @@ class AccountsAction extends ComAccountsAction{
 				$this->ajaxReturn('nothing','用户不存在',0);
 		}
 	}
-	public function doLogin(){
+	/*public function doLogin(){
 		$Model = D('Accounts');
 		$Model->create();
 		// 提取用户信息
@@ -120,6 +120,21 @@ class AccountsAction extends ComAccountsAction{
 					}
 				}
 			}
+		}
+	}*/
+
+	public function doLogin(){
+		$Model = D('Accounts');
+		$verified = 0;
+		$check = $Model->doLogin($this->_post('email'), $this->_post('password'), $verified);
+		if ($check == SUCCESS){
+			if ($this->_post('remember') == 'yes'){
+				cookie('loginEmail',$_POST['email'],3600*24*7);
+				cookie('loginPassword',$_POST['password'],3600*24*7);
+			}
+			$this->redirect('Index/index');
+		}else{
+			$this->error('登录失败', $_SERVER['HTTP_REFERER']);
 		}
 	}
 
