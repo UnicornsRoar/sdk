@@ -2174,7 +2174,9 @@ p.intro a {
 }
 .reply3 #input {
   width: 98.5%;
-  height: auto;
+  /*height: auto;*/
+  height:70px;
+  overflow:auto;
   padding: 5px 5px 0 5px;
   resize: none;
   border: none;
