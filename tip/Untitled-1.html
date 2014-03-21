@@ -18,15 +18,15 @@
 		tipsWindown("报名表","id:entry","400","auto","id")
 	});
  });
- function appendLine()
-{              // 通过 DOM 来创建文本
-    $("#addLine").before("<li><input type='text'/> <select><option>短</option><option>长</option></select></li>");  
-	tipsWindown("报名表","id:entry","400","auto","id")
-}
-function show(){
+/* function show(){
 	$("#makeEntry").click(function() {
 		tipsWindown("报名表","id:entry","400","auto","id")
 	});
+ }*/
+ function appendLine()
+{  
+    $("#addLine").before("<li><input type='text'/> <select><option>短</option><option>长</option></select></li>");  
+	tipsWindown("报名表","id:entry","400","auto","id")
 }
  </script>
 </head>
@@ -34,7 +34,7 @@ function show(){
 <body>
 <div id="container">
 
-		<button id="makeEntry" onclick="show()">制作报名表</button>
+		<button id="makeEntry">制作报名表</button>
 		<div id="entry" style="display: none">
           <form id="entry_form" action="#" method="get">
             <ul>
