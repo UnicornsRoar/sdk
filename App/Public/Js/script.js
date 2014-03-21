@@ -77,7 +77,7 @@ function controlWidth(min,max){
 function banner(){
     var index = 42;
     var timer = null;
-    var offset = 8000;
+    var offset = 8000;//时间间隔
     var left1 = -24995;
     var isScrolling = false;
     //var left1 = 1/2*bannerWidth-85/2*imgWidth; 
@@ -88,7 +88,6 @@ function banner(){
     $(".imagesdiv").css("position","absolute");  
     $(".imagesdiv").css("left",left1+"px");
 	autoPage(true);
-    //auto(true);
     function clickLeft(){
         if (timer){
             clearTimeout(timer);
@@ -111,37 +110,24 @@ function banner(){
             $($(".i-detail .information")[2]).text(hosts[detailIndex]);
             }   
             //timer = window.setTimeout('auto(' + false + ')', offset);
-			setTimeout(function(){autoPage(false)},offset)
+			timer = window.setTimeout(function(){autoPage(false)},offset)
     } 
 	function autoPage(isFirst)
     {
-        $(".imagesdiv .image").css("float","left");
-        if(isFirst == false) index++; 
-        slideimg(index,left1);
+         $(".imagesdiv .image").css("float","left");
+         if(isFirst == false) index++; 
+          slideimg(index,left1);
         if (index > $(".imagesdiv .image").length-3) {
             $(".imagesdiv").animate({left:left1},1);
-            //index = 2;
-//            $($(".i-detail .information")[0]).text(places[0]);
-//            $($(".i-detail .information")[1]).text(times[0]);
-//            $($(".i-detail .information")[2]).text(hosts[0]);
+            index = 2;
+            $($(".i-detail .information")[0]).text(places[0]);
+            $($(".i-detail .information")[1]).text(times[0]);
+            $($(".i-detail .information")[2]).text(hosts[0]);
         }    
-//        timer = window.setTimeout('auto(' + false + ')', offset); 
-         setTimeout(function(){autoPage(false)},offset)
-        //timer = window.setTimeout(my(), offset);
+            //timer = window.setTimeout('auto(' + false + ')', offset);
+			timer=setTimeout(function(){autoPage(false)},offset)
     }
-    //function auto(isFirst){
-//        $(".imagesdiv .image").css("float","left");
-//        if(isFirst == false) index++; 
-//        slideimg(index,left1);
-//        if (index > $(".imagesdiv .image").length-3) {
-//            $(".imagesdiv").animate({left:left1},1);
-//            index = 2;
-//            $($(".i-detail .information")[0]).text(places[0]);
-//            $($(".i-detail .information")[1]).text(times[0]);
-//            $($(".i-detail .information")[2]).text(hosts[0]);
-//        }    
-//        timer = window.setTimeout('auto(' + false + ')', offset);
-//    }
+	
     function slideimg (index,left1){          
         var left2=left1-imgWidth*(index-42);
         var left3=left2+"px";      
@@ -194,7 +180,7 @@ function banner(){
             index++;
             slideimg(index,left1);
             //timer = window.setTimeout('auto(' + false + ')', offset);
-			setTimeout(function(){autoPage(false)},offset)
+			timer=window.setTimeout(function(){autoPage(false)},offset)
         }
     });
 }   

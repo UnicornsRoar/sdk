@@ -1275,7 +1275,7 @@ a.lastli {
   background: rgba(0, 0, 0, 0.3) !important;
   /*实现FF背景透明，文字不透明*/
 
-  filter: alpha(opacity=30);
+  filter: Alpha(opacity=80);
   background: #000000;
   /*实现IE背景透明*/
 
@@ -1310,7 +1310,7 @@ a.lastli {
   height: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: nowrap;  
 }
 .i-detail li {
   float: left;
@@ -1352,6 +1352,7 @@ a.btn:hover {
 a.btn:hover button {
   display: block;
 }
+.banner a,button{ outline:none; }
 .imagesdiv {
   position: absolute;
   left: -1010px;
