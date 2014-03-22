@@ -1,23 +1,5 @@
-body {
-		font: 12px 'Microsoft Yahei',arial,SimSun,sans-serif;
-		margin: 0 auto;
-		padding: 0px;
-		text-align: center;
-		color: #555;
-		background: #fff;
-	}
-	h1,h2,h3,h4,h5,h6,div,p,ul,ol,dl,dd,dt,abbr,form,input,img { margin: 0; padding: 0; }
-	img { border: none; }
 
-	h1 { width: 100%; text-align: center;}
 
-	a { color: #096FB7; text-decoration: none; }
-	a:hover { text-decoration: underline; }
-
-	#container { margin: 0 auto; margin-top: 20px; padding: 20px; width: 600px; text-align: left; border: 20px solid #DDD; }
-	h3{ margin: 10px 0;}
-	ol li { list-style: ; margin: 20px 0 0 50px; }
-	blockquote { width: 500px; margin: 10px 0; padding: 10px; border: 2px dashed #F8B3D0; background-color: #FFF5FA;}
 #windownbg {
 	display: none;
 	position: absolute;
@@ -34,7 +16,10 @@ body {
 	background: #FFF;
 	text-align: left;
 }
+#windown-box ul{ margin: 0; padding: 0; }
 #windown-title {
+	font: 12px 'Microsoft Yahei',arial,SimSun,sans-serif;
+	color: #555;	
 	position: relative;
 	height: 30px;
 	border: 1px solid #A6C9E1;
@@ -42,6 +27,7 @@ body {
 	background: url(http://leotheme.cn/wp-content/themes/Dreamy/images/bg.png) 0 -330px repeat-x;
 }
 #windown-title h2 {
+	margin: 0; padding: 0;
 	position: relative;
 	left: 10px;
 	top: 5px;
@@ -80,29 +66,4 @@ body {
 	top: 50%;
 	margin-left: -8px;
 	margin-top: -8px;
-}
-#entry_form input{
-	width:160px;
-	height:30px;
-	margin:10px;
-}
-#entry_form input[type="radio"]{
-	width:15px;
-	height:15px;
-}
-#entry_form li span{
-	font-size:14px;
-	font-weight:bold;
-}
-#entry_form button{
-	width:60px;
-	height:25px;
-	margin:10px;
-	margin-top:20px;
-	margin-bottom:30px;
-}
-#addLine{
-	width:50px;
-	height:20px;
-	margin-left:180px;
 }

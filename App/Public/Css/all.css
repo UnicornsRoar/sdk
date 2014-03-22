@@ -2588,9 +2588,6 @@ p.intro a {
 .forget1 .btn-lognow {
   padding-top: 60px;
   padding-left: 67px;
-<<<<<<< .mine
-}
-=======
 }
 .tri {
   width: 20px;
@@ -2608,4 +2605,8 @@ p.intro a {
 }
 .martop10 {
   margin-top: 10px;
+}
+#entry{
+	display:block;
+	padding-bottom:23px;
 }

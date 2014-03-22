@@ -40,6 +40,16 @@
           <p class="fl">活动详情：</p>
           <textarea class="acti-detail fl" name="event_details"></textarea>
         </div>
+        <div id="entry">
+          <span >&nbsp;&nbsp;&nbsp;报名表：</span>
+          <button id="makeEntry" type="button">
+          <div class="btn-B">
+             <div class="btn-B1">
+             制作报名表
+             </div>
+          </div>
+          </button>
+        </div>
         <span >上传海报：</span>
         <button class="addPoster">
           <div class="btn-B">
@@ -68,7 +78,7 @@
 		<img id="loading" src="__JS__/AjaxFileUploaderV2.1/loading.gif" style="display:none;">
 		</div>
 
-		<button id="btn-G1"  class="marbot20" >
+		<button id="btn-G1" >
 			<div class="btn-G">
 			  <div class="btn-G1" >
 				 发布活动
@@ -88,10 +98,79 @@
   </div>
 </div>
 <script>
+/******************** 报名表 ********************/
+$("#makeEntry").click(function(){
+		tipsWindown("报名表: 填入你要获得的信息","url:get?test.html","400","atuo","true","","true","text");
+});
+
+var showWindown = true;
+var templateSrc = "http://leotheme.cn/wp-content/themes/Dreamy"; //设置loading.gif路径
+function tipsWindown(title,content,width,height,drag,time,showbg,cssName) {
+	$("#windown-box").remove(); //请除内容
+	var width = width>= 950?this.width=950:this.width=width;	    //设置最大窗口宽度
+	var height = height>= 527?this.height=527:this.height=height;  //设置最大窗口高度
+	if(showWindown == true) {
+		var simpleWindown_html = new String;
+			simpleWindown_html = "<div id=\"windownbg\" style=\"height:"+$(document).height()+"px;filter:alpha(opacity=0);opacity:0;z-index: 999901\"></div>";
+			simpleWindown_html += "<div id=\"windown-box\">";
+			simpleWindown_html += "<div id=\"windown-title\"><h2></h2><span id=\"windown-close\">×</span></div>";
+			simpleWindown_html += "<div id=\"windown-content-border\"><div id=\"windown-content\"></div></div>"; 
+			simpleWindown_html += "</div>";
+			$("body").append(simpleWindown_html);
+			show = false;
+	}
+	contentType = content.substring(0,content.indexOf(":"));
+	content = content.substring(content.indexOf(":")+1,content.length);
+		var content_array=content.split("?");
+		$("#windown-content").ajaxStart(function(){
+			$(this).html("<img src='"+templateSrc+"/images/loading.gif' class='loading' />");
+		});
+		$.ajax({
+			type:content_array[0],
+			url:content_array[1],
+			data:content_array[2],
+			error:function(){
+				$("#windown-content").html("<p class='windown-error'>加载数据出错...</p>");
+			},
+			success:function(html){
+				$("#windown-content").html(html);
+			}
+		});
+	$("#windown-title h2").html(title);
+    $("#windownbg").show();
+	$("#windownbg").animate({opacity:"0.5"},"normal");//设置透明度
+	$("#windown-box").show();
+	if( height >= 527 ) {
+		$("#windown-title").css({width:(parseInt(width)+22)+"px"});
+		$("#windown-content").css({width:(parseInt(width)+17)+"px",height:height+"px"});
+	}else {
+		$("#windown-title").css({width:(parseInt(width)+10)+"px"});
+		$("#windown-content").css({width:width+"px",height:height+"px"});
+	}
+	var	cw = document.documentElement.clientWidth,ch = document.documentElement.clientHeight,est = document.documentElement.scrollTop; 
+	var _version = $.browser.version;
+	if ( _version == 6.0 ) {
+		$("#windown-box").css({left:"50%",top:(parseInt((ch)/2)+est)+"px",marginTop: -((parseInt(height)+53)/2)+"px",marginLeft:-((parseInt(width)+32)/2)+"px",zIndex: "999999"});
+	}else {
+		$("#windown-box").css({left:"50%",top:"10%",marginTop:-((parseInt(height)+53)/2)+"px",marginLeft:-((parseInt(width)+32)/2)+"px",zIndex: "999999"});
+	};
+	$("#windown-content").attr("class","windown-"+cssName);
+	var closeWindown = function() {
+		$("#windownbg").remove();
+		$("#windown-box").fadeOut("slow");
+	}
+	$("#windown-close").click(function() {
+			$("#windownbg").remove();
+			$("#windown-box").fadeOut("slow");
+	});
+}
+/********************报名表end**********************/
+
 /********************发布活动START**********************/
 /*
  *检查元素是否为空
  */
+ 
 function checkNotNull(id_name){
 	var selected_id = '#'+id_name;
 	if($.trim($(selected_id).val()) == ''){
@@ -266,6 +345,7 @@ $('.deletePoster').click(function(){
 		return false;
 });
 /******************** 删除海报 End ********************/
+
 </script>
 
 <include file="Public:footer" />

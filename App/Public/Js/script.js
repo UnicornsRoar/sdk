@@ -296,3 +296,4 @@ function loadImg(arr,links){
          yearSuffix: '年'};
      $.datepicker.setDefaults($.datepicker.regional['zh-CN']);
 }
+

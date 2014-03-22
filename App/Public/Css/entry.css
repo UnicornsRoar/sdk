@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+#entry_form {
+		font: 12px 'Microsoft Yahei',arial,SimSun,sans-serif;
+		margin: 0 auto;
+		padding: 0px;
+		text-align: center;
+		color: #555;
+		background: #fff;
+	}
+#entry_form a { 
+    color: #096FB7; 
+	text-decoration: none;
+}
+#entry_form a:hover { 
+    text-decoration: underline; 
+	cursor:pointer;
+}
+#entry_form li {
+	list-style:none 
+}
+#entry_form{
+	padding-top:20px;
+}
+#entry_form input[type="text"]{
+	width:180px;
+	height:30px;
+	margin:10px;
+	padding:2px;
+	font-size:14px;
+	color: #333333;
+}
+#entry_form input[type="radio"]{
+	width:15px;
+	height:15px;
+}
+#entry_form li span{
+	font-size:14px;
+	font-weight:bold;
+}
+#entry_form button{
+	width:60px;
+	height:25px;
+	margin:18px;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+#addLine{
+	width:50px;
+	height:20px;
+	margin-left:140px;
+}

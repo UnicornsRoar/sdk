@@ -1,24 +1,37 @@
-///-------------------------------------------------------------------------
-//jQuery弹出窗口 By Await [2009-11-22]
-//--------------------------------------------------------------------------
-/*参数：[可选参数在调用时可写可不写,其他为必写]
-----------------------------------------------------------------------------
-    title:	窗口标题
-  content:  内容(可选内容为){ text | id | img | url | iframe }
-    width:	内容宽度
-   height:	内容高度
-	 drag:  是否可以拖动(ture为是,false为否)
-     time:	自动关闭等待的时间，为空是则不自动关闭
-   showbg:	[可选参数]设置是否显示遮罩层(0为不显示,1为显示)
-  cssName:  [可选参数]附加class名称
- ------------------------------------------------------------------------*/
- //示例:
- //------------------------------------------------------------------------
- //simpleWindown("例子","text:例子","500","400","true","3000","0","exa")
- //------------------------------------------------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ <title>TipsWindown Demo By [Await]</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="Keywords" content="" />
+ <meta name="Description" content="" />
+ <link rel="stylesheet" href="../../../Public/Css/tipswindown.css" type="text/css" media="all" />
+ <script type="text/javascript" src="../../../Public/Js/jquery.js"></script>
+<!-- <script type="text/javascript" src="../App/Public/Js/jquery.js"></script>
+ <script type="text/javascript" src="tipswindown.js"></script>-->
+</head>
+
+<body id="tipBody">
+        <div id="entry">
+          <span >&nbsp;&nbsp;&nbsp;报名表：</span>
+          <button class="addEntry">
+          <div class="btn-B">
+             <div class="btn-B1">
+             制作报名表
+             </div>
+          </div>
+          </button>
+        </div>
+
+<script>
+	$("#entry").click(function(){
+		tipsWindown("报名表: 填入你要获得的信息","url:get?test.html","400","atuo","true","","true","text");
+	});
 var showWindown = true;
 var templateSrc = "http://leotheme.cn/wp-content/themes/Dreamy"; //设置loading.gif路径
-function tipsWindown(title,content,width,height,cssName) {
+function tipsWindown(title,content,width,height,drag,time,showbg,cssName) {
 	$("#windown-box").remove(); //请除内容
 	var width = width>= 950?this.width=950:this.width=width;	    //设置最大窗口宽度
 	var height = height>= 527?this.height=527:this.height=height;  //设置最大窗口高度
@@ -26,7 +39,7 @@ function tipsWindown(title,content,width,height,cssName) {
 		var simpleWindown_html = new String;
 			simpleWindown_html = "<div id=\"windownbg\" style=\"height:"+$(document).height()+"px;filter:alpha(opacity=0);opacity:0;z-index: 999901\"></div>";
 			simpleWindown_html += "<div id=\"windown-box\">";
-			simpleWindown_html += "<div id=\"windown-title\"><h2></h2><span id=\"windown-close\">关闭</span></div>";
+			simpleWindown_html += "<div id=\"windown-title\"><h2></h2><span id=\"windown-close\">×</span></div>";
 			simpleWindown_html += "<div id=\"windown-content-border\"><div id=\"windown-content\"></div></div>"; 
 			simpleWindown_html += "</div>";
 			$("body").append(simpleWindown_html);
@@ -34,7 +47,21 @@ function tipsWindown(title,content,width,height,cssName) {
 	}
 	contentType = content.substring(0,content.indexOf(":"));
 	content = content.substring(content.indexOf(":")+1,content.length);
-	$("#windown-content").html($("#"+content+"").html());
+		var content_array=content.split("?");
+		$("#windown-content").ajaxStart(function(){
+			$(this).html("<img src='"+templateSrc+"/images/loading.gif' class='loading' />");
+		});
+		$.ajax({
+			type:content_array[0],
+			url:content_array[1],
+			data:content_array[2],
+			error:function(){
+				$("#windown-content").html("<p class='windown-error'>加载数据出错...</p>");
+			},
+			success:function(html){
+				$("#windown-content").html(html);
+			}
+		});
 	$("#windown-title h2").html(title);
     $("#windownbg").show();
 	$("#windownbg").animate({opacity:"0.5"},"normal");//设置透明度
@@ -53,14 +80,21 @@ function tipsWindown(title,content,width,height,cssName) {
 	}else {
 		$("#windown-box").css({left:"50%",top:"10%",marginTop:-((parseInt(height)+53)/2)+"px",marginLeft:-((parseInt(width)+32)/2)+"px",zIndex: "999999"});
 	};
-	
 	$("#windown-content").attr("class","windown-"+cssName);
 	var closeWindown = function() {
 		$("#windownbg").remove();
-		$("#windown-box").fadeOut("slow",function(){$(this).remove();});
+		$("#windown-box").fadeOut("slow");
 	}
 	$("#windown-close").click(function() {
 			$("#windownbg").remove();
-			$("#windown-box").fadeOut("slow",function(){$(this).remove();});
+			$("#windown-box").fadeOut("slow");
 	});
 }
+</script>
+</div>
+<br />
+
+</body>
+
+</html>
+
