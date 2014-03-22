@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>test</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="Keywords" content="" />
+ <meta name="Description" content="" />
+ <link rel="stylesheet" href="__CSS__/entry.css" type="text/css" media="all" />
+ <script type="text/javascript" src="__JS__/jquery.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function() {
+	$("#addLine").click(function(){
+		$("#addLine").before("<li><input type='text'/></li>");  
+	});
+ });
+ </script>
+</head>
+<body>
+          <form id="entry_form" action="#" method="get">
+            <ul>
+               <li>
+                 <input type="text"/>
+               </li>
+               <li>
+                 <input type="text"/>
+               </li>
+               <li>
+                 <input type="text"/>
+               </li>
+                <li>
+                  <a id="addLine" onclick="appendLine()">添加一行</a>
+                </li>
+             </ul>
+             <button type="submit">提交</button>
+             <button>取消</button>
+          </form>
+
+</body>
+
+</html>
+

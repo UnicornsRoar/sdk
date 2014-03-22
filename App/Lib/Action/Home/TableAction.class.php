@@ -1,6 +1,6 @@
 <?php
 class TableAction extends Action{
-	public function index(){
+	public function test(){
 		$this->display('test');
 	}
 
