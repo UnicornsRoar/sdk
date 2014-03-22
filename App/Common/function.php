@@ -30,3 +30,8 @@ function get_css($array = array()) {
         echo $css_href;
     }
 }
+
+function htmlspecialchars_deep($var){
+	$var = is_array($var) ? array_map('htmlspecialchars_deep', $var) : htmlspecialchars($var);
+	return $var;
+}
