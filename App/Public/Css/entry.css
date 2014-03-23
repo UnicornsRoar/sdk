@@ -19,6 +19,7 @@
 #entry_form li {
 	list-style:none 
 }
+
 #entry_form{
 	padding-top:20px;
 }
@@ -50,4 +51,9 @@
 	width:50px;
 	height:20px;
 	margin-left:180px;
+}
+#entry_form textarea{
+	width:180px;
+	height:150px;
+	margin:10px 0;
 }

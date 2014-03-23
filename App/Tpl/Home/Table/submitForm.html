@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>entryForm</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="Keywords" content="" />
+ <meta name="Description" content="" />
+ <link rel="stylesheet" href="__CSS__/entry.css" type="text/css" media="all" />
+ <script type="text/javascript" src="__JS__/jquery.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function() {
+	$("#addLine").click(function(){
+		$("#addLine").before("<li><input type='text'/><select><option value='small'>短</option><option value='large'>长</option></select></li>");  
+	});
+    $(".cancle").click(function() {
+			$("#windownbg").remove();
+			$("#windown-box").fadeOut("slow");
+	});
+ });
+ </script>
+</head>
+<body>
+          <form id="entry_form" action="#" method="get">
+            <ul>
+               <li>
+                 姓名：
+                 <input type="text" name="field_1_1"/>
+               </li>
+               <li>
+                 学院：
+                 <input type="text" name="field_2_1"/>
+               </li>
+               <li>
+                 简介:
+                 <textarea></textarea>
+               </li>
+             </ul>
+             <button type="submit">提交</button>
+             <button class="cancle">取消</button>
+          </form>
+
+</body>
+
+</html>
+

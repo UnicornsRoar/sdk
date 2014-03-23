@@ -1,6 +1,69 @@
 <include file="Public:header"/>
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2550815018" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
+/********************报名表**********************/
+var showWindown = true;
+var templateSrc = "http://leotheme.cn/wp-content/themes/Dreamy"; //设置loading.gif路径
+function tipsWindown(title,content,width,height,cssName) {
+	$("#windown-box").remove(); //请除内容
+	var width = width>= 950?this.width=950:this.width=width;	    //设置最大窗口宽度
+	var height = height>= 527?this.height=527:this.height=height;  //设置最大窗口高度
+	if(showWindown == true) {
+		var simpleWindown_html = new String;
+			simpleWindown_html = "<div id=\"windownbg\" style=\"height:"+$(document).height()+"px;filter:alpha(opacity=0);opacity:0;z-index: 999901\"></div>";
+			simpleWindown_html += "<div id=\"windown-box\">";
+			simpleWindown_html += "<div id=\"windown-title\"><h2></h2><span id=\"windown-close\">×</span></div>";
+			simpleWindown_html += "<div id=\"windown-content-border\"><div id=\"windown-content\"></div></div>"; 
+			simpleWindown_html += "</div>";
+			$("body").append(simpleWindown_html);
+			show = false;
+	}
+	contentType = content.substring(0,content.indexOf(":"));
+	content = content.substring(content.indexOf(":")+1,content.length);
+		var content_array=content.split("?");
+		$("#windown-content").ajaxStart(function(){
+			$(this).html("<img src='"+templateSrc+"/images/loading.gif' class='loading' />");
+		});
+		$.ajax({
+			type:content_array[0],
+			url:content_array[1],
+			data:content_array[2],
+			error:function(){
+				$("#windown-content").html("<p class='windown-error'>加载数据出错...</p>");
+			},
+			success:function(html){
+				$("#windown-content").html(html);
+			}
+		});
+	$("#windown-title h2").html(title);
+    $("#windownbg").show();
+	$("#windownbg").animate({opacity:"0.5"},"normal");//设置透明度
+	$("#windown-box").show();
+	if( height >= 527 ) {
+		$("#windown-title").css({width:(parseInt(width)+22)+"px"});
+		$("#windown-content").css({width:(parseInt(width)+17)+"px",height:height+"px"});
+	}else {
+		$("#windown-title").css({width:(parseInt(width)+10)+"px"});
+		$("#windown-content").css({width:width+"px",height:height+"px"});
+	}
+	var	cw = document.documentElement.clientWidth,ch = document.documentElement.clientHeight,est = document.documentElement.scrollTop; 
+	var _version = $.browser.version;
+	if ( _version == 6.0 ) {
+		$("#windown-box").css({left:"50%",top:(parseInt((ch)/2)+est)+"px",marginTop: -((parseInt(height)+53)/2)+"px",marginLeft:-((parseInt(width)+32)/2)+"px",zIndex: "999999"});
+	}else {
+		$("#windown-box").css({left:"50%",top:"50%",marginTop:-((parseInt(height)+53)/2)+"px",marginLeft:-((parseInt(width)+32)/2)+"px",zIndex: "999999"});
+	};
+	$("#windown-content").attr("class","windown-"+cssName);
+	var closeWindown = function() {
+		$("#windownbg").remove();
+		$("#windown-box").fadeOut("slow");
+	}
+	$("#windown-close").click(function() {
+			$("#windownbg").remove();
+			$("#windown-box").fadeOut("slow");
+	});
+}
+/********************报名表end**********************/
   $(function(){
     $(".board-input").click(function(){
       $(".board-input").slideUp(400);
@@ -28,7 +91,38 @@
         $(".dialog-bg").show(400);
       });
   });
-
+  /********************点击填写报名表**********************/
+$(function(){
+$("#regisEntry").click(function(){
+		tipsWindown("报名表: ","iframe:get?{:U('Table/submitForm')}","450","360","text");
+}); 
+})
+//    $(function(){
+//    $("#regisEntry").click(function(){
+//      var status = $($(this).children()[1]);
+//      $.post("{:U('Accounts/isLogined')}",{},
+//        function(isLogined){
+//          if (isLogined == 1){
+//            if (status.html() == '我要报名'){
+//			  tipsWindown("报名表:","iframe:get?{:U('Table/submitForm')}","500","360","text");
+//              $.post(
+//                '__URL__/markregis',<!-- 这个这个代码不懂呢 -->
+//                {eventId:<php>echo $detail['event_id']</php>},
+//                function(feedback){
+//                  if (feedback == 1){
+//                    status.html('已经报名');
+//                  }
+//                }
+//              );
+//			}
+//          }else{
+//            alert('请先登录');
+//          }
+//        }
+//      )
+//    });
+//  });
+  /********************点击填写报名表END**********************/
   $(function(){
     $("#marklike").click(function(){
       var status = $($(this).children()[1]);
@@ -149,6 +243,14 @@
         <!-- <a href="#" class="more">更多&gt;&gt;</a> -->
       </p>
       <div class="button">
+        <button>
+          <div class="btn-G">
+            <div class="btn-G1" id="regisEntry">
+              <span class="imghand icon fl"></span>
+              <span class="fl"><if condition="$isRegis eq 1">已经报名<else />我要报名</if></span>
+            </div>
+          </div>
+        </button>
         <button>
           <div class="btn-R">
             <div class="btn-R1" id="marklike">

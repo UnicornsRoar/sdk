@@ -3,7 +3,12 @@ class TableAction extends Action{
 	public function entryForm(){
 		$this->display('entryForm');
 	}
-
+	public function editEntry(){
+		$this->display('editEntry');
+	}
+    public function submitForm(){
+		$this->display('submitForm');
+	}
 	public function add(){
 		$fields = $this->_post('fields', 'htmlspecialchars_deep');
 		if(IS_POST and isset($fields)){

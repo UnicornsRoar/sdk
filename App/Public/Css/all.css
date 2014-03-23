@@ -1018,11 +1018,17 @@ a.btn:hover {
 .share-on {
   background: url("../images/share-on.png");
 }
+.imghand {
+  width: 15px;
+  height: 15px;
+  background: url("../images/hand.png");
+}
 .imglike {
   width: 15px;
   height: 15px;
   background: url("../images/like.png");
 }
+
 .imgshare {
   width: 19px;
   height: 17px;
