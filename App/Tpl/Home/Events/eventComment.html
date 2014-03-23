@@ -9,16 +9,19 @@
     <div class="grid4 my-bar">
       <ul>
         <li>                 
-          <a href="{:U('Events/editActivity/event_id')}/{$event.event_id}" class="myacti-a">基本信息</a> 
+          <a href="{:U('Events/editActivity/event_id')}/{$event.event_id}" class="myacti-a">&nbsp;基本信息</a> 
         </li>
         <li>
-          <a href="{:U('Index/index')}" class="myacti-a">视频管理</a>   
+          <a href="{:U('Index/index')}" class="myacti-a">&nbsp;视频管理</a>   
         </li>
         <li>
-          <a href="{:U('Events/attachment')}/e/{$event.event_id}" class="myacti-a">附件管理</a>   
+          <a href="{:U('Events/attachment')}/e/{$event.event_id}" class="myacti-a">&nbsp;附件管理</a>   
         </li>
         <li>
-          <p class="mes-title">留言评论</p> 
+          <a href="{:U('Events/eventEntry')}/e/{$event.event_id}" class="myacti-a">报名表管理</a>
+        </li>
+        <li>
+          <p class="mes-title"&nbsp;>留言评论</p> 
           <img src="__IMG__/border.png" alt="">            
         </li>
       </ul>

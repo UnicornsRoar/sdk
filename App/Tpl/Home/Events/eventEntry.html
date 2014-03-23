@@ -1,0 +1,141 @@
+<include file="Public:header"/>
+<div class="container">
+  <div class="base-title grid24">
+    <a href="{:U('Events/manage')}" class="fl back"></a>
+    <p class="fl">{$event.event_name}</p>
+  </div>
+  <div class="row-fluid">
+    <div class="grid4 my-bar">
+      <ul>
+        <li>                 
+          <a href="{:U('Events/editActivity')}/event_id/{$event.event_id}" class="myacti-a">&nbsp;基本信息</a>
+        </li>
+        <li>
+          <a href="" class="myacti-a">&nbsp;视频管理</a>   
+        </li>
+        <li>
+          <a href="{:U('Events/attachment')}/e/{$event.event_id}" class="myacti-a">附件管理</a>    
+        </li>
+        <li>
+          <p class="mes-title">报名表管理</p> 
+          <img src="__IMG__/border.png" alt="">  
+        </li>
+        <li>
+          <a href="{:U('Events/eventComment')}/e/{$event.event_id}" class="myacti-a">&nbsp;留言评论</a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid19 my-main offset1">
+      <button id="makeEntry" type="button"><!--若没制作过报名表，显示制作按钮 -->
+       <div class="btn-G">
+         <div class="btn-G1">
+           制作报名表
+         </div>
+       </div>
+      </button>
+      <div id="formDetail"><!--若制作过报名表，显示报名表信息 -->
+            <ul>
+               <li>
+                 姓名：<input type="text" name="field_1_1"/>
+               </li>
+               <li>
+                 性别：<input type="text" name="field_2_1"/>
+               </li>
+               <li>
+                 学院：<textarea></textarea><!--根据长短选择<input>和<textarea> -->
+               </li>
+               <li>
+                  <button id="editEntry" class="marbot20" type="button"><!--点击弹出修改报名表 -->
+                    <div class="btn-G">
+                      <div class="btn-G1">
+                      修改报名表
+                      </div>
+                    </div>
+                  </button>
+               </li>
+            </ul>
+      </div>
+   </div>
+  </div>
+  
+<script>
+$("#makeEntry").click(function(){
+		tipsWindown("报名表: 填入你要获得的信息","iframe:get?{:U('Table/entryForm')}","400","360","text");
+});
+$("#editEntry").click(function(){
+		tipsWindown("报名表","iframe:get?{:U('Table/editEntry')}","400","360","text");
+});
+
+
+var showWindown = true;
+var templateSrc = "http://leotheme.cn/wp-content/themes/Dreamy"; //设置loading.gif路径
+function tipsWindown(title,content,width,height,cssName) {
+	$("#windown-box").remove(); //请除内容
+	var width = width>= 950?this.width=950:this.width=width;	    //设置最大窗口宽度
+	var height = height>= 527?this.height=527:this.height=height;  //设置最大窗口高度
+	if(showWindown == true) {
+		var simpleWindown_html = new String;
+			simpleWindown_html = "<div id=\"windownbg\" style=\"height:"+$(document).height()+"px;filter:alpha(opacity=0);opacity:0;z-index: 999901\"></div>";
+			simpleWindown_html += "<div id=\"windown-box\">";
+			simpleWindown_html += "<div id=\"windown-title\"><h2></h2><span id=\"windown-close\">×</span></div>";
+			simpleWindown_html += "<div id=\"windown-content-border\"><div id=\"windown-content\"></div></div>"; 
+			simpleWindown_html += "</div>";
+			$("body").append(simpleWindown_html);
+			show = false;
+	}
+	contentType = content.substring(0,content.indexOf(":"));
+	content = content.substring(content.indexOf(":")+1,content.length);
+		var content_array=content.split("?");
+		$("#windown-content").ajaxStart(function(){
+			$(this).html("<img src='"+templateSrc+"/images/loading.gif' class='loading' />");
+		});
+		$.ajax({
+			type:content_array[0],
+			url:content_array[1],
+			data:content_array[2],
+			error:function(){
+				$("#windown-content").html("<p class='windown-error'>加载数据出错...</p>");
+			},
+			success:function(html){
+				$("#windown-content").html(html);
+			}
+		});
+	$("#windown-title h2").html(title);
+    $("#windownbg").show();
+	$("#windownbg").animate({opacity:"0.5"},"normal");//设置透明度
+	$("#windown-box").show();
+	if( height >= 527 ) {
+		$("#windown-title").css({width:(parseInt(width)+22)+"px"});
+		$("#windown-content").css({width:(parseInt(width)+17)+"px",height:height+"px"});
+	}else {
+		$("#windown-title").css({width:(parseInt(width)+10)+"px"});
+		$("#windown-content").css({width:width+"px",height:height+"px"});
+	}
+	var	cw = document.documentElement.clientWidth,ch = document.documentElement.clientHeight,est = document.documentElement.scrollTop; 
+	var _version = $.browser.version;
+	if ( _version == 6.0 ) {
+		$("#windown-box").css({left:"50%",top:(parseInt((ch)/2)+est)+"px",marginTop: -((parseInt(height)+53)/2)+"px",marginLeft:-((parseInt(width)+32)/2)+"px",zIndex: "999999"});
+	}else {
+		$("#windown-box").css({left:"50%",top:"50%",marginTop:-((parseInt(height)+53)/2)+"px",marginLeft:-((parseInt(width)+32)/2)+"px",zIndex: "999999"});
+	};
+	$("#windown-content").attr("class","windown-"+cssName);
+	var closeWindown = function() {
+		$("#windownbg").remove();
+		$("#windown-box").fadeOut("slow");
+	}
+	$("#windown-close").click(function() {
+			$("#windownbg").remove();
+			$("#windown-box").fadeOut("slow");
+	});
+}
+/********************报名表end**********************/
+/********************报名表is or not**********************/
+  if(is){
+   $("#makeEntry").hide();
+  }
+  else{
+   $("#formDetail").hide();
+  }
+/********************报名表is or not end**********************/
+</script>
+<include file="Public:footer"/>

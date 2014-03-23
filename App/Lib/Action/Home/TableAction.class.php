@@ -1,7 +1,7 @@
 <?php
 class TableAction extends Action{
-	public function test(){
-		$this->display('test');
+	public function entryForm(){
+		$this->display('entryForm');
 	}
 
 	public function add(){

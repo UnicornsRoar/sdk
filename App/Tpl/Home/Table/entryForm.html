@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
- <title>test</title>
+ <title>entryForm</title>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta http-equiv="Content-Language" content="zh-CN" />
  <meta name="Keywords" content="" />
@@ -11,7 +11,11 @@
  <script type="text/javascript">
   $(document).ready(function() {
 	$("#addLine").click(function(){
-		$("#addLine").before("<li><input type='text'/></li>");  
+		$("#addLine").before("<li><input type='text'/><select><option value='small'>短</option><option value='large'>长</option></select></li>");  
+	});
+    $(".cancle").click(function() {
+			$("#windownbg").remove();
+			$("#windown-box").fadeOut("slow");
 	});
  });
  </script>
@@ -20,20 +24,32 @@
           <form id="entry_form" action="#" method="get">
             <ul>
                <li>
-                 <input type="text"/>
+                 <input type="text" name="field_1_1"/>
+                 <select name="field_1_2">
+                   <option value="small">短</option>
+                   <option value="large">长</option>
+                 </select>
                </li>
                <li>
-                 <input type="text"/>
+                 <input type="text" name="field_2_1"/>
+                 <select name="field_2_2">
+                   <option value="small">短</option>
+                   <option value="large">长</option>
+                 </select>
                </li>
                <li>
-                 <input type="text"/>
+                 <input type="text" name="field_3_1"/>
+                 <select name="field_3_2">
+                   <option value="small">短</option>
+                   <option value="large">长</option>
+                 </select>
                </li>
                 <li>
                   <a id="addLine" onclick="appendLine()">添加一行</a>
                 </li>
              </ul>
              <button type="submit">提交</button>
-             <button>取消</button>
+             <button class="cancle">取消</button>
           </form>
 
 </body>
