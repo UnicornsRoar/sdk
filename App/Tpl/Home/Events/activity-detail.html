@@ -90,6 +90,13 @@ function tipsWindown(title,content,width,height,cssName) {
         $(".vedioplay").show();
         $(".dialog-bg").show(400);
       });
+	$(".reply3 form #input").blur(function(){
+          var inp = $(".reply3 form #input").val();
+		  if(!isNotNull(inp)){
+            $(".reply3").slideUp(400);
+		    $(".board-input").slideDown(400);
+	      }
+	  });
   });
   /********************点击填写报名表**********************/
 $(function(){
