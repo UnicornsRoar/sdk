@@ -167,8 +167,6 @@ class AccountsAction extends ComAccountsAction{
 		cookie('loginPassword','null',-1);
 		unset($_SESSION['account_id']);
 		unset($_SESSION['user_name']);
-		$ucSynLogout = uc_user_synlogout();
-        echo $ucSynLogout;
 		echo '<script type="text/javascript">window.location.href="' . U('Index/index') . '"</script>"';
 	}
 
