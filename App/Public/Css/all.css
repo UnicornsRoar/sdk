@@ -673,6 +673,7 @@ textarea,
   -moz-border-radius: 4px;
   border-radius: 4px;
   border: #26aa61 1px solid;
+  background:#37dc74;
   color: #ffffff;
   font-size: 16px;
   letter-spacing: 2px;
@@ -687,6 +688,7 @@ textarea,
   -moz-border-radius: 4px;
   border-radius: 4px;
   border: #34af6b 1px solid;
+  background:#47ef85;
   color: #ffffff;
   font-size: 16px;
   letter-spacing: 2px;
@@ -2428,6 +2430,10 @@ p.intro a {
 .vediodiv .btn-cc {
   margin-top: 20px;
 }
+#uregist{
+	width:753px;
+	margin:0 auto;
+}
 .mass-main2 {
   border-right: 1px dashed #00b945;
   height: 660px;
@@ -2612,3 +2618,8 @@ p.intro a {
 .martop10 {
   margin-top: 10px;
 }
+#formDetail li{
+	padding-bottom:23px;
+}
+#formDetail input{
+	width:

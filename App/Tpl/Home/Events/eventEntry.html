@@ -33,35 +33,42 @@
          </div>
        </div>
       </button>
-      <div id="formDetail"><!--若制作过报名表，显示报名表信息 -->
-            <ul>
-               <li>
-                 姓名：<input type="text" name="field_1_1"/>
-               </li>
-               <li>
-                 性别：<input type="text" name="field_2_1"/>
-               </li>
-               <li>
-                 学院：<textarea></textarea><!--根据长短选择<input>和<textarea> -->
-               </li>
-               <li>
-                  <button id="editEntry" class="marbot20" type="button"><!--点击弹出修改报名表 -->
-                    <div class="btn-G">
-                      <div class="btn-G1">
-                      修改报名表
-                      </div>
-                    </div>
-                  </button>
-                  <button id="deleteEntry" class="marbot20" type="button">
-                    <div class="btn-G">
-                      <div class="btn-G1">
-                      删除报名表
-                      </div>
-                    </div>
-                  </button>
-               </li>
-            </ul>
-      </div>
+      <div class="countEn">已有<span> 13 </span>人报名 , <a href="{:U('Events/entryList')}">点击查看</a></div>
+      <div class="theForm">
+      <p class="enTitle">报名表</p>
+      <div class="entry_form">
+         <ul class="submitForm clearfix">
+            <li>
+              <span>姓名 :</span>
+              <input type="text" name="field_1_1"/>
+            </li>
+            <li>
+              <span>学院 :</span>
+              <input type="text" name="field_2_1"/>
+            </li>
+            <li>
+              <span>自我简介 :</span>
+              <textarea></textarea>
+            </li>
+          </ul>
+       </div>
+       </div>
+       <div class="douButton">
+          <button id="eidtEntry" type="button">
+            <div class="btn-G">
+              <div class="btn-G1">
+                修改报名表
+              </div>
+            </div>
+           </button>
+           <button id="deleteEntry" type="button">
+            <div class="btn-G">
+              <div class="btn-G1">
+                删除报名表
+              </div>
+            </div>
+           </button>
+       </div>
    </div>
   </div>
   
@@ -69,8 +76,8 @@
 $("#makeEntry").click(function(){
 		tipsWindown("报名表: 填入你要获得的信息","iframe:get?{:U('Table/entryForm')}","400","360","text");
 });
-$("#editEntry").click(function(){
-		tipsWindown("报名表","iframe:get?{:U('Table/editEntry')}","400","360","text");
+$("#eidtEntry").click(function(){
+		tipsWindown("报名表","iframe:get?{:U('Table/entryForm')}","400","360","text");
 });
 
 
@@ -137,12 +144,7 @@ function tipsWindown(title,content,width,height,cssName) {
 }
 /********************报名表end**********************/
 /********************报名表is or not**********************/
-  if(is){
    $("#makeEntry").hide();
-  }
-  else{
-   $("#formDetail").hide();
-  }
 /********************报名表is or not end**********************/
 </script>
 <include file="Public:footer"/>

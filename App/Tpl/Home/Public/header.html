@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="__CSS__/all.css">
   <link rel="stylesheet/less" type="text/css" href="__CSS__/jquery-ui-1.9.2.custom.min.css">
   <link rel="stylesheet" type="text/css" href="__CSS__/tipswindown.css">
+  <link rel="stylesheet" href="__CSS__/entry.css" type="text/css" media="all" />
   <!--<script type="text/javascript" src="__JS__/less.js"></script>-->
   <script type="text/javascript" src="__JS__/jquery.js"></script>
   <script type="text/javascript" src="__JS__/jquery-ui-1.9.2.custom.min.js"></script>
@@ -58,7 +59,7 @@ $(function(){
     <span id="email_tip" style="color:red;height:5px;margin-left:20px;"></span>
     </form>
     <div class="logtype">
-      <a href="{:U('Accounts/massLogin')}">社团登录</a> |<a href="http://passport.mygdufs.com/Account/register/appid/2">立即注册</a>
+      <a href="{:U('Accounts/massLogin')}">社团登录</a> |<a href="{:U('Accounts/uregist')}">立即注册</a>
     </div>
 </div>
 <div class="top-nav">
@@ -68,7 +69,7 @@ $(function(){
     </div>
     <if condition="empty($_SESSION['account_id'])">
       <div class="log-a fr">
-        <a href="#" class="btnlogin">登录</a>|<a href="http://passport.mygdufs.com/Account/register/appid/2">注册</a>
+        <a href="#" class="btnlogin">登录</a>|<a href="{:U('Accounts/uregist')}">注册</a>
       </div>
     <else />
         <if condition="$Think.session.verified eq 1">

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
- <title>entryForm</title>
+ <title>submitForm</title>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta http-equiv="Content-Language" content="zh-CN" />
  <meta name="Keywords" content="" />
@@ -21,23 +21,25 @@
  </script>
 </head>
 <body>
-          <form id="entry_form" action="#" method="get">
-            <ul>
+          <form class="entry_form" action="#" method="get">
+            <ul class="submitForm submitCenter">
                <li>
-                 姓名：
+                 <span>姓名 :</span>
                  <input type="text" name="field_1_1"/>
                </li>
                <li>
-                 学院：
+                 <span>学院 :</span>
                  <input type="text" name="field_2_1"/>
                </li>
                <li>
-                 简介:
+                 <span>自我简介 :</span>
                  <textarea></textarea>
                </li>
+               <li class="formButton">
+                  <button type="submit">提交</button>
+                  <button class="cancle">取消</button>
+               </li>
              </ul>
-             <button type="submit">提交</button>
-             <button class="cancle">取消</button>
           </form>
 
 </body>

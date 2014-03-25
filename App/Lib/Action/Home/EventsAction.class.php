@@ -537,6 +537,11 @@ class EventsAction extends ComEventAction{
         $this->display('attachment');
     }
 
-    
+    public function eventEntry(){
+		$this->display();
+	}
+    public function entryList(){
+		$this->display();
+	}
 }
 ?>

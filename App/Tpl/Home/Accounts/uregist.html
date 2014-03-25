@@ -1,0 +1,238 @@
+<include file="Public:header"/>
+<div class="container">
+		<input type="hidden" name="submitted" value="submitted"/>
+  <p class="new-title grid24">用户注册</p>
+  <div class="row-fluid">
+    <div class="grid24">
+      <div class="must">
+        <i class="necessary-i">以下内容均需填写</i>
+      </div>
+    </div>
+  </div>
+  	<form id="reg_form" action="{:U('Accounts/registMass')}" method="post">
+  <div class="row-fluid">
+      <div class="grid18 mass-main2">
+        <div class="choose-form">
+          <div class="row">
+            邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="text" class="regist-box" name="email" id="reg_email1"><span class="regist-warn" id="email_tip1"></span>
+          </div>
+          <div class="row">
+            用户名称：<input type="text" class="regist-box" name="mass" id="reg_mass"><span class="regist-warn" id="mass_tip"></span>
+          </div>
+          <div class="row clearfix">
+            <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_pass"> <!-- <div class="regist-warn fl" id="reg_pass"></div> -->
+          </div>
+          <div class="row">
+            重复密码：<input type="password" class="regist-box" name="repass" id="reg_repass">
+            <span class="regist-warn" id="repass_tip"></span>
+          </div>
+        </div>
+        <button class="big-btn2">提交注册</button>
+      </div>
+      <div class="grid6">
+        <div class="lognow">发布活动 , <a href="{:U('Accounts/regist')}">社团注册</a></div>
+        <span class="lightblack">个人用户注册须知：</span>
+      </div>
+  </div>
+	</form>
+</div>
+<form class="disn">
+        <input type="file" accept="image/png/jpg/gif" id="posterToUpload" name="poster_src"/>
+        <button type="submit">确定上传</button>
+</form>
+<script>
+	function focusEmail(){
+		$('#email_tip1').html('你填写的邮箱将在日后登录时使用');
+	}
+	function focusMass(){
+		$('#mass_tip').html('请认真填写用户名称');
+	}
+	function focusPass(){
+		$('#pass_tip1').html('请输入6-16位数字、字母或常用符号，字母区分大小写');
+	}
+	function focusRepass(){
+		$('#repass_tip').html('请再次输入上面的密码');
+	}
+
+	/*
+	 *检查邮箱是否为空
+	 */
+	function isValidEmail(email){
+		if(email== ''){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	function isRegisteredEmail(email,verified) {
+		var bool;
+        $.ajax({
+			async: false,
+			type: 'post',
+			url: '{:U("Accounts/isRegisteredEmail")}',
+			data: {'email': email, 'submitted': 'submitted','verified':verified},
+			success: function(data) {
+				var feedback = $.parseJSON(data);
+				if (feedback.status == 1) {
+					$('#email_tip1').html(feedback.info);
+					bool = true;
+				} else {
+					$('#email_tip1').html('<img src="__IMG__/must2.png" />');
+					bool = false;
+				}
+			}
+		});
+		return bool;
+    }
+	/*
+	*检查填写的用户名
+	*/
+	function isValidUserName(user_name) {
+		var bool;
+        $.ajax({
+			async: false,
+			type: 'post',
+			url: '{:U("Accounts/isValidUserName")}',
+			data: {'user_name': user_name, 'submitted': 'submitted'},
+			success: function(data) {
+				var feedback = $.parseJSON(data);
+				if (feedback.status == 0) {
+					$('#mass_tip').html(feedback.info);
+					bool = false;
+				} else {
+					$('#mass_tip').html('<img src="__IMG__/must2.png" />');
+					bool = true;
+				}
+			}
+		});
+		return bool;
+    }
+
+	 /**
+     * 检查邮箱是否可以使用
+     */
+    function checkEmail() {
+        var email = $('#reg_email1').val();
+        // 检查邮箱是否合法
+		if(!isNotNull(email)){
+			$('#email_tip1').html('邮箱地址不能为空');
+			return false;
+		}
+		if (!isValidEmail(email)) {
+            $('#email_tip1').html('邮箱地址不合法');
+            return false;
+        } else {
+            // 检查邮箱是否已经被注册
+            return !isRegisteredEmail(email,1);
+        }
+    }
+
+	/**
+     * 检查用户名是否合法
+     */
+    function checkUserName() {
+        var user_name = $('#reg_mass').val();
+        // 检查用户名合法性
+		if(!isNotNull(user_name)){
+			$('#mass_tip').html('社团名称不能为空');
+			return false;
+		}
+        return isValidUserName(user_name);
+    }
+
+	/**
+     * 检查密码是否合法
+     */
+    function checkPassword() {
+        var password = $('#reg_pass1').val();
+        // 检查密码的合法性
+		if(!isNotNull(password)){
+			$('#pass_tip1').html('密码不能为空');
+			return false;
+		}
+        if (!isValidPassword(password)) {
+            $('#pass_tip1').html('密码长度不够');
+            return false;
+        } else {
+            $('#pass_tip1').html('<img src="__IMG__/must2.png" />');
+            return true;
+        }
+    }
+
+	/**
+     * 检查重复密码是否合法
+     */
+    function checkPassconf() {
+        var password = $('#reg_pass').val();
+        var passconf = $('#reg_repass').val();
+		if(!isNotNull(passconf)){
+			$('#repass_tip').html('密码不能为空');
+			return false;
+		}
+        if (password != passconf) {
+            $('#repass_tip').html('两次密码不相同');
+            return false;
+        } else if (!isValidPassword(passconf)) {
+            $('#repass_tip').html('密码长度不够');
+            return false;
+        } else {
+            $('#repass_tip').html('<img src="__IMG__/must2.png" />');
+            return true;
+        }
+    }
+
+	/*
+	 *检查是否填写完整信息
+	 */
+	function checkFields() {
+        var c_email = checkEmail();
+        var c_user_name = checkUserName();
+        var c_password = checkPassword();
+        var c_passconf = checkPassconf();
+		var c_poster = checkPoster();
+        if (c_email && c_user_name && c_password
+            && c_passconf && c_poster) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+	$('#reg_email1').focus(function(){
+		focusEmail();
+	});
+	$('#reg_mass').focus(function(){
+		focusMass();
+	});
+	$('#reg_mass').blur(function() {
+        checkUserName();
+    });
+	$('#reg_pass1').focus(function(){
+		focusPass();
+	});
+	$('#reg_pass1').blur(function(){
+		checkPassword();
+	})
+	$('#reg_repass').focus(function(){
+		focusRepass();
+	});
+	$('#reg_repass').blur(function(){
+		checkPassconf();
+	});
+
+	$('#reg_email1').blur(function() {
+        checkEmail();
+    });
+	/*
+	* 单击提交注册
+	 */
+    $(".big-btn2").click(function() {
+        if (checkFields()) {
+            $('#reg_form').submit();
+        } else {
+            return false;
+        }
+    });
+	</script>
+<include file="Public:footer"/>
