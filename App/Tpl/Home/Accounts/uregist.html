@@ -19,7 +19,7 @@
             用户名称：<input type="text" class="regist-box" name="user_name" id="reg_mass"><span class="regist-warn" id="mass_tip"></span>
           </div>
           <div class="row clearfix">
-            <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_password"> <!-- <div class="regist-warn fl"></div> -->
+            <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_password"> <span class="regist-warn" id="pass_tip1"></span><!-- <div class="regist-warn fl"></div> -->
           </div>
           <div class="row">
             重复密码：<input type="password" class="regist-box" name="repass" id="reg_repass">
@@ -134,7 +134,7 @@
         var user_name = $('#reg_mass').val();
         // 检查用户名合法性
 		if(!isNotNull(user_name)){
-			$('#mass_tip').html('社团名称不能为空');
+			$('#mass_tip').html('用户名称不能为空');
 			return false;
 		}
         return isValidUserName(user_name);
@@ -170,9 +170,6 @@
 			return false;
 		}
         if (pwd != passconf) {
-        	$('#reg_password').val(3123);
-        	alert('password='+pwd);
-        	alert('repassword='+passconf);
             $('#repass_tip').html('两次密码不相同');
             return false;
         } else if (!isValidPassword(passconf)) {

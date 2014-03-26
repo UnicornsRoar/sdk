@@ -20,7 +20,7 @@
             社团名称：<input type="text" class="regist-box" name="mass" id="reg_mass"><span class="regist-warn" id="mass_tip"></span>
           </div>
           <div class="row clearfix">
-            <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_pass"> <!-- <div class="regist-warn fl" id="reg_pass"></div> -->
+            <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_gpass"><span class="regist-warn" id="pass_tip1"></span> <!-- <div class="regist-warn fl" id="reg_pass"></div> -->
           </div>
           <div class="row">
             重复密码：<input type="password" class="regist-box" name="repass" id="reg_repass">
@@ -170,7 +170,7 @@
      * 检查密码是否合法
      */
     function checkPassword() {
-        var password = $('#reg_pass1').val();
+        var password = $('#reg_gpass').val();
         // 检查密码的合法性
 		if(!isNotNull(password)){
 			$('#pass_tip1').html('密码不能为空');
@@ -189,7 +189,7 @@
      * 检查重复密码是否合法
      */
     function checkPassconf() {
-        var password = $('#reg_pass').val();
+        var password = $('#reg_gpass').val();
         var passconf = $('#reg_repass').val();
 		if(!isNotNull(passconf)){
 			$('#repass_tip').html('密码不能为空');
@@ -246,10 +246,10 @@
 	$('#reg_mass').blur(function() {
         checkUserName();
     });
-	$('#reg_pass1').focus(function(){
+	$('#reg_gpass').focus(function(){
 		focusPass();
 	});
-	$('#reg_pass1').blur(function(){
+	$('#reg_gpass').blur(function(){
 		checkPassword();
 	})
 	$('#reg_repass').focus(function(){
