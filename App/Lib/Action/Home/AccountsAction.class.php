@@ -297,7 +297,22 @@ class AccountsAction extends ComAccountsAction{
 
 	function userRegister(){
 		if(IS_POST){
-			var_dump($_POST);
+			$accounts = D('Accounts');
+			$data['user_name'] = $this->_post('user_name');
+			$data['password']  = sha1($this->_post('pass'));
+			$data['email']     = $this->_post('email');
+			$UsedName = $accounts->isRegisteredUserName($data['user_name']);
+			$UsedEmail = $accounts->isRegisteredEmail($data['email']);
+			$samePass = $this->_post('pass') == $this->_post('repass');
+			
+			if (!$UsedEmail AND !$UsedName AND $samePass){
+				if ($accounts->add($data))
+					$this->success("注册成功",U('Index/index'));
+				else
+					$this->error('注册失败');
+			}else{
+				$this->error('注册信息有误');
+			}
 		}else{
 			$this->display('uregist');
 		}
