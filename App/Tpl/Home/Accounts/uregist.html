@@ -1,6 +1,5 @@
 <include file="Public:header"/>
 <div class="container">
-		<input type="hidden" name="submitted" value="submitted"/>
   <p class="new-title grid24">用户注册</p>
   <div class="row-fluid">
     <div class="grid24">
@@ -9,7 +8,7 @@
       </div>
     </div>
   </div>
-  	<form id="reg_form" action="{:U('Accounts/registMass')}" method="post">
+  	<form id="reg_form" action="{:U('Accounts/userRegister')}" method="post">
   <div class="row-fluid">
       <div class="grid18 mass-main2">
         <div class="choose-form">
@@ -17,10 +16,10 @@
             邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="text" class="regist-box" name="email" id="reg_email1"><span class="regist-warn" id="email_tip1"></span>
           </div>
           <div class="row">
-            用户名称：<input type="text" class="regist-box" name="mass" id="reg_mass"><span class="regist-warn" id="mass_tip"></span>
+            用户名称：<input type="text" class="regist-box" name="user_name" id="reg_mass"><span class="regist-warn" id="mass_tip"></span>
           </div>
           <div class="row clearfix">
-            <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_pass"> <!-- <div class="regist-warn fl" id="reg_pass"></div> -->
+            <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_password"> <!-- <div class="regist-warn fl"></div> -->
           </div>
           <div class="row">
             重复密码：<input type="password" class="regist-box" name="repass" id="reg_repass">
@@ -58,10 +57,11 @@
 	 *检查邮箱是否为空
 	 */
 	function isValidEmail(email){
-		if(email== ''){
-			return false;
-		}else{
+		re = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/
+		if(re.test(email)){
 			return true;
+		}else{
+			return false;
 		}
 	}
 	function isRegisteredEmail(email,verified) {
@@ -144,7 +144,7 @@
      * 检查密码是否合法
      */
     function checkPassword() {
-        var password = $('#reg_pass1').val();
+        var password = $('#reg_password').val();
         // 检查密码的合法性
 		if(!isNotNull(password)){
 			$('#pass_tip1').html('密码不能为空');
@@ -163,13 +163,16 @@
      * 检查重复密码是否合法
      */
     function checkPassconf() {
-        var password = $('#reg_pass').val();
+        var pwd = $('#reg_password').val();
         var passconf = $('#reg_repass').val();
 		if(!isNotNull(passconf)){
 			$('#repass_tip').html('密码不能为空');
 			return false;
 		}
-        if (password != passconf) {
+        if (pwd != passconf) {
+        	$('#reg_password').val(3123);
+        	alert('password='+pwd);
+        	alert('repassword='+passconf);
             $('#repass_tip').html('两次密码不相同');
             return false;
         } else if (!isValidPassword(passconf)) {
@@ -189,9 +192,8 @@
         var c_user_name = checkUserName();
         var c_password = checkPassword();
         var c_passconf = checkPassconf();
-		var c_poster = checkPoster();
         if (c_email && c_user_name && c_password
-            && c_passconf && c_poster) {
+            && c_passconf) {
             return true;
         } else {
             return false;
@@ -200,30 +202,25 @@
 
 
 	$('#reg_email1').focus(function(){
-		focusEmail();
-	});
-	$('#reg_mass').focus(function(){
-		focusMass();
-	});
-	$('#reg_mass').blur(function() {
-        checkUserName();
-    });
-	$('#reg_pass1').focus(function(){
-		focusPass();
-	});
-	$('#reg_pass1').blur(function(){
-		checkPassword();
-	})
-	$('#reg_repass').focus(function(){
-		focusRepass();
-	});
-	$('#reg_repass').blur(function(){
-		checkPassconf();
-	});
-
+		focusEmail();} );
 	$('#reg_email1').blur(function() {
-        checkEmail();
-    });
+        checkEmail();} );
+
+	$('#reg_mass').focus(function(){
+		focusMass();} );
+	$('#reg_mass').blur(function() {
+        checkUserName(); });
+
+	$('#reg_password').focus(function(){
+		focusPass(); });
+	$('#reg_password').blur(function(){
+		checkPassword(); })
+
+	$('#reg_repass').focus(function(){
+		focusRepass(); });
+	$('#reg_repass').blur(function(){
+		checkPassconf(); });
+
 	/*
 	* 单击提交注册
 	 */

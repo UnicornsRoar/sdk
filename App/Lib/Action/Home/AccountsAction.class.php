@@ -237,7 +237,7 @@ class AccountsAction extends ComAccountsAction{
             $type = $_POST['type'];
             $Account = new AccountsModel();
             if (!$Account->checkUserName($user_name)) {
-                $this->ajaxReturn('', '用户名3-15个字节', 0);
+                $this->ajaxReturn('', '用户名4-15个字节', 0);
             } else {
                 // 如果是编辑资料, 当填写的用户名与当前登录的用户名相同时返回
                 // 即没有更改用户时返回
@@ -293,5 +293,13 @@ class AccountsAction extends ComAccountsAction{
 	function userLogin(){
 		$this->assign('type',0);
 		$this->display('massLogin');
+	}
+
+	function userRegister(){
+		if(IS_POST){
+			var_dump($_POST);
+		}else{
+			$this->display('uregist');
+		}
 	}
 }

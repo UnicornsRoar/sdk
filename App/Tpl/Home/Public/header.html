@@ -59,7 +59,7 @@ $(function(){
     <span id="email_tip" style="color:red;height:5px;margin-left:20px;"></span>
     </form>
     <div class="logtype">
-      <a href="{:U('Accounts/massLogin')}">社团登录</a> |<a href="{:U('Accounts/uregist')}">立即注册</a>
+      <a href="{:U('Accounts/massLogin')}">社团登录</a> |<a href="{:U('Accounts/userRegister')}">立即注册</a>
     </div>
 </div>
 <div class="top-nav">
@@ -69,7 +69,7 @@ $(function(){
     </div>
     <if condition="empty($_SESSION['account_id'])">
       <div class="log-a fr">
-        <a href="#" class="btnlogin">登录</a>|<a href="{:U('Accounts/uregist')}">注册</a>
+        <a href="#" class="btnlogin">登录</a>|<a href="{:U('Accounts/userRegister')}">注册</a>
       </div>
     <else />
         <if condition="$Think.session.verified eq 1">
