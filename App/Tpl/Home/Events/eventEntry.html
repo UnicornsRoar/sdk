@@ -34,25 +34,45 @@
        </div>
       </button>
       <div class="countEn">已有<span> 13 </span>人报名 , <a href="{:U('Events/entryList')}">点击查看</a></div>
-      <div class="theForm">
-      <p class="enTitle">报名表</p>
-      <div class="entry_form">
-         <ul class="submitForm clearfix">
-            <li>
-              <span>姓名 :</span>
-              <input type="text" name="field_1_1"/>
-            </li>
-            <li>
-              <span>学院 :</span>
-              <input type="text" name="field_2_1"/>
-            </li>
-            <li>
-              <span>自我简介 :</span>
-              <textarea></textarea>
-            </li>
-          </ul>
-       </div>
-       </div>
+       <p class="struTitle">报名表结构</p>
+       <div class="entryStru padlef20">
+         <table>
+            <tr class="firstTr">
+              <td>报名表项</td>
+              <td>输入长度</td>
+              <td colspan="2">操作</td>
+            </tr>
+            <tr>
+              <td>姓名</td>
+              <td>短</td>
+              <td><a class="adelete" href="#">× 删除</a></td>
+              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+            </tr>
+            <tr>
+              <td>学院</td>
+              <td>短</td>
+              <td><a class="adelete" href="#">× 删除</a></td>
+              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+            </tr>
+            <tr>
+              <td>学号</td>
+              <td>短</td>
+              <td><a class="adelete" href="#">× 删除</a></td>
+              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+            </tr>
+            <tr>
+            <tr>
+              <td>自我简介</td>
+              <td>长</td>
+              <td><a class="adelete" href="#">× 删除</a></td>
+              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+            </tr>
+            <tr>
+              <td class="itemCount" colspan="4">4 条表项</td>
+            </tr>
+          </table>
+        </div>
+
        <div class="douButton">
           <button id="eidtEntry" type="button">
             <div class="btn-G">

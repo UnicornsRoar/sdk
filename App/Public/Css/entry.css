@@ -79,7 +79,8 @@
 }
 .douButton{
 	margin-top:20px;
-	margin-left:110px;
+	margin-left:75px;
+	margin-bottom:40px;
 }
 .douButton button{
 	margin-right:10px;
@@ -111,23 +112,27 @@
 	padding-bottom:20px;
 }
 .entryTable{
-	margin:0 auto;
 	margin-bottom:40px;
 	min-height:440px;
 }
-.entryTable table{
+.entryTable table,.entryStru table{
 	font-size:16px;
-	margin:0 auto;
 	border-top:1px solid #00b945;
 	border-left:1px solid #00b945;
 }
-.entryTable tr{
+.entryTable tr,.entryStru tr{
 	border-bottom:1px solid #00b945;
 }
-.entryTable td{
+.entryTable td,.entryStru td{
 	border-right:1px solid #00b945;
 	padding:10px;
 	max-width:400px;
+}
+.entryStru td{
+	padding:10px 15px;
+}
+.entryStru td a{
+	font-size:14px;
 }
 .firstTr{
 	background-color:#37dc74;
@@ -139,4 +144,30 @@
 }
 .firstTr td{
 	border:1px solid #009b45;
+}
+.struTitle{
+	font-size:18px;
+	color: #238b49;
+	font-weight:bold;
+	margin-bottom:12px;
+}
+.entryStru{
+	text-align:center;
+}
+.itemCount{
+	font-size:14px;
+	font-weight:600;
+}
+.aedit{
+	color:#0776a0;
+}
+.adelete{
+	color:#F00;
+}
+.imgpen{
+  width: 12px;
+  height: 12px;
+  background: url("../images/aedit.png");
+  margin-top:5px;
+  margin-right:5px;
 }
