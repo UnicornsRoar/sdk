@@ -301,10 +301,11 @@ class AccountsAction extends ComAccountsAction{
 			$data['user_name'] = $this->_post('user_name');
 			$data['password']  = sha1($this->_post('pass'));
 			$data['email']     = $this->_post('email');
-			$UsedName = $accounts->isRegisteredUserName($data['user_name']);
+			$data['reg_time']  = time();
+			$UsedName  = $accounts->isRegisteredUserName($data['user_name']);
 			$UsedEmail = $accounts->isRegisteredEmail($data['email']);
-			$samePass = $this->_post('pass') == $this->_post('repass');
-			
+			$samePass  = $this->_post('pass') == $this->_post('repass');
+
 			if (!$UsedEmail AND !$UsedName AND $samePass){
 				if ($accounts->add($data))
 					$this->success("注册成功",U('Index/index'));

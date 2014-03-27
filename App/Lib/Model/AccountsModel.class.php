@@ -176,6 +176,7 @@ class AccountsModel extends Model{
 
    	/**
    	 * 批量获取用户名字
+   	 * 引用并返回$array数组参数
    	 * @param  array $array 每个字数组带有account_id值的数组
    	 * @return array
    	 */
@@ -184,6 +185,21 @@ class AccountsModel extends Model{
    			$array[$key]['user_name'] = $this->getUserName($value['account_id']);
    		}
    		return $array;
+   	}
+
+   	/**
+   	 * 从一个account_id数组中取出用户名
+   	 * @param  array $idArray (num_index => acount_id)
+   	 * @return array (account_id => user_name)
+   	 */
+   	public function getUserNameInBatchFromId($idArray){
+   		$where = array('account_id'=>array('in', $idArray));
+   		$rows = $this->field('account_id, user_name')->where($where)->select();
+   		$result = array();
+   		foreach ($row as $value) {
+   			$result[$value['account_id']] = $value['user_name'];
+   		}
+   		return $result;
    	}
 
    	/**

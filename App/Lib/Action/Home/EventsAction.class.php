@@ -448,14 +448,6 @@ class EventsAction extends ComEventAction{
             $this->error('请先登录,登录后方可评论');
         $Model = D('Comments');
         if($Model->create($_POST,1)){
-
-            ob_start();
-            var_dump($_POST);
-            $output = ob_get_clean();
-            $file = fopen('./debug.txt', 'w');
-            fwrite($file, $output);
-            fclose($file);
-            
             $data['comment']    = htmlspecialchars($_POST['comment']);
             $data['account_id'] = $_SESSION['account_id'];
             $data['event_id']   = $_POST['eventId'];
@@ -537,11 +529,53 @@ class EventsAction extends ComEventAction{
         $this->display('attachment');
     }
 
+    /**
+     * 报名表设置
+     */
     public function eventEntry(){
-		$this->display();
+        $event_id   = $this->_get('e');
+        $fieldModel = D('Table_field');
+        $fields     = $fieldModel->getEventFields($event_id);
+        if (count($fields)){
+            $this->assign('hasSetTable', 0);
+            $this->display();
+        }else{
+            $this->assign('hasSetTable', 1);
+            $this->assign('fields', $fields);
+            $this->display();
+        }
 	}
+
+    /**
+     * 查看报名人数信息
+     */
     public function entryList(){
-		$this->display();
+        $event_id = $this->_get('e');
+        if (!empty($event_id)){
+            $fieldModel = D('Table_field');
+            // 获取分页
+            $pageNum = $this->_get('p', 'htmlspecialchars', 1);
+            $count   = $fieldModel->getSignCount($event_id);
+            $limit   = 15;
+            $pager   = new Page($count, $limit);
+
+            $signedUsers = $fieldModel->getSignUsers($event_id, $pageNum, $limit);
+            $fields      = $fieldModel->getEventFields($event_id);
+            $table       = $fieldModel->createTable($fields, $signedUsers);
+
+            // 确保fields按照field_id排序
+            $sortedFields = array();
+            foreach ($fields as $value) {
+                $sortedFields[$value['field_id']] = $value['field_name'];
+            }
+
+            $this->assign('fields', $sortedFields);
+            $this->assign('tabel', $table);
+            $this->assign('page', $pager->show());
+    		$this->display();
+        }else{
+            $this->error('非法操作！');
+        }
 	}
 }
 ?>
