@@ -536,12 +536,12 @@ class EventsAction extends ComEventAction{
         $event_id   = $this->_get('e');
         $fieldModel = D('Table_field');
         $fields     = $fieldModel->getEventFields($event_id);
-        if (count($fields)){
-            $this->assign('hasSetTable', 0);
-            $this->display();
-        }else{
+        if ($fields){
             $this->assign('hasSetTable', 1);
             $this->assign('fields', $fields);
+            $this->display();
+        }else{
+            $this->assign('hasSetTable', 0);
             $this->display();
         }
 	}

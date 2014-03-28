@@ -26,69 +26,72 @@
       </ul>
     </div>
     <div class="grid19 my-main offset1">
-      <button id="makeEntry" type="button"><!--若没制作过报名表，显示制作按钮 -->
-        <div class="btn-G">
-          <div class="btn-G1">
-            制作报名表
+      <if condition="$hasSetTable eq 0">
+        <button id="makeEntry" type="button"><!--若没制作过报名表，显示制作按钮 -->
+          <div class="btn-G">
+            <div class="btn-G1">
+              制作报名表
+            </div>
           </div>
-        </div>
-      </button>
-      <div class="countEn">已有<span> 13 </span>人报名 , <a href="{:U('Events/entryList')}">点击查看</a></div>
-       <p class="struTitle">报名表结构</p>
-       <div class="entryStru padlef20">
-         <table>
-            <tr class="firstTr">
-              <td>报名表项</td>
-              <td>输入长度</td>
-              <td colspan="2">操作</td>
-            </tr>
-            <tr>
-              <td>姓名</td>
-              <td>短</td>
-              <td><a class="adelete" href="#">× 删除</a></td>
-              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-            </tr>
-            <tr>
-              <td>学院</td>
-              <td>短</td>
-              <td><a class="adelete" href="#">× 删除</a></td>
-              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-            </tr>
-            <tr>
-              <td>学号</td>
-              <td>短</td>
-              <td><a class="adelete" href="#">× 删除</a></td>
-              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-            </tr>
-            <tr>
-            <tr>
-              <td>自我简介</td>
-              <td>长</td>
-              <td><a class="adelete" href="#">× 删除</a></td>
-              <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-            </tr>
-            <tr>
-              <td class="itemCount" colspan="4">4 条表项</td>
-            </tr>
-          </table>
-        </div>
+        </button>
+      <else />
+        <div class="countEn">已有<span> 13 </span>人报名 , <a href="{:U('Events/entryList')}">点击查看</a></div>
+         <p class="struTitle">报名表结构</p>
+         <div class="entryStru padlef20">
+           <table>
+              <tr class="firstTr">
+                <td>报名表项</td>
+                <td>输入长度</td>
+                <td colspan="2">操作</td>
+              </tr>
+              <tr>
+                <td>姓名</td>
+                <td>短</td>
+                <td><a class="adelete" href="#">× 删除</a></td>
+                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+              </tr>
+              <tr>
+                <td>学院</td>
+                <td>短</td>
+                <td><a class="adelete" href="#">× 删除</a></td>
+                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+              </tr>
+              <tr>
+                <td>学号</td>
+                <td>短</td>
+                <td><a class="adelete" href="#">× 删除</a></td>
+                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+              </tr>
+              <tr>
+              <tr>
+                <td>自我简介</td>
+                <td>长</td>
+                <td><a class="adelete" href="#">× 删除</a></td>
+                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
+              </tr>
+              <tr>
+                <td class="itemCount" colspan="4">4 条表项</td>
+              </tr>
+            </table>
+          </div>
 
-       <div class="douButton">
-          <button id="eidtEntry" type="button">
-            <div class="btn-G">
-              <div class="btn-G1">
-                修改报名表
+        <div class="douButton">
+            <button id="eidtEntry" type="button">
+              <div class="btn-G">
+                <div class="btn-G1">
+                  修改报名表
+                </div>
               </div>
-            </div>
-           </button>
-           <button id="deleteEntry" type="button">
-            <div class="btn-G">
-              <div class="btn-G1">
-                删除报名表
+             </button>
+             <button id="deleteEntry" type="button">
+              <div class="btn-G">
+                <div class="btn-G1">
+                  删除报名表
+                </div>
               </div>
-            </div>
-           </button>
-       </div>
+             </button>
+        </div>
+      </if>
    </div>
   </div>
   
@@ -164,7 +167,7 @@ function tipsWindown(title,content,width,height,cssName) {
 }
 /********************报名表end**********************/
 /********************报名表is or not**********************/
-   $("#makeEntry").hide();
+   // $("#makeEntry").hide();
 /********************报名表is or not end**********************/
 </script>
 <include file="Public:footer"/>
