@@ -47,7 +47,13 @@
 	margin:18px;
 	margin-top:30px;
 	margin-bottom:30px;
-	border:1px solid #999;
+    border:1px solid #A6C9E1;
+	background:#E9F3FD;
+	cursor:pointer;
+}
+.entry_form button:hover{
+	border:2px solid #9CC9E1;
+	font-size:12px;
 }
 .addLine{
 	width:50px;
@@ -74,8 +80,11 @@
 	font-size:14px;
 }
 .formButton{
-	margin-left:140px;
+	margin-left:-25px;
 	margin-top:20px;
+}
+.submitForm .formButton{
+	margin-left:140px;
 }
 .douButton{
 	margin-top:20px;

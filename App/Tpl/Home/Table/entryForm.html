@@ -10,8 +10,8 @@
  <script type="text/javascript" src="__JS__/jquery.js"></script>
  <script type="text/javascript">
   $(document).ready(function() {
-	$("#addLine").click(function(){
-		$("#addLine").before("<li><input type='text'/><select><option value='small'>短</option><option value='large'>长</option></select></li>");  
+	$(".addLine").click(function(){
+		$(".addLine").before("<li><input type='text'/><select><option value='small'>短</option><option value='large'>长</option></select></li>");  
 	});
     $(".cancle").click(function() {
 			$("#windownbg").remove();
@@ -44,12 +44,16 @@
                    <option value="large">长</option>
                  </select>
                </li>
-                <li>
+               <li>
                   <a class="addLine" onclick="appendLine()">添加一行</a>
-                </li>
-             </ul>
-             <button type="submit">提交</button>
-             <button class="cancle">取消</button>
+               </li>
+               <li class="formButton">
+                  <a><button type="submit">提交</button></a>
+                  <a><button class="cancle">取消</button></a>
+               </li>
+            </ul>
+<!--             <a><button type="submit">提交</button></a>
+             <a><button class="cancle">取消</button></a>-->
           </form>
 
 </body>
