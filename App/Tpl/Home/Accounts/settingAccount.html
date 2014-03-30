@@ -1,0 +1,162 @@
+<include file="Public:header"/>
+<div class="container">
+  <p class="new-title grid24">账号设置</p>
+  <div class="row-fluid">
+    <div class="grid24">
+      <div class="must">
+        <i class="necessary-i">修改帐号信息</i>
+      </div>
+    </div>
+  </div>
+  	
+  <div class="row-fluid">
+     <div class="grid18 mass-main2">
+       <div class="choose-form">
+          <div class="row">
+            用户名称：<span class="account_inf">hey</span>
+          </div>
+          <div class="row">
+            邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<span class="account_inf">4444@qq.com</span>
+          </div>
+          <div class="row">
+            登录密码：<a href="javascript:void(0)" class="resetPass">重置密码</a>
+          </div>
+          <form id="setting_form" action="#" method="post">
+             <div class="row">
+               当前密码：<input type="password" class="regist-box" name="repass" id="reg_curpass">
+               <span class="regist-warn" id="curpass_tip"></span>
+             </div>
+             <div class="row clearfix">
+               <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_password"> <span class="regist-warn" id="pass_tip1"></span><!-- <div class="regist-warn fl"></div> -->
+             </div>
+             <div class="row">
+               重复密码：<input type="password" class="regist-box" name="repass" id="reg_repass">
+               <span class="regist-warn" id="repass_tip"></span>
+             </div>
+             <button class="big-btn2">确认修改密码</button>
+          </form>
+        </div>
+      </div>
+      <div class="grid6">
+          <span class="lightblack">
+            <p>如何使密码更安全？</p>
+
+使用标点符号、数字和大小写字母的组合作为密码。<br />
+密码中勿包含个人信息（如姓名、生日等）。<br />
+不使用和其他网站相同的密码。<br />
+定期修改密码。
+          </span>
+      </div>
+  </div>
+	
+</div>
+<script>
+    $('#setting_form').hide();
+    function focusCurpass(){
+		$('#curpass_tip').html('请输入您的登录密码');
+	}
+    function focusPass(){
+		$('#pass_tip1').html('请输入6-16位数字、字母或常用符号，字母区分大小写');
+	}
+	function focusRepass(){
+		$('#repass_tip').html('请再次输入上面的密码');
+	}
+	
+	function checkCurpass(){
+		var currentpass = $('#reg_curpass').val();
+        if (!isNotNull(currentpass)) {
+            $('#curpass_tip').html('您输入的当前密码为空');
+            return false;
+        } else {
+            $('#curpass_tip').html('');
+            return true;
+        }
+	}
+	
+    function checkPassword() {
+        var password = $('#reg_password').val();
+        // 检查密码的合法性
+		if(!isNotNull(password)){
+			$('#pass_tip1').html('密码不能为空');
+			return false;
+		}
+        if (!isValidPassword(password)) {
+            $('#pass_tip1').html('密码长度不够');
+            return false;
+        } else {
+            $('#pass_tip1').html('<img src="__IMG__/must2.png" />');
+            return true;
+        }
+    }
+
+	/**
+     * 检查重复密码是否合法
+     */
+    function checkPassconf() {
+        var pwd = $('#reg_password').val();
+        var passconf = $('#reg_repass').val();
+		if(!isNotNull(passconf)){
+			$('#repass_tip').html('密码不能为空');
+			return false;
+		}
+        if (pwd != passconf) {
+            $('#repass_tip').html('两次密码不相同');
+            return false;
+        } else if (!isValidPassword(passconf)) {
+            $('#repass_tip').html('密码长度不够');
+            return false;
+        } else {
+            $('#repass_tip').html('<img src="__IMG__/must2.png" />');
+            return true;
+        }
+    }
+	
+	/*
+	 *检查是否填写完整信息
+	 */
+    function checkFields() {
+        var c_curpass = checkCurpass();
+        var c_password = checkPassword();
+        var c_passconf = checkPassconf();
+        if (c_curpass && c_password
+            && c_passconf) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+	$('#reg_curpass').focus(function(){
+		focusCurpass();});
+	$('#reg_curpass').blur(function(){
+		checkCurpass();});
+	
+	$('#reg_password').focus(function(){
+		focusPass(); });
+	$('#reg_password').blur(function(){
+		checkPassword(); })
+
+	$('#reg_repass').focus(function(){
+		focusRepass(); });
+	$('#reg_repass').blur(function(){
+		checkPassconf(); });
+
+	/*
+	* 单击重置密码
+	 */
+	$(".resetPass").click(function(){
+		$('#setting_form').toggle();
+	});
+	
+   /*
+	* 单击确认修改密码
+	 */
+    $(".big-btn2").click(function() {
+        if (checkFields()) {
+            $('#setting_form').submit();
+        } else {
+            return false;
+        }
+    });
+	</script>
+<include file="Public:footer"/>

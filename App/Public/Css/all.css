@@ -176,6 +176,10 @@ textarea,
 .uneditable-input {
   margin-left: 0;
 }
+#word{
+	width:490px;
+	padding:3px;
+}
 .controls-row [class*="span"] + [class*="span"] {
   margin-left: 20px;
 }
@@ -906,6 +910,10 @@ textarea:focus {
 }
 .padlef40 {
   padding-left: 40px;
+}
+.rtop{
+	position:relative;
+	top:1px;
 }
 a.more {
   color: #0776a0;
@@ -2474,6 +2482,11 @@ p.intro a {
   font-size: 18px;
   color: #333333;
 }
+.resetPass{
+	color:#0776a0;
+	font-size:16px;
+	padding-left:10px;
+}
 .preview2 {
   background: url("../images/previewbg.png") repeat;
   width: 207px;
@@ -2622,5 +2635,14 @@ p.intro a {
 #formDetail li{
 	padding-bottom:23px;
 }
-#formDetail input{
-	width:
+#setting_form  button{
+	margin-top:50px;
+	margin-left:102px;
+}
+.account_inf{
+	padding-left:10px;
+}
+.lightblack p{
+	color:#00b945;
+	padding-bottom:15px;
+}

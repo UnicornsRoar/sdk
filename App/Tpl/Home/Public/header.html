@@ -94,7 +94,7 @@ $(function(){
             </div> 
           </div>
           <div class="hoverli">
-            <a href="http://passport.mygdufs.com/Account/personal_account" class="list-li">账号设置</a>
+            <a href="{:U('Accounts/settingAccount')}" class="list-li">账号设置</a>
             <if condition="$Think.session.verified eq 1">
               <a href="{:U('Events/manage')}" class="list-li">活动管理</a>
             </if>
