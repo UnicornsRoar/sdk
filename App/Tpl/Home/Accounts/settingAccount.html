@@ -13,24 +13,24 @@
      <div class="grid18 mass-main2">
        <div class="choose-form">
           <div class="row">
-            用户名称：<span class="account_inf">hey</span>
+            用户名称：<span class="account_inf">{$info.user_name}</span>
           </div>
           <div class="row">
-            邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<span class="account_inf">4444@qq.com</span>
+            邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<span class="account_inf">{$info.email}</span>
           </div>
           <div class="row">
             登录密码：<a href="javascript:void(0)" class="resetPass">重置密码</a>
           </div>
-          <form id="setting_form" action="#" method="post">
+          <form id="setting_form" action="" method="post">
              <div class="row">
-               当前密码：<input type="password" class="regist-box" name="repass" id="reg_curpass">
+               当前密码：<input type="password" class="regist-box" name="nowPass" id="reg_curpass">
                <span class="regist-warn" id="curpass_tip"></span>
              </div>
              <div class="row clearfix">
-               <span class="fl">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" class="regist-box fl" name="pass" id="reg_password"> <span class="regist-warn" id="pass_tip1"></span><!-- <div class="regist-warn fl"></div> -->
+               <span class="fl">新&nbsp;&nbsp;密&nbsp;码：</span><input type="password" class="regist-box fl" name="newPass" id="reg_password"> <span class="regist-warn" id="pass_tip1"></span><!-- <div class="regist-warn fl"></div> -->
              </div>
              <div class="row">
-               重复密码：<input type="password" class="regist-box" name="repass" id="reg_repass">
+               重复密码：<input type="password" class="regist-box" name="rePass" id="reg_repass">
                <span class="regist-warn" id="repass_tip"></span>
              </div>
              <button class="big-btn2">确认修改密码</button>

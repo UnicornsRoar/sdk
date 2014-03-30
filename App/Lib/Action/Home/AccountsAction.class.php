@@ -283,19 +283,19 @@ class AccountsAction extends ComAccountsAction{
 	/*
 	 * 社团登陆
 	 */
-	function massLogin(){
+	public function massLogin(){
 		$this->assign('type',1);
 		$this->display();
 	}
 	/*
 	 * 用户登录
 	 */
-	function userLogin(){
+	public function userLogin(){
 		$this->assign('type',0);
 		$this->display('massLogin');
 	}
 
-	function userRegister(){
+	public function userRegister(){
 		if(IS_POST){
 			$accounts = D('Accounts');
 			$data['user_name'] = $this->_post('user_name');
@@ -316,6 +316,36 @@ class AccountsAction extends ComAccountsAction{
 			}
 		}else{
 			$this->display('uregist');
+		}
+	}
+
+	/**
+	 * 用户修改设置
+	 */
+	public function settingAccount(){
+		$account_id = session('account_id');
+		if (empty($account_id))
+			$this->error('亲，要先登录呀');
+		$AccountsModel = M('Accounts');
+		$info = $AccountsModel->find($account_id);
+		if (IS_POST){
+			$nowPass = $this->_post('nowPass');
+			if (sha1($nowPass) != $info['password'])
+				$this->error('亲，原密码输错了哦');
+
+			// 验证两次密码是否一样
+			$newPass = $this->_post('newPass');
+			$rePass  = $this->_post('rePass');
+			if ($newPass != $rePass)
+				$this->error('咦，怎么两次密码不一样');
+			$info['password'] = sha1($newPass);
+			if ($AccountsModel->save($info))
+				$this->success('密码修改成功');
+			else
+				$this->error('密码修改失败，请联系管理人员');
+		}else{
+			$this->assign('info', $info);
+			$this->display();
 		}
 	}
 }
