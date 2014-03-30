@@ -51,12 +51,48 @@ class TableAction extends Action{
 		}
 	}
 
+	/**
+	 * 编辑报名表字段
+	 */
 	public function editEntry(){
 		$event_id = $this->_get('e');
-		if ($this->_checkEventBelong($event_id)){
-			$this->display('editEntry');
-		}else{
+		if (!$this->_checkEventBelong($event_id))
 			$this->error('非法操作！');
+		if (IS_POST){
+			$save_pattern = "/^field_id\d+$/";
+			$add_pattern = "/^field_name\d+$/";
+			foreach ($_POST as $key => $value) {
+				// 检查是不是更新的数据
+				if (preg_match($save_pattern, $key)){
+					$number  = substr($key, 8, strlen($key));
+					$is_long = ($this->_post('is_long'.$number) == 1)?1:0;
+					$save_data[] = array(
+							'field_id'   => $number,
+							'field_name' => $this->_post($key),
+							'is_long'    => $is_long
+						);
+				// 检查是不是插入新数据
+				}elseif (preg_match($add_pattern, $key) AND !empty($value)) {
+					$number  = substr($key, 10, strlen($key));
+					$is_long = ($this->_post('field_long'.$number) == 1)?1:0;
+					$save_data[] = array(
+							'field_id'   => -1,
+							'field_name' => $this->_post($key),
+							'is_long'    => $is_long
+						);
+				}
+			}
+			// 写入数据库
+			$affected_rows = D('Table_field')->saveArray($save_data, $event_id);
+			if ($affected_rows)
+				$this->success('保存成功');
+			else
+				$this->error('保存失败');
+		}else{
+			$fieldModel = D('Table_field');
+			$fields = $fieldModel->getEventFields($event_id);
+			$this->assign('fields', $fields);
+			$this->display('editEntry');
 		}
 	}
 

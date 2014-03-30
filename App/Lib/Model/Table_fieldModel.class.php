@@ -21,7 +21,7 @@ class Table_fieldModel extends Model{
 		$n = 0;
 		foreach ($fields as $key => $value) {
 			// 判断是否有新的字段
-			if ($value['field_id'] == '-1'){ // 新的记录id标记为-1
+			if ($value['field_id'] == -1){ // 新的记录id标记为-1
 				$data = array(
 					'field_name' => $value['field_name'],
 					'is_long' => $value['is_long'],

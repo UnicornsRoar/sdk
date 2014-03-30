@@ -25,18 +25,20 @@
 <body>
           <form class="entry_form" action="{:U('Table/editEntry', array('e'=>$_GET['e']))}" method="post">
             <ul>
-              <li class="inputUnit">
-                <input type="text" name="field_name0"/>
-                <select name="field_long0">
-                  <option value="0">短</option>
-                  <option value="100">长</option>
-                </select>
-              </li>
+              <volist name="fields" id="field">
+                <li class="inputUnit">
+                  <input type="text" name="field_id{$field.field_id}" value="{$field.field_name}"/>
+                  <select name="is_long{$field.field_id}">
+                    <option value="0" <if condition="$field.is_long eq 0">selected="selected"</if>>短</option>
+                    <option value="1" <if condition="$field.is_long eq 1">selected="selected"</if>>长</option>
+                  </select>
+                </li>
+              </volist>
               <li>
                 <a class="addLine" onclick="appendLine()">添加一行</a>
               </li>
               <li class="formButton">
-                <a><button type="submit">提交</button></a>
+                <a><button type="submit">保存</button></a>
                 <a><button class="cancle">取消</button></a>
               </li>
             </ul>
