@@ -1023,6 +1023,9 @@ a.btn:hover {
 .imghost {
   background: url("../images/host.png");
 }
+.hand-on {
+	background: url("../images/hand-on.png");
+}
 .like-on {
   background: url("../images/like-on.png");
 }
@@ -1968,7 +1971,7 @@ a.myacti-a:hover {
 }
 .detail3 span {
   width: auto;
-  padding-right: 40px;
+  padding-right: 30px;
 }
 .detail3 li {
   float: left;
