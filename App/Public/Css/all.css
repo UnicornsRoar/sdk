@@ -1369,7 +1369,7 @@ a.btn:hover {
 a.btn:hover button {
   display: block;
 }
-.banner a,button{ outline:none; }
+.banner a,button{ outline:none;}
 .imagesdiv {
   position: absolute;
   left: -1010px;
@@ -1380,15 +1380,16 @@ a.btn:hover button {
   float: left;
   width: 600px;
   position: relative;
+  cursor:pointer;
 }
 .imagesdiv a {
   display: block;
   width: 600px;
   height: 350px;
-  position: absolute;
+  /*position: absolute;*/
   z-index: 9999;
-  top: 0;
-  left: 0;
+  /*top: 0;
+  left: 0;*/
 }
 .load-pic {
   z-index: 999;
@@ -1658,6 +1659,7 @@ a.btn:hover button {
   font-size: 18px;
   color: #333333;
   resize: none;
+  overflow:auto;
 }
 .acti-detail:focus {
   border: #00b945 1px solid;

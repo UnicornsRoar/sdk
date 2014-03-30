@@ -251,8 +251,8 @@ function loadImg(arr,links){
     $(".imagesdiv").width(600*imgslength);
     // alert(imagesdiv.width());
     var $image=$("<div class='image fl'></div>");
-    $image.append("<a href='"+links[i]+"'></a>");
-    $image.append("<img src='"+arr[i]+"'/>");
+    $image.append("<a href='"+links[i]+"'><img src='"+arr[i]+"'/></a>");
+	//$image.append("<a href='"+links[i]+"'></a>");
     // $image.find('img').attr('src',arr[i]);
     $(".imagesdiv").append($image);
     $($(".i-detail .information")[0]).text(places[0]);
