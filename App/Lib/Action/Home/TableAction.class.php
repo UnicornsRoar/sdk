@@ -115,7 +115,7 @@ class TableAction extends Action{
     					'event_id' => $event_id
     				);
     		}
-    		if ($fieldModel->addAll($data))
+    		if (M('Field_record')->addAll($data))
     			$this->success('报名成功');
     		else
     			$this->error('报名失败');
@@ -156,7 +156,7 @@ class TableAction extends Action{
 
 	public function deleteWholeTable(){
 		$event_id = $this->_get('e');
-		if ($this->_checkEventBelong($event_id))
+		if (!$this->_checkEventBelong($event_id))
 			$this->error('非法操作');
 		$result = M('Table_field')->where("event_id = '$event_id'")->delete();
 		if ($result)
@@ -168,7 +168,7 @@ class TableAction extends Action{
 	public function deleteOneField(){
 		$field_id = $this->_get('fid');
 		$event_id = $this->_get('eid');
-		if ($this->_checkEventBelong($event_id))
+		if (!$this->_checkEventBelong($event_id))
 			$this->error('非法操作');
 		$result = M('Table_field')->delete($field_id);
 		if ($result)
