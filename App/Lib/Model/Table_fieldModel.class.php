@@ -119,7 +119,12 @@ class Table_fieldModel extends Model{
 	 * @return int
 	 */
 	public function getSignCount($event_id){
-		$sql    = "SELECT DISTINCT `account_id` FROM sdk_field_record WHERE event_id='$event_id'";
+		$nowField = $this->getEventFields($event_id);
+		foreach ($nowField as $value) {
+			$fields[] = $value['field_id'];
+		}
+		$fieldsStr = implode(',', $fields);
+		$sql    = "SELECT DISTINCT `account_id` FROM sdk_field_record WHERE event_id='$event_id' AND field_id IN ($fieldsStr)";
 		$model  = new Model();
 		$result = $model->query($sql);
 		return count($result);
