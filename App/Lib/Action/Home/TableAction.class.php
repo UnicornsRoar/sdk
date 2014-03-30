@@ -214,4 +214,65 @@ class TableAction extends Action{
 		else
 			$this->error('操作失败');
 	}
+
+	/**
+	 * 组装CSV字符串
+	 * @param  array $fields
+	 * @param  array $table
+	 * @return string
+	 */
+	private function _getCSV($fields, $table){
+		$csv = implode(',', $fields)."\n";
+        $csv = iconv('utf-8', 'gb2312', $csv);
+        foreach ($table as $row) {
+        	$tem = array();
+        	foreach ($row as $col) {
+        		$tem[] = iconv('utf-8', 'gb2312', $col['content']);
+        	}
+        	$temStr = implode(',', $tem);
+        	$csv .= $temStr."\n";
+        }
+        return $csv;
+	}
+
+	/**
+	 * 导出CSV文件
+	 * @param  string $filename
+	 * @param  string $CSVStr  
+	 * @return file
+	 */
+	private function _exportCSV($filename, $CSVStr){
+	    header("Content-type:text/csv"); 
+	    header("Content-Disposition:attachment;filename=".$filename); 
+	    header('Cache-Control:must-revalidate,post-check=0,pre-check=0'); 
+	    header('Expires:0'); 
+	    header('Pragma:public'); 
+	    echo $CSVStr;
+	}
+
+	public function exportPageCSV(){
+		$event_id = $this->_get('e');
+		if (!$this->_checkEventBelong($event_id))
+			$this->error('无效链接');
+		$page = $this->_get('p', 'htmlspecialchars', 1);
+		$fieldModel = D('Table_field');
+		
+		$signedUsers = $fieldModel->getSignUsers($event_id, $page);
+		$fields      = $fieldModel->getEventFields($event_id);
+		$table       = $fieldModel->createTable($fields, $signedUsers);
+
+		// 取出字段先
+		$sortedFields = array();
+        foreach ($fields as $value) {
+            $sortedFields[$value['field_id']] = $value['field_name'];
+        }
+        ksort($sortedFields); // 排好序
+
+        // 组装CVS
+        $csv = $this->_getCSV($sortedFields, $table);
+
+        // 导出csv文件
+        $filename = 'event_'.$event_id.'_page'.$page.'_'.date('Ymd').".csv";
+        $this->_exportCSV($filename, $csv);
+	}
 }
