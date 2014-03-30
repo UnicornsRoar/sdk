@@ -173,7 +173,7 @@ class Table_fieldModel extends Model{
 		// 每次获取一个用户所填信息
 		foreach ($usersId as $account_id) {
 			$where = array('account_id'=>$account_id, 'field_id'=>array('in', $fieldsId));
-			$accountFields = $this->table('sdk_field_record')->where($where)->order('field_id')->select();
+			$accountFields = $this->field('field_id, content')->table('sdk_field_record')->where($where)->order('field_id')->select();
 			// 填充表格中的每一格
 			foreach ($accountFields as $oneField) {
 				// 中间第二维是为了确保遍历时的顺序是按照field_id排序

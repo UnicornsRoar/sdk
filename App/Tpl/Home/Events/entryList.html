@@ -5,28 +5,21 @@
   <p class="fl">{$event.event_name}</p>
  </div>
  <div class="entryTable submitCenter">
-   <table class="submitCenter">
+  <table class="submitCenter">
     <tr class="firstTr">
-      <td>姓名</td>
-      <td>性别</td>
-      <td>学院</td>
-      <td>手机</td>
-      <td>自我介绍</td>
+      <volist name="fields" id="field">
+        <td>{$field}</td>
+      </volist>
     </tr>
-    <tr>
-      <td>我是关公啊啊啊啊啊啊啊</td>
-      <td>男</td>
-      <td>思科信息雪原</td>
-      <td>136529938668</td>
-      <td>我我哦我啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</td>
-    </tr>
-    <tr>
-      <td>我是关公啊啊啊啊啊啊啊</td>
-      <td>性别</td>
-      <td>学院</td>
-      <td>手机</td>
-    </tr>
-   </table>
+
+    <volist name="table" id="row">
+      <tr>
+        <volist name="row" id="col">
+          <td>{$col.content}</td>
+        </volist>
+      </tr>
+    </volist>
+  </table>
  </div>
 </div>
 <include file="Public:footer"/>

@@ -570,6 +570,7 @@ class EventsAction extends ComEventAction{
         if (!empty($event_id)){
             $fieldModel = D('Table_field');
             // 获取分页
+            import('@.ORG.Page');
             $pageNum = $this->_get('p', 'htmlspecialchars', 1);
             $count   = $fieldModel->getSignCount($event_id);
             $limit   = 15;
@@ -584,9 +585,10 @@ class EventsAction extends ComEventAction{
             foreach ($fields as $value) {
                 $sortedFields[$value['field_id']] = $value['field_name'];
             }
+            ksort($sortedFields);
 
             $this->assign('fields', $sortedFields);
-            $this->assign('tabel', $table);
+            $this->assign('table', $table);
             $this->assign('page', $pager->show());
     		$this->display();
         }else{
