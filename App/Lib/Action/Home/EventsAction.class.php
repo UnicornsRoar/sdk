@@ -503,6 +503,7 @@ class EventsAction extends ComEventAction{
                     $this->assign('hasSign', 0);
             }
         }
+        $detail['sign_count'] = $fieldModel->getSignCount($eventId);
 
         $this->assign('detail',$detail);
         $this->display('activity-detail');

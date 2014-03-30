@@ -214,11 +214,12 @@ $("#regisEntry").click(function(){
       <span class="information fl">{$detail.event_host}</span>
     </li>
     <li><span class="information">|</span></li>
-    
-    <li>
-      <span class="fl hand-on icon"></span>
-      <span class="information fl" id="entryCount">0人报名</span>
-    </li>
+    <if condition="$hasSetTable eq 1">
+      <li>
+        <span class="fl hand-on icon"></span>
+        <span class="information fl" id="entryCount">{$detail.sign_count}人报名</span>
+      </li>
+    </if>
     <li>
       <span class="fl like-on icon"></span>
 
