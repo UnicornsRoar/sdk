@@ -140,6 +140,17 @@ class Table_fieldModel extends Model{
 		return $users;
 	}
 
+	public function getAllSignUsers($event_id){
+		$sql    = "SELECT DISTINCT `account_id` FROM sdk_field_record WHERE event_id='$event_id'";
+		$model  = new Model();
+		$result = $model->query($sql);
+		$users  = array();
+		foreach ($result as $key => $value) {
+			$users[] = $value['account_id'];
+		}
+		return $users;
+	}
+
 	/**
 	 * 统计一个活动有多少人报名
 	 * @param  int $event_id
@@ -161,7 +172,7 @@ class Table_fieldModel extends Model{
 	 * 构造已填信息的表
 	 * @param  array $fields  (index => array(''=>v2,''=>v2...))
 	 * @param  array $usersId (index => account_id)
-	 * @return array 三维数组
+	 * @return array 2维数组
 	 */
 	public function createTable($fields, $usersId){
 		$fieldsId = array();

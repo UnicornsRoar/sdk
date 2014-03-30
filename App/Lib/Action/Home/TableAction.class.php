@@ -250,13 +250,16 @@ class TableAction extends Action{
 	    echo $CSVStr;
 	}
 
+	/**
+	 * 导出单页的CSV表格
+	 */
 	public function exportPageCSV(){
 		$event_id = $this->_get('e');
 		if (!$this->_checkEventBelong($event_id))
 			$this->error('无效链接');
 		$page = $this->_get('p', 'htmlspecialchars', 1);
-		$fieldModel = D('Table_field');
 		
+		$fieldModel = D('Table_field');
 		$signedUsers = $fieldModel->getSignUsers($event_id, $page);
 		$fields      = $fieldModel->getEventFields($event_id);
 		$table       = $fieldModel->createTable($fields, $signedUsers);
@@ -273,6 +276,29 @@ class TableAction extends Action{
 
         // 导出csv文件
         $filename = 'event_'.$event_id.'_page'.$page.'_'.date('Ymd').".csv";
+        $this->_exportCSV($filename, $csv);
+	}
+
+	/**
+	 * 导出活动所有报名资料CSV表格
+	 */
+	public function exportAllCSV(){
+		$event_id = $this->_get('e');
+		if (!$this->_checkEventBelong($event_id))
+			$this->error('无效链接');
+		$fieldModel  = D('Table_field');
+		$signedUsers = $fieldModel->getAllSignUsers($event_id);
+		$fields      = $fieldModel->getEventFields($event_id);
+		$table       = $fieldModel->createTable($fields, $signedUsers);
+
+		$sortedFields = array();
+        foreach ($fields as $value) {
+            $sortedFields[$value['field_id']] = $value['field_name'];
+        }
+        ksort($sortedFields);
+        $csv = $this->_getCSV($sortedFields, $table);
+        // 导出csv文件
+        $filename = 'event_'.$event_id.'_all_'.date('Ymd').".csv";
         $this->_exportCSV($filename, $csv);
 	}
 }

@@ -26,8 +26,8 @@
       {$page}
     </div>
     <!-- 导出按钮 -->
-    <a href="{:U('Table/exportPageCSV', array('e'=>$_GET['e'], 'p'=>$_GET['p']))}"><button type="button" class="btn-G"> 本页导出CSV </button></a>
-    <button type="button" class="btn-G"> 所有导出CSV </button>
+    <a href="{:U('Table/exportPageCSV', array('e'=>$_GET['e'], 'p'=>$_GET['p']))}"><button type="button" class="btn-G">本页导出CSV </button></a>
+    <a href="{:U('Table/exportAllCSV', array('e'=>$_GET['e']))}"><button type="button" class="btn-G">所有导出CSV</button></a>
  </div>
 </div>
 <include file="Public:footer"/>
