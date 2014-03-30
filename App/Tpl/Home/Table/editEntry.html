@@ -23,13 +23,13 @@
  </script>
 </head>
 <body>
-          <form class="entry_form" action="{:U('Table/entryForm')}/e/{$Think.get.e}" method="post">
+          <form class="entry_form" action="{:U('Table/editEntry', array('e'=>$_GET['e']))}" method="post">
             <ul>
               <li class="inputUnit">
                 <input type="text" name="field_name0"/>
                 <select name="field_long0">
                   <option value="0">短</option>
-                  <option value="1">长</option>
+                  <option value="100">长</option>
                 </select>
               </li>
               <li>

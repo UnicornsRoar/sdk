@@ -8,20 +8,20 @@
     <div class="grid4 my-bar">
       <ul>
         <li>                 
-          <a href="{:U('Events/editActivity')}/event_id/{$event.event_id}" class="myacti-a">&nbsp;基本信息</a>
+          <a href="{:U('Events/editActivity', array('event_id'=>$_GET['e']))}" class="myacti-a">&nbsp;基本信息</a>
         </li>
         <li>
           <a href="" class="myacti-a">&nbsp;视频管理</a>   
         </li>
         <li>
-          <a href="{:U('Events/attachment')}/e/{$event.event_id}" class="myacti-a">附件管理</a>    
+          <a href="{:U('Events/attachment', array('event_id'=>$_GET['e']))}" class="myacti-a">附件管理</a>    
         </li>
         <li>
           <p class="mes-title">报名表管理</p> 
           <img src="__IMG__/border.png" alt="">  
         </li>
         <li>
-          <a href="{:U('Events/eventComment')}/e/{$event.event_id}" class="myacti-a">&nbsp;留言评论</a>
+          <a href="{:U('Events/eventComment', array('event_id'=>$_GET['e']))}" class="myacti-a">&nbsp;留言评论</a>
         </li>
       </ul>
     </div>
@@ -35,42 +35,31 @@
           </div>
         </button>
       <else />
-        <div class="countEn">已有<span> 13 </span>人报名 , <a href="{:U('Events/entryList')}">点击查看</a></div>
+        <div class="countEn">已有<span> {$signCount} </span>人报名 , <a href="{:U('Events/entryList', array('e'=>$_GET['e']))}">点击查看</a></div>
          <p class="struTitle">报名表结构</p>
          <div class="entryStru padlef20">
            <table>
               <tr class="firstTr">
                 <td>报名表项</td>
                 <td>输入长度</td>
-                <td colspan="2">操作</td>
+                <td>操作</td>
               </tr>
+              <volist name="fields" id="field">
+                <tr>
+                  <td>{$field.field_name}</td>
+                  <td>
+                    <if condition="$field.is_long eq 1">
+                      长
+                    <else />
+                      短
+                    </if>
+                  </td>
+                  <td><a class="adelete" href="{:U('Table/deleteOneField', array('eid'=>$_GET['e'], 'fid'=>$field['field_id']))}">× 删除</a></td>
+                  <!-- <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td> -->
+                </tr>
+              </volist>
               <tr>
-                <td>姓名</td>
-                <td>短</td>
-                <td><a class="adelete" href="#">× 删除</a></td>
-                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-              </tr>
-              <tr>
-                <td>学院</td>
-                <td>短</td>
-                <td><a class="adelete" href="#">× 删除</a></td>
-                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-              </tr>
-              <tr>
-                <td>学号</td>
-                <td>短</td>
-                <td><a class="adelete" href="#">× 删除</a></td>
-                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-              </tr>
-              <tr>
-              <tr>
-                <td>自我简介</td>
-                <td>长</td>
-                <td><a class="adelete" href="#">× 删除</a></td>
-                <td><a class="aedit" href="#"><span class="imgpen fl"></span><span class="fl">编辑</a></td>
-              </tr>
-              <tr>
-                <td class="itemCount" colspan="4">4 条表项</td>
+                <td class="itemCount" colspan="3">{$fieldCount} 条表项</td>
               </tr>
             </table>
           </div>
@@ -97,10 +86,10 @@
   
 <script>
 $("#makeEntry").click(function(){
-		tipsWindown("报名表: 填入你要获得的信息","iframe:get?{:U('Table/entryForm')}","400","360","text");
+		tipsWindown("报名表: 填入你要获得的信息","iframe:get?{:U('Table/entryForm')}/e/{$Think.get.e}","400","360","text");
 });
 $("#eidtEntry").click(function(){
-		tipsWindown("报名表","iframe:get?{:U('Table/entryForm')}","400","360","text");
+		tipsWindown("报名表","iframe:get?{:U('Table/editEntry', array('e'=>$_GET['e']))}","400","360","text");
 });
 
 

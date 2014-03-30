@@ -537,8 +537,11 @@ class EventsAction extends ComEventAction{
         $fieldModel = D('Table_field');
         $fields     = $fieldModel->getEventFields($event_id);
         if ($fields){
+            $signCount  = $fieldModel->getSignCount($event_id);
+            $this->assign('signCount', $signCount);
             $this->assign('hasSetTable', 1);
             $this->assign('fields', $fields);
+            $this->assign('fieldCount', count($fields));
             $this->display();
         }else{
             $this->assign('hasSetTable', 0);
