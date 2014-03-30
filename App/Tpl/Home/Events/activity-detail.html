@@ -101,34 +101,18 @@ function tipsWindown(title,content,width,height,cssName) {
   /********************点击填写报名表**********************/
 $(function(){
 $("#regisEntry").click(function(){
-		tipsWindown("报名表","iframe:get?{:U('Table/submitForm')}","450","460","text");
+    $.post("{:U('Accounts/isLogined')}",{},
+        function(isLogined){
+          if (isLogined == 1){
+            tipsWindown("报名表","iframe:get?<if condition='$hasSign eq 0'><php> echo U('Table/submitForm', array('e'=> $_GET['e'])); </php> <else /><php>echo U('Table/editSubmit', array('e'=> $_GET['e']));</php></if>","450","460","text");
+          }else{
+            alert('请先登录');
+          }
+        }
+      );
 }); 
 })
-//    $(function(){
-//    $("#regisEntry").click(function(){
-//      var status = $($(this).children()[1]);
-//      $.post("{:U('Accounts/isLogined')}",{},
-//        function(isLogined){
-//          if (isLogined == 1){
-//            if (status.html() == '我要报名'){
-//			  tipsWindown("报名表:","iframe:get?{:U('Table/submitForm')}","500","360","text");
-//              $.post(
-//                '__URL__/markregis',<!-- 这个这个代码不懂呢 -->
-//                {eventId:<php>echo $detail['event_id']</php>},
-//                function(feedback){
-//                  if (feedback == 1){
-//                    status.html('已经报名');
-//                  }
-//                }
-//              );
-//			}
-//          }else{
-//            alert('请先登录');
-//          }
-//        }
-//      )
-//    });
-//  });
+
   /********************点击填写报名表END**********************/
   $(function(){
     $("#marklike").click(function(){
@@ -142,14 +126,14 @@ $("#regisEntry").click(function(){
                 {eventId:<php>echo $detail['event_id']</php>},
                 function(feedback){
                   if (feedback == 1){
-                    status.html('已经喜欢');
+                    status.html('已经收藏');
                     var collectCount = parseInt($('#collectCount').html());
                     $('#collectCount').html((collectCount+1)+'人喜欢');
                   }
                 }
               );
             else{
-              if (status.html() == '取消喜欢')
+              if (status.html() == '取消收藏')
                 $.post(
                   '__URL__/unlike',
                   {eventId:<php>echo $detail['event_id']</php>},
@@ -174,14 +158,14 @@ $("#regisEntry").click(function(){
     $("#marklike").hover(
       function(){
         var status = $($(this).children()[1]);
-        if (status.html() == '已经喜欢'){
-          status.html('取消喜欢');
+        if (status.html() == '已经收藏'){
+          status.html('取消收藏');
         }
       },
       function(){
         var status = $($(this).children()[1]);
-        if (status.html() == '取消喜欢')
-          status.html('已经喜欢');
+        if (status.html() == '取消收藏')
+          status.html('已经收藏');
     });
   });
 
@@ -250,14 +234,16 @@ $("#regisEntry").click(function(){
         <!-- <a href="#" class="more">更多&gt;&gt;</a> -->
       </p>
       <div class="button">
-        <button>
-          <div class="btn-G">
-            <div class="btn-G1" id="regisEntry">
-              <span class="imghand icon fl"></span>
-              <span class="fl"><if condition="$isRegis eq 1">已经报名<else />我要报名</if></span>
+        <if condition="$hasSetTable eq 1">
+          <button>
+            <div class="btn-G">
+              <div class="btn-G1" id="regisEntry">
+                <span class="imghand icon fl"></span>
+                <span class="fl"><if condition="$hasSign eq 1">已经报名<else />我要报名</if></span>
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </if>
         <button>
           <div class="btn-R">
             <div class="btn-R1" id="marklike">

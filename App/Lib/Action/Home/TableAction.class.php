@@ -8,7 +8,8 @@ class TableAction extends Action{
 	 * @return bool
 	 */
 	private function _checkEventBelong($event_id, $account_id=NULL){
-		if ($account_id == NULL) $account_id = session('account_id');
+		if ($account_id == NULL)
+			$account_id = session('account_id');
 		$where = array('event_id' => $event_id, 'account_id' => $account_id);
 		if (M('Events')->where($where)->find()){
 			return true;
@@ -76,7 +77,7 @@ class TableAction extends Action{
 					$number  = substr($key, 10, strlen($key));
 					$is_long = ($this->_post('field_long'.$number) == 1)?1:0;
 					$save_data[] = array(
-							'field_id'   => -1,
+							'field_id'   => -1,/* -1表明是插入信息 */
 							'field_name' => $this->_post($key),
 							'is_long'    => $is_long
 						);
@@ -96,9 +97,35 @@ class TableAction extends Action{
 		}
 	}
 
+	/**
+	 * 用户报名
+	 */
     public function submitForm(){
-    	$
-		$this->display('submitForm');
+    	if (!session('account_id'))
+    		$this->error('请先登录');
+    	$fieldModel = D('Table_field');
+    	$event_id = $this->_get('e');
+    	if (IS_POST){
+    		$account_id = session('account_id');
+    		foreach ($_POST as $key => $value) {
+    			$data[] = array(
+    					'field_id' => $key,
+    					'content' => $this->_post($key),
+    					'account_id' => $account_id,
+    					'event_id' => $event_id
+    				);
+    		}
+    		if ($fieldModel->addAll($data))
+    			$this->success('报名成功');
+    		else
+    			$this->error('报名失败');
+    	}else{
+	    	$fields = $fieldModel->getEventFields($event_id);
+	    	if (empty($fields))
+	    		$this->error('无报名表设置');
+    		$this->assign('fields', $fields);
+			$this->display('submitForm');
+    	}
 	}
 
 	public function add(){

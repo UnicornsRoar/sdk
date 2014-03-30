@@ -492,6 +492,18 @@ class EventsAction extends ComEventAction{
             $attachments = $attachModel->getEventAttachment($eventId);
             $this->assign('attachments',$attachments);
         }
+        // 报名表设置
+        $fieldModel = D('Table_field');
+        if ($fieldModel->hasSetTable($eventId)){
+            $this->assign('hasSetTable', 1);
+            if (session('account_id')){
+                if ($fieldModel->hasUserSign($eventId, session('account_id')))
+                    $this->assign('hasSign', 1);
+                else
+                    $this->assign('hasSign', 0);
+            }
+        }
+
         $this->assign('detail',$detail);
         $this->display('activity-detail');
     }
@@ -581,4 +593,4 @@ class EventsAction extends ComEventAction{
         }
 	}
 }
-?>
+?>  

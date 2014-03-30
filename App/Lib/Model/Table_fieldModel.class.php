@@ -46,6 +46,36 @@ class Table_fieldModel extends Model{
 		return $fields;
 	}
 
+	/**
+	 * 判断活动是否有设置过报名表
+	 * @param  int $event_id
+	 * @return boolean
+	 */
+	public function hasSetTable($event_id){
+		$count = $this->where("event_id = $event_id")->count();
+		return ($count) ? true : false;
+	}
+
+	/**
+	 * 判断用户是否已经报名
+	 * @param  int  $event_id  
+	 * @param  int  $account_id
+	 * @return boolean
+	 */
+	public function hasUserSign($event_id, $account_id){
+		$fields = $this->getEventFields($event_id);
+		$fid = array();
+		foreach ($fields as $value) {
+			$fid[] = $value['field_id'];
+		}
+		$where = array(
+				'event_id'   => $event_id,
+				'account_id' => $account_id,
+				'field_id'   => array('in', $fid)
+			);
+		return ($this->table('sdk_field_record')->where($where)->find()) ? true : false;
+	}
+
 
 	/**
 	 * 获取某个人的一个报名

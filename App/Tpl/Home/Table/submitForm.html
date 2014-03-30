@@ -21,26 +21,23 @@
  </script>
 </head>
 <body>
-          <form class="entry_form" action="#" method="get">
-            <ul class="submitForm submitCenter">
-               <li>
-                 <span>姓名 :</span>
-                 <input type="text" name="field_1_1"/>
-               </li>
-               <li>
-                 <span>学院 :</span>
-                 <input type="text" name="field_2_1"/>
-               </li>
-               <li>
-                 <span>自我简介 :</span>
-                 <textarea></textarea>
-               </li>
-               <li class="formButton">
-                  <button type="submit">提交</button>
-                  <button class="cancle">取消</button>
-               </li>
-             </ul>
-          </form>
+    <form class="entry_form" action="{:U('Table/submitForm', array('e'=>$_GET['e']))}" method="post">
+      <ul class="submitForm submitCenter">
+      <volist name="fields" id="field">
+        <li>
+          <span>{$field.field_name} :</span>
+          <if condition="$field.is_long eq 0">
+            <input type="text" name="{$field.field_id}"/>
+          <else />
+            <textarea name="{$field.field_id}"></textarea>
+          </if>
+        </li>
+      </volist>
+        <li class="formButton">
+            <button type="submit">提交</button>
+        </li>
+      </ul>
+    </form>
 
 </body>
 
