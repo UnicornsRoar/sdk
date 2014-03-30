@@ -84,14 +84,41 @@ class Table_fieldModel extends Model{
 	 * @return array
 	 */
 	public function getOneRecord($event_id, $account_id){
-		$valid_field = $this->field('field_id')->where("event_id = '$event_id")->select();
-		$valid_id = array();
+		$valid_field = $this->field('field_id, field_name, is_long')->where("event_id = '$event_id'")->select();
+		$valid_id    = array();
+		$id2name     = array();
 		foreach ($valid_field as $key => $value) {
 			$valid_id[] = $value['field_id'];
+			$id2name[$value['field_id']] = array(
+					'field_name' => $value['field_name'],
+					'is_long' => $value['is_long']
+				);
 		}
+
 		$where = array('account_id' => $account_id, 'field_id' => array('in', $valid_id));
 		$record = M('Field_record')->where($where)->select();
+		foreach ($record as &$value) {
+			$value['field_name'] = $id2name[$value['field_id']]['field_name'];
+			$value['is_long'] = $id2name[$value['field_id']]['is_long'];
+		}
 		return $record;
+	}
+
+	/**
+	 * 确认recordIds是否都为同一个用户
+	 * @param  array $recordIds (index => record_id)
+	 * @return fasle | 同一个用户的ID
+	 */
+	public function confirmOneUser($recordIds){
+		$range = implode(',', $recordIds);
+		$sql = "SELECT DISTINCT `account_id` FROM sdk_field_record WHERE record_id IN ($range)";
+		$model = new Model();
+		$result = $model->query($sql);
+		if (count($result) != 1){
+			return false;
+		}else{
+			return $result[0]['account_id'];
+		}
 	}
 
 	/**

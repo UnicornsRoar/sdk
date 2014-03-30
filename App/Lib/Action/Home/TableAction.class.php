@@ -128,6 +128,44 @@ class TableAction extends Action{
     	}
 	}
 
+	/**
+	 * 编辑已经报名的信息
+	 */
+	public function editSubmit(){
+		$event_id = $this->_get('e');
+		$fieldModel = D('Table_field');
+		if (IS_POST){
+			// 判断所有记录是不是属于登陆的用户
+			foreach ($_POST as $key => $value) {
+				$recordIds[] = $key;
+			}
+			if (session('account_id') != $fieldModel->confirmOneUser($recordIds))
+				$this->error('数据出错');
+
+			$affected_rows = 0;
+			$recordModel = M('Field_record');
+			// 逐项保存
+			foreach ($_POST as $key => $value) {
+				if (!is_int($key))
+					continue;
+				$data = array(
+						'record_id' => $key,
+						'content' => $this->_post($key)
+					);
+				if ($recordModel->save($data))
+					$affected_rows++;
+			}
+			if ($affected_rows)
+				$this->success('成功保存');
+			else
+				$this->error('保存失败');
+		}else{
+			$info = $fieldModel->getOneRecord($event_id, session('account_id'));
+			$this->assign('info', $info);
+			$this->display();
+		}
+	}
+
 	public function add(){
 		$fields = $this->_post('fields', 'htmlspecialchars_deep');
 		if(IS_POST and isset($fields)){
