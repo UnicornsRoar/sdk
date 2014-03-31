@@ -88,7 +88,7 @@
 }
 .douButton{
 	margin-top:20px;
-	margin-left:20px;
+	margin-left:13px;
 	margin-bottom:40px;
 }
 .douButton button{
@@ -122,12 +122,15 @@
 }
 .entryTable{
 	margin-bottom:40px;
-	min-height:440px;
+	min-height:540px;
 }
 .entryTable table,.entryStru table{
 	font-size:16px;
 	border-top:1px solid #00b945;
 	border-left:1px solid #00b945;
+}
+.entryTable p{
+	padding:0 0 10px 20px;
 }
 .entryTable tr,.entryStru tr{
 	border-bottom:1px solid #00b945;
@@ -179,4 +182,8 @@
   background: url("../images/aedit.png");
   margin-top:5px;
   margin-right:5px;
+}
+.importBut{
+	margin:120px 0;
+	text-align:center;
 }

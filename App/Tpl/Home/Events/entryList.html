@@ -2,9 +2,13 @@
 <div class="container">
  <div class="base-title grid24">
   <a href="{:U('Events/eventEntry')}" class="fl back"></a>
-  <p class="fl">{$event.event_name}</p>
+  <p class="fl">{$event.event_name}呵呵</p>
  </div>
  <div class="entryTable submitCenter">
+      <!-- 分页在这里 -->
+    <p>
+      {$page}
+    </p>
   <table class="submitCenter">
     <tr class="firstTr">
       <volist name="fields" id="field">
@@ -20,14 +24,12 @@
       </tr>
     </volist>
   </table>
-
-    <!-- 分页在这里 -->
-    <div>
-      {$page}
-    </div>
     <!-- 导出按钮 -->
-    <a href="{:U('Table/exportPageCSV', array('e'=>$_GET['e'], 'p'=>$_GET['p']))}"><button type="button" class="btn-G">本页导出CSV </button></a>
+  <div class="importBut">
+    <a href="{:U('Table/exportPageCSV', array('e'=>$_GET['e'], 'p'=>$_GET['p']))}"><button type="button" class="btn-G marrit38">本页导出CSV </button></a>
     <a href="{:U('Table/exportAllCSV', array('e'=>$_GET['e']))}"><button type="button" class="btn-G">所有导出CSV</button></a>
+  </div> 
+   
  </div>
 </div>
 <include file="Public:footer"/>
