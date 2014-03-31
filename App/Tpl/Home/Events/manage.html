@@ -25,7 +25,9 @@
       <div class="my-main-row">
         <a href="{:U('Events/activityDetail/e')}/{$vo.event_id}" class="my-main-title">{$vo.event_name}</a>
         <p class="my-main-date fl">{$vo.create_time|date="Y-m-d H:i:s",###}</p>
-        <div class="my-main-manager fr"><a href="{:U('/Events/editActivity/event_id/' . $vo['event_id'])}" class="fl manage">管理</a>|<a href="{:U('/Events/delActivity/event_id/'.$vo['event_id'])}" class="fr delect" id="delete">删除</a></div>
+        <div class="my-main-manager fr">
+          <a href="{:U('/Events/editActivity/event_id/' . $vo['event_id'])}" class="fl manage">管理</a><a href="{:U('/Events/delActivity/event_id/'.$vo['event_id'])}" class="fr delect" id="delete">删除</a>
+        </div>
       </div>
 	  </volist>
     </div>
