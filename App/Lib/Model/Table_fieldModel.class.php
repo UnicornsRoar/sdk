@@ -198,10 +198,10 @@ class Table_fieldModel extends Model{
 				$table[$account_id][$oneField['field_id']] = $oneField;
 			}
 
-			// 检查是否有空的字段，如果为空，则填上“空”
+			// 检查是否有空的字段，如果为空，则填上“未填”
 			foreach ($fieldsId as $fkey) {
-				if (!isset($table[$account_id][$fkey]))
-					$table[$account_id][$fkey] = array('content' => "空");;
+				if (empty($table[$account_id][$fkey]))
+					$table[$account_id][$fkey] = array('content' => "未填");;
 			}
 			ksort($table[$account_id]);
 		}
