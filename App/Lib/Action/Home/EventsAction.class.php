@@ -581,6 +581,7 @@ class EventsAction extends ComEventAction{
             $fields      = $fieldModel->getEventFields($event_id);
             $table       = $fieldModel->createTable($fields, $signedUsers);
 
+
             // 确保fields按照field_id排序
             $sortedFields = array();
             foreach ($fields as $value) {
@@ -592,7 +593,7 @@ class EventsAction extends ComEventAction{
             $this->assign('fields', $sortedFields);
             $this->assign('table', $table);
             $this->assign('page', $pager->show());
-    		$this->display();
+            $this->display();
         }else{
             $this->error('非法操作！');
         }
