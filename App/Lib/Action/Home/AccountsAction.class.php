@@ -295,6 +295,9 @@ class AccountsAction extends ComAccountsAction{
 		$this->display('massLogin');
 	}
 
+	/**
+	 * 普通用户注册
+	 */
 	public function userRegister(){
 		if(IS_POST){
 			$accounts = D('Accounts');
@@ -307,8 +310,10 @@ class AccountsAction extends ComAccountsAction{
 			$samePass  = $this->_post('pass') == $this->_post('repass');
 
 			if (!$UsedEmail AND !$UsedName AND $samePass){
-				if ($accounts->add($data))
+				if ($id = $accounts->add($data)){
+					$accounts->setLogin($id, $data['user_name']);
 					$this->success("注册成功",U('Index/index'));
+				}
 				else
 					$this->error('注册失败');
 			}else{
