@@ -100,7 +100,7 @@ function tipsWindown(title,content,width,height,cssName) {
   });
   /********************点击填写报名表**********************/
 $(function(){
-$("#regisEntry").click(function(){
+$("#applyEntry").click(function(){
     $.post("{:U('Accounts/isLogined')}",{},
         function(isLogined){
           if (isLogined == 1){
@@ -115,8 +115,8 @@ $("#regisEntry").click(function(){
 
   /********************点击填写报名表END**********************/
   $(function(){
-    $("#marklike").click(function(){
-      var status = $($(this).children()[1]);
+    $("#likeIt").click(function(){
+      var status = $($("#marklike").children()[1]);
       $.post("{:U('Accounts/isLogined')}",{},
         function(isLogined){
           if (isLogined == 1){
@@ -155,15 +155,15 @@ $("#regisEntry").click(function(){
   });
 
   $(function(){
-    $("#marklike").hover(
+    $("#likeIt").hover(
       function(){
-        var status = $($(this).children()[1]);
+        var status = $($("#marklike").children()[1]);
         if (status.html() == '已经收藏'){
           status.html('取消收藏');
         }
       },
       function(){
-        var status = $($(this).children()[1]);
+        var status = $($("#marklike").children()[1]);
         if (status.html() == '取消收藏')
           status.html('已经收藏');
     });
@@ -241,7 +241,7 @@ $("#regisEntry").click(function(){
       </p>
       <div class="button">
         <if condition="$hasSetTable eq 1">
-          <button>
+          <button id="applyEntry">
             <div class="btn-G">
               <div class="btn-G1" id="regisEntry">
                 <span class="imghand icon fl"></span>
@@ -250,7 +250,7 @@ $("#regisEntry").click(function(){
             </div>
           </button>
         </if>
-        <button>
+        <button id="likeIt">
           <div class="btn-R">
             <div class="btn-R1" id="marklike">
               <span class="imglike icon fl"></span>

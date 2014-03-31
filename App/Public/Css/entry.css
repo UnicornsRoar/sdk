@@ -27,6 +27,7 @@
 	padding:2px;
 	font-size:14px;
 	color: #333333;
+	border: 1px solid #D6D6D6;
 }
 .entry_form input[type="radio"]{
 	width:15px;
