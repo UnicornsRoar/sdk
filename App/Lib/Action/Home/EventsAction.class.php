@@ -551,6 +551,7 @@ class EventsAction extends ComEventAction{
         $fields     = $fieldModel->getEventFields($event_id);
         if ($fields){
             $signCount  = $fieldModel->getSignCount($event_id);
+            $this->assign('event_name', D('Events')->getEventName($event_id));
             $this->assign('signCount', $signCount);
             $this->assign('hasSetTable', 1);
             $this->assign('fields', $fields);
@@ -560,7 +561,7 @@ class EventsAction extends ComEventAction{
             $this->assign('hasSetTable', 0);
             $this->display();
         }
-	}
+    }
 
     /**
      * 查看报名人数信息

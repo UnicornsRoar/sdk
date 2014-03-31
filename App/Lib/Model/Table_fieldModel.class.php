@@ -73,12 +73,13 @@ class Table_fieldModel extends Model{
 				'account_id' => $account_id,
 				'field_id'   => array('in', $fid)
 			);
-		return ($this->table('sdk_field_record')->where($where)->find()) ? true : false;
+		$result = M('Field_record')->where($where)->find() ? true : false;
+		return $result;
 	}
 
 
 	/**
-	 * 获取某个人的一个报名
+	 * 获取一个用户在一个活动中的报名信息
 	 * @param  int $event_id
 	 * @param  int $account_id [description]
 	 * @return array
