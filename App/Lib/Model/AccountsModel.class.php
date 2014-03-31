@@ -84,7 +84,7 @@ class AccountsModel extends Model{
 			session_start();
 			$_SESSION['account_id'] = $user['account_id'];
 			$_SESSION['user_name']  = $user['user_name'];
-			$_SESSION['verified'] = 1;
+			$_SESSION['verified'] = $verified;
 		}
 		return $check;
 	}
