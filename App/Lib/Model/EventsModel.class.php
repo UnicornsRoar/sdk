@@ -200,6 +200,16 @@ class EventsModel extends Model{
         $page   = new Page($count, 15);
         return $page->show();
     }
+
+    /**
+     * 获取一个活动的名字
+     * @param  int $event_id
+     * @return string | NULL
+     */
+    public function getEventName($event_id){
+        $name = $this->field('event_name')->find($event_id);
+        return $name['event_name'];
+    }
 }
 
 

@@ -1,8 +1,8 @@
 <include file="Public:header"/>
 <div class="container">
  <div class="base-title grid24">
-  <a href="{:U('Events/eventEntry')}" class="fl back"></a>
-  <p class="fl">{$event.event_name}呵呵</p>
+  <a href="{:U('Events/eventEntry', array('e'=> $_GET['e']))}" class="fl back"></a>
+  <p class="fl">{$event_name}</p>
  </div>
  <div class="entryTable submitCenter">
       <!-- 分页在这里 -->

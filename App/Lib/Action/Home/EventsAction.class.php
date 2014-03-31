@@ -587,6 +587,7 @@ class EventsAction extends ComEventAction{
             }
             ksort($sortedFields);
 
+            $this->assign('event_name', D('Events')->getEventName($event_id));
             $this->assign('fields', $sortedFields);
             $this->assign('table', $table);
             $this->assign('page', $pager->show());
