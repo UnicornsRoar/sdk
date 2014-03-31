@@ -274,8 +274,12 @@ class EventsAction extends ComEventAction{
 			$this->error('请先登录');
 		$event_id = (int)$this->_get('event_id');
 		$Videos = D('Videos');
-		$video=$Videos->getEventVideo($event_id);
-		$this->assign('video',$video);
+        $Events = D('Events');
+        
+        $video=$Videos->getEventVideo($event_id);
+
+		$this->assign('event_name',$Events->getEventName($event_id));
+        $this->assign('video',$video);
 		$this->assign('event_id', $event_id);
 		$this->display();
 	}
@@ -408,7 +412,7 @@ class EventsAction extends ComEventAction{
         $eventModel   = D('Events');
         $eventId      = $this->_get('e');
         if (!$eventModel->checkEventBelong($eventId,$_SESSION['account_id'])){
-            $this->error('你没有权限查看该页面');
+            $this->error('没有数据');
         }
         $comments     = $commentModel->getEventCommentForHolder($eventId,1,100);
         foreach ($comments as $key => $value) {
