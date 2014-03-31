@@ -18,10 +18,10 @@ body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16p
 <body>
 <div class="system-message">
 <present name="message">
-<h1><img src="../../App/Public/Images/dispatch_jump.png" width="147" height="155" /></h1>
+<h1><img src="__IMG__/dispatch_jump.png" width="147" height="155" /></h1>
 <p class="success"><?php echo($message); ?>*^ο^*</p>
 <else/>
-<h1><img src="../../App/Public/Images/dispatch_jump.png" width="147" height="155" /></h1>
+<h1><img src="__IMG__/dispatch_jump.png" width="147" height="155" /></h1>
 <p class="error"><?php echo($error); ?>::>_<::</p>
 </present>
 <p class="detail"></p>
