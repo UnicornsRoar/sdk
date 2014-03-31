@@ -193,6 +193,13 @@ class Table_fieldModel extends Model{
 				// 中间第二维是为了确保遍历时的顺序是按照field_id排序
 				$table[$account_id][$oneField['field_id']] = $oneField;
 			}
+
+			// 检查是否有空的字段，如果为空，则填上“空”
+			foreach ($fieldsId as $fkey) {
+				if (!isset($table[$account_id][$fkey]))
+					$table[$account_id][$fkey] = array('content' => "空");;
+			}
+			ksort($table[$account_id]);
 		}
 		return $table;
 	}
