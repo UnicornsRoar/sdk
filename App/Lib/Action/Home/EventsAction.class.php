@@ -11,6 +11,18 @@ class EventsAction extends ComEventAction{
 	function index(){
         $this->newest();
 	}
+
+    private function _checkEventBelong($event_id, $account_id=NULL){
+        if ($account_id == NULL)
+            $account_id = session('account_id');
+        $where = array('event_id' => $event_id, 'account_id' => $account_id);
+        if (M('Events')->where($where)->find()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 	function Activity(){
 		 if (empty($_SESSION['account_id']))
             $this->error('请先登录');
@@ -53,9 +65,9 @@ class EventsAction extends ComEventAction{
  *编辑活动
  */
 	function editActivity(){
-		 if (empty($_SESSION['account_id']))
-            $this->error('请先登录');
 		$event_id = (int) $_GET['event_id'];
+        if (!$this->_checkEventBelong($event_id))
+            $this->error('无效链接');
 		$css = array(
                         '__CSS__/page-1.css',
                         '__JS__/jquery-ui-1.8.17.custom/themes/base/jquery.ui.all.css',
@@ -100,10 +112,10 @@ class EventsAction extends ComEventAction{
  * 删除活动
  */
 	function delActivity(){
-		 if (empty($_SESSION['account_id']))
-            $this->error('请先登录');
 		if (isset($_GET['event_id'])) {
             $event_id = (int) $_GET['event_id'];
+        if (!$this->_checkEventBelong($event_id))
+            $this->error('无效链接');
 
             $Event = D('Events');
             // 检查活动是否本人发布
@@ -412,7 +424,7 @@ class EventsAction extends ComEventAction{
         $eventModel   = D('Events');
         $eventId      = $this->_get('e');
         if (!$eventModel->checkEventBelong($eventId,$_SESSION['account_id'])){
-            $this->error('没有数据');
+            $this->error('无相关数据');
         }
         $comments     = $commentModel->getEventCommentForHolder($eventId,1,100);
         foreach ($comments as $key => $value) {
@@ -572,7 +584,7 @@ class EventsAction extends ComEventAction{
      */
     public function entryList(){
         $event_id = $this->_get('e');
-        if (!empty($event_id)){
+        if ($this->_checkEventBelong($event_id)){
             $fieldModel = D('Table_field');
             // 获取分页
             import('@.ORG.Page');
