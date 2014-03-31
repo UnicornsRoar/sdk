@@ -563,10 +563,13 @@ class EventsAction extends ComEventAction{
      */
     public function eventEntry(){
         $event_id   = $this->_get('e');
+        if (!$this->_checkEventBelong($event_id))
+            $this->error('无效链接');
         $fieldModel = D('Table_field');
         $fields     = $fieldModel->getEventFields($event_id);
+        $this->assign('event_name', D('Events')->getEventName($event_id));
         if ($fields){
-            $signCount  = $fieldModel->getSignCount($event_id);
+            $signCount = $fieldModel->getSignCount($event_id);
             $this->assign('event_name', D('Events')->getEventName($event_id));
             $this->assign('signCount', $signCount);
             $this->assign('hasSetTable', 1);
