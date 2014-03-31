@@ -111,6 +111,8 @@ class Table_fieldModel extends Model{
 	 * @return fasle | 同一个用户的ID
 	 */
 	public function confirmOneUser($recordIds){
+		if (count($recordIds)==0)
+			return fasle;
 		$range = implode(',', $recordIds);
 		$sql = "SELECT DISTINCT `account_id` FROM sdk_field_record WHERE record_id IN ($range)";
 		$model = new Model();
@@ -159,6 +161,8 @@ class Table_fieldModel extends Model{
 	 */
 	public function getSignCount($event_id){
 		$nowField = $this->getEventFields($event_id);
+		if (count($nowField) == 0)
+			return 0;
 		foreach ($nowField as $value) {
 			$fields[] = $value['field_id'];
 		}
